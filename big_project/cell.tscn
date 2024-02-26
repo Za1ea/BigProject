@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://pbalualjl0k7"]
+
+[ext_resource type="Script" path="res://cell.gd" id="1_8bjgb"]
+[ext_resource type="Texture2D" uid="uid://dh6ri0wmevpxo" path="res://art/square with dot.png" id="2_c6d3s"]
+[ext_resource type="Texture2D" uid="uid://caaiygfklu101" path="res://art/square.png" id="3_677nb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_op8wo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c6d3s")
+}],
+"loop": true,
+"name": &"circle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_677nb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="cell" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_8bjgb")
+
+[node name="square" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(84, 84)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_op8wo")
+animation = &"circle"
