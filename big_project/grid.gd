@@ -7,7 +7,7 @@ func _ready():
 	# create a 6x6 grid
 	var rows = 6
 	var cols = 6
-	var cell_size = get_node("cell/Control/Sprite2D").texture.get_size()
+	var cell_size = Vector2(130, 130)
 	print(cell_size)
 	for row in range(rows):
 		for col in range(cols):

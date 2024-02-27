@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpvvlr2xeo60f"]
+[gd_scene load_steps=2 format=3 uid="uid://bpvvlr2xeo60f"]
 
-[ext_resource type="PackedScene" uid="uid://pbalualjl0k7" path="res://cell.tscn" id="1_rhca1"]
 [ext_resource type="Script" path="res://grid.gd" id="1_vygvi"]
 
 [node name="grid" type="Node2D"]
@@ -10,5 +9,3 @@ script = ExtResource("1_vygvi")
 offset_right = 947.0
 offset_bottom = 649.0
 columns = 6
-
-[node name="cell" parent="." instance=ExtResource("1_rhca1")]
