@@ -1,10 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1709056732
-cell.gd::GDScript::-1::1709056655::0::1::::<>Control<>::
-cell.tscn::PackedScene::1054917727036780576::1709056655::0::1::::<><>::res://cell.gd<>uid://dh6ri0wmevpxo::::res://art/square with dot.png<>uid://caaiygfklu101::::res://art/square.png
-grid.gd::GDScript::-1::1709056655::0::1::::<>Node2D<>::
-grid.tscn::PackedScene::3483900907337510435::1709056655::0::1::::<><>::uid://pbalualjl0k7::::res://cell.tscn<>res://grid.gd
-icon.svg::CompressedTexture2D::4067679029610153788::1709056655::1709056733::1::::<><>::
-::res://art/::1709056655
-square with dot.png::CompressedTexture2D::7715627489770516672::1709056655::1709056733::1::::<><>::
-square.png::CompressedTexture2D::4773370285716045220::1709056655::1709056733::1::::<><>::
+::res://::1709141788
+cell.gd::GDScript::-1::1709056626::0::1::::<>Control<>::
+cell.tscn::PackedScene::1054917727036780576::1709141788::0::1::::<><>::res://cell.gd<>uid://dh6ri0wmevpxo::::res://art/square with dot.png<>uid://caaiygfklu101::::res://art/square.png
+grid.gd::GDScript::-1::1709056919::0::1::::<>Node2D<>::
+grid.tscn::PackedScene::3483900907337510435::1709141788::0::1::::<><>::res://grid.gd
+icon.svg::CompressedTexture2D::4067679029610153788::1709056626::1709056626::1::::<><>::
+start.tscn::PackedScene::3566607453896349293::1709141788::0::1::::<><>::uid://8y8q2plmifsp::::res://art/start.png<>uid://qtx4rxpo8ysp::::res://art/title.png
+::res://art/::1709142813
+square with dot.png::CompressedTexture2D::7715627489770516672::1709056626::1709056626::1::::<><>::
+square.png::CompressedTexture2D::4773370285716045220::1709056626::1709056626::1::::<><>::
+start.png::CompressedTexture2D::2367810581434941607::1708708630::1709065530::1::::<><>::
+startButton - Copy.png::CompressedTexture2D::1877599568086692269::1709142674::1709142689::1::::<><>::
+startButton.png::CompressedTexture2D::7876124771078627038::1709142813::1709142816::1::::<><>::
+title.png::CompressedTexture2D::1163693883521544027::1709141251::1709141257::1::::<><>::

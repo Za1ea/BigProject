@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bq2xreis1rpnp"]
+
+[ext_resource type="Script" path="res://start.gd" id="1_f5n56"]
+[ext_resource type="Texture2D" uid="uid://8y8q2plmifsp" path="res://art/start.png" id="1_vlg26"]
+[ext_resource type="Texture2D" uid="uid://qtx4rxpo8ysp" path="res://art/title.png" id="2_asymr"]
+[ext_resource type="Texture2D" uid="uid://dkhivhwbx3xtm" path="res://art/startButton.png" id="3_l8nt3"]
+
+[node name="start" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 2100.0
+offset_bottom = 1500.0
+script = ExtResource("1_f5n56")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 4.0
+offset_right = 2104.0
+offset_bottom = 1500.0
+texture = ExtResource("1_vlg26")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = -105.0
+offset_top = -447.0
+offset_right = 2141.0
+offset_bottom = 1239.0
+texture = ExtResource("2_asymr")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 704.0
+offset_right = 1058.0
+offset_bottom = 1009.0
+icon = ExtResource("3_l8nt3")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
