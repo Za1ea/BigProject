@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1709056732
+::res://::1709143466
 cell.gd::GDScript::-1::1709056655::0::1::::<>Control<>::
-cell.tscn::PackedScene::1054917727036780576::1709056655::0::1::::<><>::res://cell.gd<>uid://dh6ri0wmevpxo::::res://art/square with dot.png<>uid://caaiygfklu101::::res://art/square.png
-grid.gd::GDScript::-1::1709056655::0::1::::<>Node2D<>::
-grid.tscn::PackedScene::3483900907337510435::1709056655::0::1::::<><>::uid://pbalualjl0k7::::res://cell.tscn<>res://grid.gd
+cell.tscn::PackedScene::1054917727036780576::1709056865::0::1::::<><>::res://cell.gd<>uid://dh6ri0wmevpxo::::res://art/square with dot.png<>uid://caaiygfklu101::::res://art/square.png
+grid.gd::GDScript::-1::1709056843::0::1::::<>Node2D<>::
+grid.tscn::PackedScene::3483900907337510435::1709056865::0::1::::<><>::res://grid.gd
 icon.svg::CompressedTexture2D::4067679029610153788::1709056655::1709056733::1::::<><>::
-::res://art/::1709056655
+::res://art/::1709056733
 square with dot.png::CompressedTexture2D::7715627489770516672::1709056655::1709056733::1::::<><>::
 square.png::CompressedTexture2D::4773370285716045220::1709056655::1709056733::1::::<><>::
