@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl07u722ltcf6"]
+
+[ext_resource type="Texture2D" uid="uid://dsk7akmwyp2as" path="res://art/homepage.png" id="1_f0hy3"]
+[ext_resource type="Script" path="res://sub_home.gd" id="1_vgnjq"]
+[ext_resource type="PackedScene" uid="uid://dcvepch0ulnwi" path="res://intro.tscn" id="3_pr250"]
+
+[node name="subHome" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vgnjq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1477.0
+offset_bottom = 1001.0
+texture = ExtResource("1_f0hy3")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="intro" parent="." instance=ExtResource("3_pr250")]
+position = Vector2(190, 155)

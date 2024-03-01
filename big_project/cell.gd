@@ -1,5 +1,6 @@
 extends Control
 
+var default = true;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -7,24 +8,28 @@ func _ready():
 	set_process_input(true)
 	
 func _gui_input(event):
-	if event is InputEventMouseButton:
-		print("clicked")
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			$square.animation = "circle"
+#	if event is InputEventMouseButton:
+	if Input.is_action_just_pressed("draw_circle"):
+		default = not default
+		switch_animation()
+#		print("clicked")
+#		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+#			default = not default
+#			switch_animation()
 			
 			
-#func spawn_circle():
-#	var circle = Sprite2D.new()
-#	circle.position = Vector2(get_size().x / 2, get_size().y / 2)
-#	add_child(circle)
+func switch_animation():
+	if default:
+		$square.animation = "default"
+	if not default:
+		$square.animation = "circle"
 #			
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+#	if Input.is_action_just_pressed("draw_circle"):
+#		default = not default
+#		switch_animation()
 	pass
 		
-		
-#func _draw():
-#	if Input.action_is_pressed("draw_circle"):
-#		draw_circle(Vector2(50,50), 10, Color.WHITE)

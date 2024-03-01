@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcvepch0ulnwi"]
+
+[ext_resource type="Script" path="res://intro.gd" id="1_mi6qm"]
+[ext_resource type="Texture2D" uid="uid://cikjl7dnjkh3i" path="res://art/text.png" id="2_dwsup"]
+
+[node name="intro" type="Node2D"]
+position = Vector2(183, 176)
+script = ExtResource("1_mi6qm")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 21.0
+offset_top = 48.0
+offset_right = 76.0
+offset_bottom = 72.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 160
+
+[node name="NinePatchRect" type="TextureRect" parent="."]
+show_behind_parent = true
+offset_left = -147.0
+offset_top = -149.0
+offset_right = 1112.0
+offset_bottom = 1020.0
+texture = ExtResource("2_dwsup")
+expand_mode = 1
+stretch_mode = 4
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

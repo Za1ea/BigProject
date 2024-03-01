@@ -1,4 +1,8 @@
+TextureRect
+NinePatchRect
+Label
+VBoxContainer
+Timer
 Button
 Control
-TextureRect
 MarginContainer

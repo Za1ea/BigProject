@@ -26,6 +26,7 @@ animations = [{
 [node name="cell" type="Node2D"]
 
 [node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -33,7 +34,7 @@ offset_bottom = 40.0
 script = ExtResource("1_8bjgb")
 
 [node name="square" type="AnimatedSprite2D" parent="Control"]
-position = Vector2(84, 84)
+position = Vector2(60, 60)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_op8wo")
 animation = &"circle"
