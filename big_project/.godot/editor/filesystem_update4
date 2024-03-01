@@ -1,3 +1,4 @@
 res://cell.tscn
-res://cell.gd
+res://grid.gd
 res://grid.tscn
+res://cell.gd

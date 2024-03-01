@@ -1,25 +1,52 @@
-[gd_scene load_steps=5 format=3 uid="uid://pbalualjl0k7"]
+[gd_scene load_steps=8 format=3 uid="uid://pbalualjl0k7"]
 
 [ext_resource type="Script" path="res://cell.gd" id="1_8bjgb"]
 [ext_resource type="Texture2D" uid="uid://dh6ri0wmevpxo" path="res://art/square with dot.png" id="2_c6d3s"]
 [ext_resource type="Texture2D" uid="uid://caaiygfklu101" path="res://art/square.png" id="3_677nb"]
+[ext_resource type="Texture2D" uid="uid://bbrlw1t1xkbeo" path="res://art/red_dot.png" id="4_0axxx"]
+[ext_resource type="Texture2D" uid="uid://csp4cbt5houyn" path="res://art/purple_dot.png" id="4_bqcmt"]
+[ext_resource type="Texture2D" uid="uid://cdfpmpfa7px36" path="res://art/teal_dot.png" id="5_bb27x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_op8wo"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_c6d3s")
-}],
-"loop": true,
-"name": &"circle",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_677nb")
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_bqcmt")
+}],
+"loop": true,
+"name": &"purple",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_0axxx")
+}],
+"loop": true,
+"name": &"red",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bb27x")
+}],
+"loop": true,
+"name": &"teal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c6d3s")
+}],
+"loop": true,
+"name": &"white",
 "speed": 5.0
 }]
 
@@ -37,4 +64,4 @@ script = ExtResource("1_8bjgb")
 position = Vector2(60, 60)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_op8wo")
-animation = &"circle"
+animation = &"teal"

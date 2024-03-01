@@ -1,6 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpvvlr2xeo60f"]
+[gd_scene load_steps=8 format=3 uid="uid://bpvvlr2xeo60f"]
 
 [ext_resource type="Script" path="res://grid.gd" id="1_vygvi"]
+[ext_resource type="Texture2D" uid="uid://dkt72sw2uuwyb" path="res://art/cargo_ship.png" id="2_b6ckh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y0xjk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ox4ff"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vce2d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mmqe7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5rxcc"]
 
 [node name="grid" type="Node2D"]
 script = ExtResource("1_vygvi")
@@ -8,4 +19,31 @@ script = ExtResource("1_vygvi")
 [node name="GridContainer" type="GridContainer" parent="."]
 offset_right = 947.0
 offset_bottom = 649.0
-columns = 6
+columns = 7
+
+[node name="ColorRect" type="Panel" parent="."]
+offset_left = 1068.0
+offset_top = 107.0
+offset_right = 1324.0
+offset_bottom = 933.0
+
+[node name="Button" type="Button" parent="ColorRect"]
+offset_left = 17.0
+offset_top = 34.0
+offset_right = 241.0
+offset_bottom = 126.0
+theme_override_colors/font_color = Color(0.101961, 0.101961, 0.384314, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y0xjk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ox4ff")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vce2d")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mmqe7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5rxcc")
+text = "Purple"
+alignment = 2
+expand_icon = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect/Button"]
+show_behind_parent = true
+position = Vector2(82, 79)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_b6ckh")
