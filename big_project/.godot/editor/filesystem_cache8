@@ -1,18 +1,23 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1709313352
+::res://::1709658905
 cell.gd::GDScript::-1::1709143721::0::1::::<>Control<>::
 cell.tscn::PackedScene::1054917727036780576::1709143721::0::1::::<><>::res://cell.gd<>uid://dh6ri0wmevpxo::::res://art/square with dot.png<>uid://caaiygfklu101::::res://art/square.png
 grid.gd::GDScript::-1::1709056919::0::1::::<>Node2D<>::
 grid.tscn::PackedScene::3483900907337510435::1709142899::0::1::::<><>::res://grid.gd
 icon.svg::CompressedTexture2D::4067679029610153788::1709056626::1709056626::1::::<><>::
-intro.gd::GDScript::-1::1709230110::0::1::::<>Node2D<>::
-intro.tscn::PackedScene::7343261443093654176::1709313352::0::1::::<><>::res://intro.gd
-sub_home.gd::GDScript::-1::1709313185::0::1::::<>Control<>::
+intro.gd::GDScript::-1::1709575932::0::1::::<>Node2D<>::
+intro.tscn::PackedScene::7343261443093654176::1709658905::0::1::::<><>::res://intro.gd<>uid://cikjl7dnjkh3i::::res://art/text.png
+map.tscn::PackedScene::1547384562755656097::1709658905::0::1::::<><>::uid://8n5sfgagfukj::::res://art/map.png
 start.gd::GDScript::-1::1709313342::0::1::::<>Control<>::
-start.tscn::PackedScene::3566607453896349293::1709313352::0::1::::<><>::res://start.gd<>uid://8y8q2plmifsp::::res://art/start.png<>uid://qtx4rxpo8ysp::::res://art/title.png<>uid://dkhivhwbx3xtm::::res://art/startButton.png
-sub_home.tscn::PackedScene::5598508474601806777::1709313352::0::1::::<><>::uid://dsk7akmwyp2as::::res://art/homepage.png<>res://sub_home.gd
-::res://art/::1709314246
+start.tscn::PackedScene::3566607453896349293::1709658904::0::1::::<><>::res://start.gd<>uid://8y8q2plmifsp::::res://art/start.png<>uid://qtx4rxpo8ysp::::res://art/title.png<>uid://dkhivhwbx3xtm::::res://art/startButton.png
+sub_home.gd::GDScript::-1::1709577159::0::1::::<>Control<>::
+sub_home.tscn::PackedScene::5598508474601806777::1709658904::0::1::::<><>::uid://dsk7akmwyp2as::::res://art/homepage.png<>res://sub_home.gd<>uid://dcvepch0ulnwi::::res://intro.tscn
+::res://art/::1709659565
+alert2.png::CompressedTexture2D::1768827275853173069::1709659542::1709659574::1::::<><>::
+alert.png::CompressedTexture2D::5392401119790043140::1708537690::1709659574::1::::<><>::
 homepage.png::CompressedTexture2D::8445248502676437302::1708969956::1709228568::1::::<><>::
+map - Copy.png::CompressedTexture2D::2267811332608584120::1708537755::1709577091::1::::<><>::
+map.png::CompressedTexture2D::2344922676824943029::1708537755::1709576749::1::::<><>::
 square with dot.png::CompressedTexture2D::7715627489770516672::1709056626::1709056626::1::::<><>::
 square.png::CompressedTexture2D::4773370285716045220::1709056626::1709056626::1::::<><>::
 start.png::CompressedTexture2D::2367810581434941607::1708708630::1709065530::1::::<><>::

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://wbtgyrlm0eg4"]
+
+[ext_resource type="Texture2D" uid="uid://8n5sfgagfukj" path="res://art/map.png" id="1_ow0ys"]
+[ext_resource type="PackedScene" uid="uid://c3wxa3oypncmh" path="res://alert.tscn" id="2_a8chh"]
+
+[node name="map" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -3.0
+offset_right = 1402.0
+offset_bottom = 1167.0
+texture = ExtResource("1_ow0ys")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="alert" parent="." instance=ExtResource("2_a8chh")]
+position = Vector2(-224, 172)
+
+[node name="alert3" parent="." instance=ExtResource("2_a8chh")]
+position = Vector2(386, 336)
+
+[node name="alert2" parent="." instance=ExtResource("2_a8chh")]
+position = Vector2(102, -192)

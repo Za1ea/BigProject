@@ -1,8 +1,12 @@
+Area2D
+CollisionShape2D
+AnimatedSprite2D
+Node2D
 TextureRect
+Button
 NinePatchRect
 Label
 VBoxContainer
 Timer
-Button
 Control
 MarginContainer

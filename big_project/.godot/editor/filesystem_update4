@@ -1,5 +1,6 @@
 res://start.tscn
 res://sub_home.tscn
 res://intro.tscn
-res://start.gd
-res://intro.gd
+res://map.tscn
+res://alert.tscn
+res://alert.gd
