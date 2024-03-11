@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2sysr0ib0i5w"]
+
+[ext_resource type="Script" path="res://mapSub.gd" id="1_gmls5"]
+[ext_resource type="Texture2D" uid="uid://bp8v8iijbblyw" path="res://art/submarinefinal (1).png" id="2_2ui7f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6swuq"]
+radius = 75.1665
+
+[node name="mapSub" type="RigidBody2D"]
+mass = 0.01
+gravity_scale = 0.0
+script = ExtResource("1_gmls5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(15, 19)
+scale = Vector2(0.145714, 0.136)
+texture = ExtResource("2_2ui7f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7, -3)
+shape = SubResource("CircleShape2D_6swuq")

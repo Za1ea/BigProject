@@ -33,5 +33,5 @@ animation = &"big"
 frame_progress = 0.560003
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(566, 453)
+position = Vector2(567, 448)
 shape = SubResource("CapsuleShape2D_363x8")

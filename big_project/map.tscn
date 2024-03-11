@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://wbtgyrlm0eg4"]
+[gd_scene load_steps=5 format=3 uid="uid://wbtgyrlm0eg4"]
 
+[ext_resource type="Script" path="res://map.gd" id="1_2tn30"]
 [ext_resource type="Texture2D" uid="uid://8n5sfgagfukj" path="res://art/map.png" id="1_ow0ys"]
 [ext_resource type="PackedScene" uid="uid://c3wxa3oypncmh" path="res://alert.tscn" id="2_a8chh"]
+[ext_resource type="PackedScene" uid="uid://b2sysr0ib0i5w" path="res://map_sub.tscn" id="3_c1seq"]
 
 [node name="map" type="Node2D"]
+script = ExtResource("1_2tn30")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_top = -3.0
@@ -21,3 +24,18 @@ position = Vector2(386, 336)
 
 [node name="alert2" parent="." instance=ExtResource("2_a8chh")]
 position = Vector2(102, -192)
+
+[node name="mapSub" parent="." instance=ExtResource("3_c1seq")]
+position = Vector2(170, 261)
+
+[node name="Panel" type="ReferenceRect" parent="."]
+offset_left = 13.0
+offset_top = 21.0
+offset_right = 1387.0
+offset_bottom = 976.0
+border_color = Color(0.0313726, 0.247059, 0.337255, 1)
+border_width = 50.0
+
+[connection signal="body_entered" from="alert" to="." method="_on_alert_body_entered"]
+[connection signal="body_entered" from="alert3" to="." method="_on_alert_3_body_entered"]
+[connection signal="body_entered" from="alert2" to="." method="_on_alert_2_body_entered"]

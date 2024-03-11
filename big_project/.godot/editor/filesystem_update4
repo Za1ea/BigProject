@@ -3,4 +3,10 @@ res://sub_home.tscn
 res://intro.tscn
 res://map.tscn
 res://alert.tscn
+res://map_sub.tscn
 res://alert.gd
+res://grid.tscn
+res://cell.tscn
+res://Info.tscn
+res://map.gd
+res://mapSub.gd
