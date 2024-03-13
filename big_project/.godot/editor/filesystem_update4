@@ -1,4 +1,5 @@
-res://cell.tscn
+res://start.tscn
 res://grid.gd
 res://grid.tscn
-res://cell.gd
+res://cell.tscn
+res://ship_panel.tscn

@@ -1,14 +1,32 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1709315178
-cell.gd::GDScript::-1::1709314091::0::1::::<>Control<>::
-cell.tscn::PackedScene::1054917727036780576::1709315178::0::1::::<><>::res://cell.gd<>uid://dh6ri0wmevpxo::::res://art/square with dot.png<>uid://caaiygfklu101::::res://art/square.png<>uid://bbrlw1t1xkbeo::::res://art/red_dot.png<>uid://csp4cbt5houyn::::res://art/purple_dot.png<>uid://cdfpmpfa7px36::::res://art/teal_dot.png
-grid.gd::GDScript::-1::1709315053::0::1::::<>Node2D<>::
-grid.tscn::PackedScene::3483900907337510435::1709315178::0::1::::<><>::res://grid.gd
-icon.svg::CompressedTexture2D::4067679029610153788::1709056655::1709056733::1::::<><>::
-::res://art/::1709315492
-cargo_ship.png::CompressedTexture2D::7902365805651017033::1709315493::1709315496::1::::<><>::
-purple_dot.png::CompressedTexture2D::6068970666807344237::1709227348::1709228944::1::::<><>::
-red_dot.png::CompressedTexture2D::2492412519707327194::1709227236::1709228944::1::::<><>::
-square with dot.png::CompressedTexture2D::7715627489770516672::1709056655::1709056733::1::::<><>::
-square.png::CompressedTexture2D::4773370285716045220::1709056655::1709056733::1::::<><>::
-teal_dot.png::CompressedTexture2D::4994662767106607979::1709227816::1709228944::1::::<><>::
+::res://::1710347444
+cell.gd::GDScript::-1::1710261341::0::1::::<>Control<>::
+cell.tscn::PackedScene::1054917727036780576::1710262223::0::1::::<><>::res://cell.gd<>uid://dh6ri0wmevpxo::::res://art/square with dot.png<>uid://caaiygfklu101::::res://art/square.png<>uid://bbrlw1t1xkbeo::::res://art/red_dot.png<>uid://csp4cbt5houyn::::res://art/purple_dot.png<>uid://cdfpmpfa7px36::::res://art/teal_dot.png<>uid://drtgti8lx5ldj::::res://art/blue_whale_1.png<>uid://plvm7o0nafyr::::res://art/blue_whale_2.png
+cell_vars.gd::GDScript::-1::1709836924::0::1::::<>Node2D<>::
+grid.gd::GDScript::-1::1710262221::0::1::::<>Node2D<>::
+grid.tscn::PackedScene::3483900907337510435::1710262223::0::1::::<><>::res://grid.gd<>uid://dkt72sw2uuwyb::::res://art/cargo_ship.png<>uid://c64122exa4lya::::res://art/red_boat.png<>uid://6onhafwrm3br::::res://art/teal_boat.png
+icon.svg::CompressedTexture2D::4067679029610153788::1709060255::1709060333::1::::<><>::
+intro.gd::GDScript::-1::1709320126::0::1::::<>Node2D<>::
+intro.tscn::PackedScene::7343261443093654176::1709320126::0::1::::<><>::res://intro.gd<>uid://cikjl7dnjkh3i::::res://art/text.png
+ship_panel.tscn::PackedScene::4183479742958275283::1710262223::0::1::::<><>::uid://dkt72sw2uuwyb::::res://art/cargo_ship.png<>uid://c64122exa4lya::::res://art/red_boat.png<>uid://6onhafwrm3br::::res://art/teal_boat.png
+start.gd::GDScript::-1::1709320126::0::1::::<>Control<>::
+start.tscn::PackedScene::3566607453896349293::1710262222::0::1::::<><>::res://start.gd<>uid://8y8q2plmifsp::::res://art/start.png<>uid://qtx4rxpo8ysp::::res://art/title.png<>uid://dkhivhwbx3xtm::::res://art/startButton.png
+sub_home.gd::GDScript::-1::1709320126::0::1::::<>Control<>::
+sub_home.tscn::PackedScene::5598508474601806777::1709320126::0::1::::<><>::uid://dsk7akmwyp2as::::res://art/homepage.png<>res://sub_home.gd<>uid://dcvepch0ulnwi::::res://intro.tscn
+::res://art/::1709838178
+blue_whale_1.png::CompressedTexture2D::8392094273990845467::1709838022::1709838178::1::::<><>::
+blue_whale_2.png::CompressedTexture2D::1076838999767828805::1709838044::1709838178::1::::<><>::
+cargo_ship.png::CompressedTexture2D::7902365805651017033::1709319093::1709319096::1::::<><>::
+homepage.png::CompressedTexture2D::8445248502676437302::1709320126::1709320126::1::::<><>::
+purple_dot.png::CompressedTexture2D::6068970666807344237::1709230948::1709232544::1::::<><>::
+red_boat.png::CompressedTexture2D::7010190758636139428::1709580015::1709580058::1::::<><>::
+red_dot.png::CompressedTexture2D::2492412519707327194::1709230836::1709232544::1::::<><>::
+square with dot.png::CompressedTexture2D::7715627489770516672::1709060255::1709060333::1::::<><>::
+square.png::CompressedTexture2D::4773370285716045220::1709060255::1709060333::1::::<><>::
+start.png::CompressedTexture2D::2367810581434941607::1709320126::1709320126::1::::<><>::
+startButton - Copy.png::CompressedTexture2D::1877599568086692269::1709320126::1709320126::1::::<><>::
+startButton.png::CompressedTexture2D::7876124771078627038::1709320126::1709320126::1::::<><>::
+teal_boat.png::CompressedTexture2D::2205557271545962259::1709580291::1709580294::1::::<><>::
+teal_dot.png::CompressedTexture2D::4994662767106607979::1709231416::1709232544::1::::<><>::
+text.png::CompressedTexture2D::5355563676683618460::1709320126::1709320126::1::::<><>::
+title.png::CompressedTexture2D::1163693883521544027::1709320126::1709320126::1::::<><>::

@@ -1,4 +1,12 @@
+Button
+AnimatedSprite2D
 Panel
 ColorRect
 Sprite2D
-Button
+TextureRect
+NinePatchRect
+Label
+VBoxContainer
+Timer
+Control
+MarginContainer
