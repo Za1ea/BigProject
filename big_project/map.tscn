@@ -23,18 +23,10 @@ position = Vector2(-224, 172)
 position = Vector2(386, 336)
 
 [node name="alert2" parent="." instance=ExtResource("2_a8chh")]
-position = Vector2(102, -192)
+position = Vector2(99, -189)
 
 [node name="mapSub" parent="." instance=ExtResource("3_c1seq")]
 position = Vector2(170, 261)
-
-[node name="Panel" type="ReferenceRect" parent="."]
-offset_left = 13.0
-offset_top = 21.0
-offset_right = 1387.0
-offset_bottom = 976.0
-border_color = Color(0.0313726, 0.247059, 0.337255, 1)
-border_width = 50.0
 
 [connection signal="body_entered" from="alert" to="." method="_on_alert_body_entered"]
 [connection signal="body_entered" from="alert3" to="." method="_on_alert_3_body_entered"]

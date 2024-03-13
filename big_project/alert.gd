@@ -16,3 +16,4 @@ func _on_body_entered(body):
 	get_tree().change_scene_to_file("res://Info.tscn")
 	$CollisionShape2D.set_deferred("disabled", true)
 	pass # Replace with function body.
+ 
