@@ -9,3 +9,5 @@ res://map_sub.tscn
 res://grid.tscn
 res://cell.tscn
 res://Info.tscn
+res://start.gd
+res://sub_home.gd

@@ -1,3 +1,4 @@
+TextureRect
 AnimationPlayer
 ColorRect
 CanvasLayer
@@ -10,6 +11,4 @@ Sprite2D
 Area2D
 AnimatedSprite2D
 Node2D
-TextureRect
 Button
-NinePatchRect
