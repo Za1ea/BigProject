@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://pbalualjl0k7"]
+[gd_scene load_steps=11 format=3 uid="uid://pbalualjl0k7"]
 
 [ext_resource type="Script" path="res://cell.gd" id="1_8bjgb"]
 [ext_resource type="Texture2D" uid="uid://dh6ri0wmevpxo" path="res://art/square with dot.png" id="2_c6d3s"]
@@ -6,6 +6,19 @@
 [ext_resource type="Texture2D" uid="uid://bbrlw1t1xkbeo" path="res://art/red_dot.png" id="4_0axxx"]
 [ext_resource type="Texture2D" uid="uid://csp4cbt5houyn" path="res://art/purple_dot.png" id="4_bqcmt"]
 [ext_resource type="Texture2D" uid="uid://cdfpmpfa7px36" path="res://art/teal_dot.png" id="5_bb27x"]
+[ext_resource type="Texture2D" uid="uid://drtgti8lx5ldj" path="res://art/blue_whale_1.png" id="6_rt5ia"]
+[ext_resource type="Texture2D" uid="uid://plvm7o0nafyr" path="res://art/blue_whale_2.png" id="7_y7g4m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_01g8r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_677nb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_op8wo"]
 animations = [{
@@ -43,6 +56,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("6_rt5ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_y7g4m")
+}],
+"loop": true,
+"name": &"whale",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("2_c6d3s")
 }],
 "loop": true,
@@ -50,9 +74,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="cell" type="Node2D"]
-
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control"]
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 3
 anchors_preset = 0
@@ -60,8 +82,12 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_8bjgb")
 
-[node name="square" type="AnimatedSprite2D" parent="Control"]
+[node name="square" type="AnimatedSprite2D" parent="."]
 position = Vector2(60, 60)
 scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_01g8r")
+
+[node name="animation" type="AnimatedSprite2D" parent="square"]
+position = Vector2(-7.15256e-06, 5.00001)
 sprite_frames = SubResource("SpriteFrames_op8wo")
-animation = &"teal"
+animation = &"purple"
