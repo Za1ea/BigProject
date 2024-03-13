@@ -26,10 +26,10 @@ justification_flags = 160
 
 [node name="NinePatchRect" type="TextureRect" parent="."]
 show_behind_parent = true
-offset_left = -147.0
-offset_top = -149.0
-offset_right = 1112.0
-offset_bottom = 1020.0
+offset_left = -110.0
+offset_top = -121.0
+offset_right = 1149.0
+offset_bottom = 1048.0
 texture = ExtResource("2_dwsup")
 expand_mode = 1
 stretch_mode = 4

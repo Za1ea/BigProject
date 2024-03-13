@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3wxa3oypncmh"]
+
+[ext_resource type="Texture2D" uid="uid://ci3eb80lw2tc3" path="res://art/alert.png" id="1_5tvcy"]
+[ext_resource type="Script" path="res://alert.gd" id="1_bc1v0"]
+[ext_resource type="Texture2D" uid="uid://0g3ld1yqugen" path="res://art/alert2.png" id="2_ca7lp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_556n5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5tvcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ca7lp")
+}],
+"loop": true,
+"name": &"big",
+"speed": 2.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_363x8"]
+radius = 29.0
+height = 88.0
+
+[node name="alert" type="Area2D"]
+script = ExtResource("1_bc1v0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(563, 471)
+scale = Vector2(0.345238, 0.307333)
+sprite_frames = SubResource("SpriteFrames_556n5")
+animation = &"big"
+frame_progress = 0.560003
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(567, 448)
+shape = SubResource("CapsuleShape2D_363x8")

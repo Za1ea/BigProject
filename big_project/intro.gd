@@ -31,4 +31,8 @@ func _on_timer_timeout():
 			if(!do_close):
 				do_close = true
 				timer.start(1)
+	
+		
 	pass # Replace with function body.
+
+
