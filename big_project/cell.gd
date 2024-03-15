@@ -2,6 +2,7 @@ extends Control
 
 var default = true;
 var path_color = ""
+#var anim = get_tree().square.animation
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
