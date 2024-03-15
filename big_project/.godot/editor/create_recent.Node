@@ -1,4 +1,16 @@
 TextureRect
+Button
+AnimatedSprite2D
+Panel
+ColorRect
+Sprite2D
+TextureRect
+NinePatchRect
+Label
+VBoxContainer
+Timer
+Control
+MarginContainer
 AnimationPlayer
 ColorRect
 CanvasLayer
@@ -11,4 +23,6 @@ Sprite2D
 Area2D
 AnimatedSprite2D
 Node2D
+TextureRect
 Button
+NinePatchRect

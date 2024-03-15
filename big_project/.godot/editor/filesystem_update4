@@ -1,6 +1,10 @@
 res://scene_transition.gd
 res://scene_transition.tscn
 res://start.tscn
+res://grid.gd
+res://grid.tscn
+res://cell.tscn
+res://ship_panel.tscn
 res://sub_home.tscn
 res://intro.tscn
 res://map.tscn
