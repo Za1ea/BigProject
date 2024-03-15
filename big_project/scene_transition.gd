@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-func change_scene(target: String, type: String = 'dissolve') -> void:
+func change_scene(target: String, type: String = '') -> void:
 	if type == 'dissolve':
 		transition_dissolve(target)
 	else:
