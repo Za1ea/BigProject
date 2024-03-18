@@ -1,8 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://cl07u722ltcf6"]
+[gd_scene load_steps=16 format=3 uid="uid://cl07u722ltcf6"]
 
 [ext_resource type="Texture2D" uid="uid://dsk7akmwyp2as" path="res://art/homepage.png" id="1_f0hy3"]
 [ext_resource type="Script" path="res://sub_home.gd" id="1_vgnjq"]
 [ext_resource type="PackedScene" uid="uid://dcvepch0ulnwi" path="res://intro.tscn" id="3_pr250"]
+[ext_resource type="Texture2D" uid="uid://dfcjl8okynwje" path="res://art/contButton copy.png" id="4_14ran"]
+[ext_resource type="Texture2D" uid="uid://drtgti8lx5ldj" path="res://art/blue_whale_1.png" id="4_fvjwp"]
+[ext_resource type="Texture2D" uid="uid://dqoem0qolc1my" path="res://art/contButton.png" id="5_tbu1q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wyjja"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x46yl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o5s5p"]
+texture = ExtResource("4_fvjwp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_28hnq"]
+texture = ExtResource("4_14ran")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wwp0r"]
 
@@ -39,8 +52,14 @@ position = Vector2(190, 174)
 layout_mode = 0
 offset_left = 991.0
 offset_top = 802.0
-offset_right = 1197.0
-offset_bottom = 874.0
+offset_right = 1215.0
+offset_bottom = 918.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wyjja")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x46yl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_o5s5p")
+theme_override_styles/focus = SubResource("StyleBoxTexture_28hnq")
+icon = ExtResource("5_tbu1q")
+expand_icon = true
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
