@@ -4,7 +4,6 @@ AnimatedSprite2D
 Panel
 ColorRect
 Sprite2D
-TextureRect
 NinePatchRect
 Label
 VBoxContainer
@@ -12,17 +11,3 @@ Timer
 Control
 MarginContainer
 AnimationPlayer
-ColorRect
-CanvasLayer
-CharacterBody2D
-RigidBody2D
-ReferenceRect
-Panel
-CollisionShape2D
-Sprite2D
-Area2D
-AnimatedSprite2D
-Node2D
-TextureRect
-Button
-NinePatchRect

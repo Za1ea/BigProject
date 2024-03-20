@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bq2xreis1rpnp"]
+[gd_scene load_steps=9 format=3 uid="uid://bq2xreis1rpnp"]
 
 [ext_resource type="Script" path="res://start.gd" id="1_f5n56"]
 [ext_resource type="Texture2D" uid="uid://8y8q2plmifsp" path="res://art/start.png" id="1_vlg26"]
@@ -11,13 +11,19 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_myhya"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ge678"]
+
 [node name="start" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 90.0
 offset_top = -34.0
-offset_right = 2190.0
-offset_bottom = 1466.0
+offset_right = 790.0
+offset_bottom = 466.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_f5n56")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -26,10 +32,10 @@ anchor_left = -0.228
 anchor_top = 0.038
 anchor_right = -0.027
 anchor_bottom = 0.038
-offset_left = 397.8
-offset_top = -24.0
-offset_right = 1568.7
-offset_bottom = 971.0
+offset_left = 385.8
+offset_top = -18.0
+offset_right = 1580.7
+offset_bottom = 995.0
 texture = ExtResource("1_vlg26")
 expand_mode = 1
 stretch_mode = 4
@@ -58,6 +64,7 @@ scale = Vector2(0.65, 0.65)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qh0ch")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_8muga")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_myhya")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ge678")
 icon = ExtResource("3_l8nt3")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

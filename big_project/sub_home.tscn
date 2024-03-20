@@ -23,6 +23,10 @@ texture = ExtResource("4_14ran")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a0v3b"]
 bg_color = Color(0.333333, 0.643137, 0.792157, 0.764706)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wwrto"]
 
@@ -46,7 +50,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="intro" parent="." instance=ExtResource("3_pr250")]
-position = Vector2(190, 174)
+position = Vector2(186, 155)
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -63,9 +67,9 @@ expand_icon = true
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 499.0
+offset_left = 501.0
 offset_top = 362.0
-offset_right = 936.0
+offset_right = 939.0
 offset_bottom = 732.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wwp0r")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_0c4h0")

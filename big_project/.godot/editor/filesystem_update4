@@ -1,6 +1,5 @@
-res://start.tscn
-res://grid.gd
 res://sub_home.tscn
+res://grid.gd
 res://intro.tscn
 res://map.tscn
 res://alert.tscn
@@ -9,6 +8,4 @@ res://grid.tscn
 res://cell.tscn
 res://Info.tscn
 res://scene_transition.tscn
-res://start.gd
-res://sub_home.gd
-res://scene_transition.gd
+res://ship_panel.tscn

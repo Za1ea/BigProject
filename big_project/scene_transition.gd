@@ -16,8 +16,9 @@ func transition_dissolve(target: String) -> void:
 	
 func transition_clouds(target: String) -> void:
 	$AnimationPlayer.play('clouds_in')
-	await get_tree().create_timer(0.5).timeout
-	get_tree().change_scene_to_file(target)
+	await get_tree().create_timer(1).timeout
 	$AnimationPlayer.play('clouds_out')
+	get_tree().change_scene_to_file(target)
+	
 
 
