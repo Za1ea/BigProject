@@ -2,7 +2,7 @@ extends Node2D
 
 var cell_scene = preload("res://cell.tscn")
 var path_color = ""
-
+var grid       = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,11 +13,13 @@ func _ready():
 	print(cell_size)
 	for row in range(rows):
 		for col in range(cols):
+			var idx = str(row*7+col)
 			print("cell")
 			var cell = cell_scene.instantiate()
 			$GridContainer.add_child(cell)
 			cell.add_to_group("cells")
 			cell.position = Vector2(col * cell_size.x + 100, row * cell_size.x + 100)
+			grid[idx] = ""
 	level1()
 	
 
@@ -64,7 +66,8 @@ func level1():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	for child in $GridContainer.get_children():
+		pass
 
 
 func _on_restart_pressed():

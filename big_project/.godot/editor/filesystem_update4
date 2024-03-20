@@ -4,7 +4,10 @@ res://intro.tscn
 res://map.tscn
 res://alert.tscn
 res://map_sub.tscn
+res://start.tscn
+
 res://grid.tscn
+res://cell.gd
 res://cell.tscn
 res://Info.tscn
 res://scene_transition.tscn
