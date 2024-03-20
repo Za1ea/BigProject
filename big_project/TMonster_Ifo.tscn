@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgd70c55qirld"]
+
+[ext_resource type="Script" path="res://TMonster_Ifo.gd" id="1_yce54"]
+[ext_resource type="FontFile" uid="uid://b2glt3q7de2p2" path="res://bubblegum/Bubblegum.ttf" id="2_aspc3"]
+[ext_resource type="Texture2D" uid="uid://cj5p2ggt0yby7" path="res://Arctic_Background2.jpg" id="2_ps324"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_yce54")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_top = 3.0
+offset_right = 1154.0
+offset_bottom = 646.0
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.2, 0.486275, 0.67451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_aspc3")
+theme_override_font_sizes/font_size = 50
+text = "Trash Monster Minigame
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.2, 0.486275, 0.67451, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_aspc3")
+theme_override_font_sizes/font_size = 30
+text = "placeholder
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.2, 0.486275, 0.67451, 1)
+theme_override_fonts/font = ExtResource("2_aspc3")
+theme_override_font_sizes/font_size = 50
+text = "Next
+"
+
+[node name="background" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(576, 324)
+scale = Vector2(1.00033, 1)
+texture = ExtResource("2_ps324")
+
+[connection signal="sort_children" from="MarginContainer" to="." method="_on_margin_container_sort_children"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
