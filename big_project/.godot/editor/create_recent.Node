@@ -1,9 +1,12 @@
 Popup
 TextureRect
 Button
+ColorRect
+PopupPanel
+Popup
+TextureRect
 AnimatedSprite2D
 Panel
-ColorRect
 Sprite2D
 NinePatchRect
 Label
@@ -11,4 +14,3 @@ VBoxContainer
 Timer
 Control
 MarginContainer
-AnimationPlayer
