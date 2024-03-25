@@ -3,8 +3,8 @@ res://grid.gd
 res://start.tscn
 res://grid.tscn
 res://cell.tscn
-res://map_sub.tscn
-res://map.tscn
-res://intro.tscn
-res://map_intro.tscn
-res://alert.tscn
+res://Route_Ifo.gd
+res://Route_Ifo.tscn
+res://scene_transition.tscn
+res://Obstacle_Ifo.tscn
+res://Obstacle_Ifo.gd
