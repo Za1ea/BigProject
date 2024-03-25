@@ -10,5 +10,5 @@ func _process(delta):
 	pass
 
 func _on_button_pressed():
-	SceneTransition.change_scene("res://sub_home.tscn")
+	SceneTransition.change_scene("res://sub_home.tscn", "")
 	pass # Replace with function body.

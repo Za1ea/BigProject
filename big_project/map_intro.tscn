@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://s0n4ag5pa7uy"]
+
+[ext_resource type="PackedScene" uid="uid://dcvepch0ulnwi" path="res://intro.tscn" id="1_73glv"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_bny6y"]
+
+[sub_resource type="Theme" id="Theme_0lqma"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_410bt"]
+bg_color = Color(0.0627451, 0.34902, 0.792157, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[node name="mapIntro" instance=ExtResource("1_73glv")]
+
+[node name="NinePatchRect" parent="." index="2"]
+modulate = Color(0.0705882, 0.333333, 0.705882, 1)
+offset_left = 61.0
+offset_top = -2.0
+offset_right = 856.0
+offset_bottom = 578.0
+texture = SubResource("CanvasTexture_bny6y")
+stretch_mode = 0
+
+[node name="Popup" type="PopupPanel" parent="." index="3"]
+visible = true
+theme = SubResource("Theme_0lqma")
+theme_override_styles/panel = SubResource("StyleBoxFlat_410bt")
