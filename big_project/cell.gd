@@ -1,7 +1,11 @@
 extends Control
 
-var default = true;
+var default = true
 var path_color = ""
+var grid = global.grid
+var row = 0
+var col = 0
+var index = 0
 #var anim = get_tree().square.animation
 
 # Called when the node enters the scene tree for the first time.
@@ -18,7 +22,12 @@ func _gui_input(event):
 #			default = not default
 #			switch_animation()
 			
-			
+
+#func set_index(row, col):
+#	row = row
+#	col = col
+#	print(row, col)
+
 func set_path_color(color):
 	path_color = color
 	
@@ -27,8 +36,26 @@ func switch_color(color):
 	$square/animation.position = Vector2i(0, 5)
 	if color.is_empty():
 		$square/animation.animation = "default"
+		grid[row][col] = ""
 	else:
-		$square/animation.animation = color
+		var current = Vector2i(row, col)
+		var a = Vector2i(row-1, col)
+		var b = Vector2i(row-1, col)
+		var l  = Vector2i(row  , col-1)
+		var r = Vector2i(row  , col+1) 
+		if (row == 0):
+			a = current
+		elif (row == 6):
+			b = current
+		if (col == 0):
+			l = current
+		elif (col == 7):
+			r = current
+		if (grid[a.x][a.y] == color || grid[a.x][a.y] == color || grid[a.x][a.y] == color || grid[a.x][a.y] == color):
+			$square/animation.animation = color
+			#print(row, col)
+			grid[row][col] = color
+	#print(grid)
 
 func whale():
 	$square/animation.scale = 0.5*$square/animation.scale

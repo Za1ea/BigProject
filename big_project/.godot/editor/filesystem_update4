@@ -1,12 +1,6 @@
-res://Route_Ifo.tscn
-res://sub_home.tscn
+res://start.tscn
 res://grid.gd
-res://intro.tscn
-res://map.tscn
-res://alert.tscn
-res://map_sub.tscn
 res://grid.tscn
 res://cell.tscn
-res://scene_transition.tscn
-res://ship_panel.tscn
 res://Route_Ifo.gd
+res://Route_Ifo.tscn
