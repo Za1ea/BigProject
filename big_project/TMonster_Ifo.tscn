@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cgd70c55qirld"]
 
-[ext_resource type="Script" path="res://Info.gd" id="1_yce54"]
+[ext_resource type="Script" path="res://TMonster_Ifo.gd" id="1_yce54"]
 [ext_resource type="FontFile" uid="uid://b2glt3q7de2p2" path="res://bubblegum/Bubblegum.ttf" id="2_aspc3"]
 [ext_resource type="Texture2D" uid="uid://cj5p2ggt0yby7" path="res://Arctic_Background2.jpg" id="2_ps324"]
 
@@ -25,11 +25,11 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-theme_override_colors/font_color = Color(0.8, 0.980392, 1, 1)
+theme_override_colors/font_color = Color(0.2, 0.486275, 0.67451, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_aspc3")
 theme_override_font_sizes/font_size = 50
-text = "Ship Routing Minigame
+text = "Trash Monster Minigame
 "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -37,7 +37,7 @@ vertical_alignment = 1
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.8, 0.980392, 1, 1)
+theme_override_colors/font_color = Color(0.2, 0.486275, 0.67451, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_aspc3")
 theme_override_font_sizes/font_size = 30
@@ -50,7 +50,7 @@ autowrap_mode = 2
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_colors/font_color = Color(0.8, 0.980392, 1, 1)
+theme_override_colors/font_color = Color(0.2, 0.486275, 0.67451, 1)
 theme_override_fonts/font = ExtResource("2_aspc3")
 theme_override_font_sizes/font_size = 50
 text = "Next

@@ -4,5 +4,9 @@ res://Sound/grid.tscn
 res://Sound/cell.tscn
 res://Sound/cell.gd
 res://global.gd
-res://win_screen.tscn
 res://Sound/win_screen.tscn
+res://Route_Ifo.gd
+res://Route_Ifo.tscn
+res://scene_transition.tscn
+res://Obstacle_Ifo.tscn
+res://Obstacle_Ifo.gd
