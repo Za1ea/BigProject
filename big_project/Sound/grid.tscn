@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bpvvlr2xeo60f"]
 
-[ext_resource type="Script" path="res://grid.gd" id="1_vygvi"]
+[ext_resource type="Script" path="res://Sound/grid.gd" id="1_vygvi"]
 [ext_resource type="Texture2D" uid="uid://dkt72sw2uuwyb" path="res://art/cargo_ship.png" id="2_b6ckh"]
 [ext_resource type="Texture2D" uid="uid://c64122exa4lya" path="res://art/red_boat.png" id="3_23dl6"]
 [ext_resource type="Texture2D" uid="uid://6onhafwrm3br" path="res://art/teal_boat.png" id="4_vjqlq"]
@@ -108,6 +108,22 @@ position = Vector2(74, 43)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_vjqlq")
 
+[node name="white" type="Button" parent="ColorRect"]
+offset_left = 23.0
+offset_top = 403.0
+offset_right = 247.0
+offset_bottom = 495.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y0xjk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ox4ff")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vce2d")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mmqe7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5rxcc")
+text = "White"
+alignment = 2
+expand_icon = true
+
 [node name="Restart" type="Button" parent="."]
 offset_left = 1110.0
 offset_top = 128.0
@@ -118,4 +134,5 @@ text = "Restart"
 [connection signal="pressed" from="ColorRect/purple" to="." method="_on_ship_pressed" binds= ["purple"]]
 [connection signal="pressed" from="ColorRect/red" to="." method="_on_ship_pressed" binds= ["red"]]
 [connection signal="pressed" from="ColorRect/teal" to="." method="_on_ship_pressed" binds= ["teal"]]
+[connection signal="pressed" from="ColorRect/white" to="." method="_on_ship_pressed" binds= ["white"]]
 [connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
