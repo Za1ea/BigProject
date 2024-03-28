@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://wbtgyrlm0eg4"]
+[gd_scene load_steps=6 format=3 uid="uid://wbtgyrlm0eg4"]
 
 [ext_resource type="Script" path="res://map.gd" id="1_2tn30"]
 [ext_resource type="Texture2D" uid="uid://8n5sfgagfukj" path="res://art/map.png" id="1_ow0ys"]
 [ext_resource type="PackedScene" uid="uid://c3wxa3oypncmh" path="res://alert.tscn" id="2_a8chh"]
 [ext_resource type="PackedScene" uid="uid://b2sysr0ib0i5w" path="res://map_sub.tscn" id="3_c1seq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jqndu"]
+bg_color = Color(0.0901961, 0.34902, 0.894118, 1)
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
 
 [node name="map" type="Node2D"]
 script = ExtResource("1_2tn30")
@@ -17,16 +24,27 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="alert" parent="." instance=ExtResource("2_a8chh")]
+visible = false
 position = Vector2(-224, 172)
 
 [node name="alert3" parent="." instance=ExtResource("2_a8chh")]
+visible = false
 position = Vector2(386, 336)
 
 [node name="alert2" parent="." instance=ExtResource("2_a8chh")]
-position = Vector2(99, -189)
+visible = false
+position = Vector2(99, -167)
 
 [node name="mapSub" parent="." instance=ExtResource("3_c1seq")]
 position = Vector2(170, 261)
+
+[node name="message" type="PopupPanel" parent="."]
+transparent_bg = true
+title = "move the submarien"
+initial_position = 2
+size = Vector2i(700, 300)
+keep_title_visible = true
+theme_override_styles/panel = SubResource("StyleBoxFlat_jqndu")
 
 [connection signal="body_entered" from="alert" to="." method="_on_alert_body_entered"]
 [connection signal="body_entered" from="alert3" to="." method="_on_alert_3_body_entered"]

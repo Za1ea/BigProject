@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cl07u722ltcf6"]
+[gd_scene load_steps=17 format=3 uid="uid://cl07u722ltcf6"]
 
 [ext_resource type="Texture2D" uid="uid://dsk7akmwyp2as" path="res://art/homepage.png" id="1_f0hy3"]
 [ext_resource type="Script" path="res://sub_home.gd" id="1_vgnjq"]
@@ -31,6 +31,8 @@ corner_radius_bottom_left = 50
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wwrto"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wiyel"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_f5hm6"]
 
 [node name="subHome" type="Control"]
 layout_mode = 3
@@ -77,6 +79,20 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_a0v3b")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_wwrto")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wiyel")
 disabled = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 774.0
+offset_right = 905.0
+offset_bottom = 831.0
+color = Color(0.0313726, 0.247059, 0.337255, 1)
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+icon = SubResource("CanvasTexture_f5hm6")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
