@@ -7,3 +7,5 @@ res://Route_Ifo.tscn
 res://scene_transition.tscn
 res://Obstacle_Ifo.tscn
 res://Obstacle_Ifo.gd
+res://TMonster_Ifo.tscn
+res://TMonster_Ifo.gd
