@@ -1,7 +1,13 @@
 res://start.tscn
-res://grid.gd
-res://grid.tscn
-res://cell.tscn
+res://Sound/grid.gd
+res://Sound/grid.tscn
+res://Sound/cell.tscn
+res://Sound/cell.gd
+res://global.gd
+res://Sound/win_screen.tscn
+res://sub_home.tscn
+res://Route_Ifo.gd
+res://Route_Ifo.tscn
 res://TMonster_Ifo.tscn
 res://scene_transition.tscn
 res://sub_home.tscn

@@ -2,12 +2,8 @@ ea4bc82a6ad023ab7ee23ee620429895
 ::res://::1711642440
 alert.gd::GDScript::-1::1711463624::0::1::::<>Area2D<>::
 alert.tscn::PackedScene::6784943284066127359::1711463624::0::1::::<><>::uid://ci3eb80lw2tc3::::res://art/alert.png<>res://alert.gd<>uid://0g3ld1yqugen::::res://art/alert2.png
-cell.gd::GDScript::-1::1711463624::0::1::::<>Control<>::
-cell.tscn::PackedScene::1054917727036780576::1711472319::0::1::::<><>::res://cell.gd<>uid://dh6ri0wmevpxo::::res://art/square with dot.png<>uid://caaiygfklu101::::res://art/square.png<>uid://bbrlw1t1xkbeo::::res://art/red_dot.png<>uid://csp4cbt5houyn::::res://art/purple_dot.png<>uid://cdfpmpfa7px36::::res://art/teal_dot.png<>uid://drtgti8lx5ldj::::res://art/blue_whale_1.png<>uid://plvm7o0nafyr::::res://art/blue_whale_2.png
 cell_vars.gd::GDScript::-1::1711463624::0::1::::<>Node2D<>::
 global.gd::GDScript::-1::1711463624::0::1::::<>Node<>::
-grid.gd::GDScript::-1::1711471301::0::1::::<>Node2D<>::
-grid.tscn::PackedScene::3483900907337510435::1711472319::0::1::::<><>::res://grid.gd<>uid://dkt72sw2uuwyb::::res://art/cargo_ship.png<>uid://c64122exa4lya::::res://art/red_boat.png<>uid://6onhafwrm3br::::res://art/teal_boat.png
 icon.svg::CompressedTexture2D::4067679029610153788::1711463624::1711463624::1::::<><>::
 intro.gd::GDScript::-1::1711463624::0::1::::<>Node2D<>::
 intro.tscn::PackedScene::7343261443093654176::1711463624::0::1::::<><>::res://intro.gd<>uid://cikjl7dnjkh3i::::res://art/text.png
@@ -23,7 +19,6 @@ Route_Ifo.gd::GDScript::-1::1711463624::0::1::::<>Node2D<>::
 Route_Ifo.tscn::PackedScene::5202155303868336317::1711463624::0::1::::<><>::
 scene_transition.gd::GDScript::-1::1711463624::0::1::::<>CanvasLayer<>::
 scene_transition.tscn::PackedScene::3167832655919278619::1711472319::0::1::::<><>::res://scene_transition.gd<>uid://cikjl7dnjkh3i::::res://art/text.png
-ship_panel.tscn::PackedScene::4183479742958275283::1711463624::0::1::::<><>::uid://dkt72sw2uuwyb::::res://art/cargo_ship.png<>uid://c64122exa4lya::::res://art/red_boat.png<>uid://6onhafwrm3br::::res://art/teal_boat.png
 start.gd::GDScript::-1::1711470104::0::1::::<>Control<>::
 start.tscn::PackedScene::3566607453896349293::1711472319::0::1::::<><>::res://start.gd<>uid://8y8q2plmifsp::::res://art/start.png<>uid://qtx4rxpo8ysp::::res://art/title.png<>uid://dkhivhwbx3xtm::::res://art/startButton.png
 sub_home.gd::GDScript::-1::1711471835::0::1::::<>Control<>::
@@ -60,3 +55,9 @@ text.png::CompressedTexture2D::5355563676683618460::1711463624::1711463624::1:::
 title.png::CompressedTexture2D::1163693883521544027::1711463624::1711463624::1::::<><>::
 ::res://art/bubblegum/::1711463624
 Bubblegum.ttf::FontFile::4294609042277764437::1711463624::1711463624::1::::<><>::
+::res://Sound/::1711386991
+cell.gd::GDScript::-1::1711386780::0::1::::<>Control<>::
+cell.tscn::PackedScene::1054917727036780576::1711386991::0::1::::<><>::res://Sound/cell.gd<>uid://caaiygfklu101::::res://art/square.png<>uid://csp4cbt5houyn::::res://art/purple_dot.png<>uid://bbrlw1t1xkbeo::::res://art/red_dot.png<>uid://cdfpmpfa7px36::::res://art/teal_dot.png<>uid://drtgti8lx5ldj::::res://art/blue_whale_1.png<>uid://plvm7o0nafyr::::res://art/blue_whale_2.png<>uid://dh6ri0wmevpxo::::res://art/square with dot.png
+grid.gd::GDScript::-1::1711386630::0::1::::<>Node2D<>::
+grid.tscn::PackedScene::3483900907337510435::1711386991::0::1::::<><>::res://Sound/grid.gd<>uid://dkt72sw2uuwyb::::res://art/cargo_ship.png<>uid://c64122exa4lya::::res://art/red_boat.png<>uid://6onhafwrm3br::::res://art/teal_boat.png
+ship_panel.tscn::PackedScene::4183479742958275283::1710782847::0::1::::<><>::uid://dkt72sw2uuwyb::::res://art/cargo_ship.png<>uid://c64122exa4lya::::res://art/red_boat.png<>uid://6onhafwrm3br::::res://art/teal_boat.png
