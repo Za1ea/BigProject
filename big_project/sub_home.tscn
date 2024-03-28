@@ -52,11 +52,9 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="intro" parent="." instance=ExtResource("3_pr250")]
-visible = false
 position = Vector2(186, 155)
 
 [node name="Button" type="Button" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 991.0
 offset_top = 802.0

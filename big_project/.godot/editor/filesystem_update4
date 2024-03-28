@@ -1,10 +1,8 @@
-res://sub_home.tscn
-res://grid.gd
 res://start.tscn
+res://grid.gd
 res://grid.tscn
 res://cell.tscn
-res://Route_Ifo.gd
-res://Route_Ifo.tscn
+res://TMonster_Ifo.tscn
 res://scene_transition.tscn
-res://Obstacle_Ifo.tscn
-res://Obstacle_Ifo.gd
+res://sub_home.tscn
+res://map.tscn

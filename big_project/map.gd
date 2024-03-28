@@ -15,7 +15,7 @@ func _process(delta):
 
 
 func _on_alert_body_entered(body):
-	SceneTransition.change_scene_to_file("res://Info.tscn")
+	SceneTransition.change_scene("res://Obstacle_Ifo.tscn", "dissolve")
 	
 	
 
@@ -26,4 +26,4 @@ func _on_alert_3_body_entered(body):
 
 
 func _on_alert_2_body_entered(body):
-	SceneTransition.change_scene("res://Info.tscn", "dissolve")
+	SceneTransition.change_scene("res://Route_Ifo.tscn", "dissolve")
