@@ -24,15 +24,12 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="alert" parent="." instance=ExtResource("2_a8chh")]
-visible = false
 position = Vector2(-224, 172)
 
 [node name="alert3" parent="." instance=ExtResource("2_a8chh")]
-visible = false
 position = Vector2(386, 336)
 
 [node name="alert2" parent="." instance=ExtResource("2_a8chh")]
-visible = false
 position = Vector2(99, -167)
 
 [node name="mapSub" parent="." instance=ExtResource("3_c1seq")]
@@ -43,6 +40,7 @@ transparent_bg = true
 title = "move the submarien"
 initial_position = 2
 size = Vector2i(700, 300)
+visible = true
 keep_title_visible = true
 theme_override_styles/panel = SubResource("StyleBoxFlat_jqndu")
 

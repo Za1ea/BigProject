@@ -2,10 +2,12 @@ res://start.tscn
 res://grid.gd
 res://grid.tscn
 res://cell.tscn
-res://TMonster_Ifo.tscn
-res://scene_transition.tscn
-res://sub_home.tscn
+res://map_sub.tscn
 res://map.tscn
+res://intro.tscn
+res://map_intro.tscn
+res://sub_home.tscn
+res://alert.tscn
+res://Obstacle_Ifo.tscn
 res://Sound/grid.gd
-res://Sound/grid.tscn
-res://Sound/cell.tscn
+res://scene_transition.tscn
