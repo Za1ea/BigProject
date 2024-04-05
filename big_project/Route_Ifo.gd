@@ -25,7 +25,7 @@ func _on_button_pressed():
 	current_text += bubble_text[i]
 	label.text = current_text
 	if i == 3:
-		SceneTransition.change_scene("res://grid.tscn")
+		SceneTransition.change_scene("res://grid.tscn", "dissolve")
 
 
 	pass # Replace with function body.
