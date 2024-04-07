@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://bde54px7in2qf"]
+
+[ext_resource type="Script" path="res://WinScreen.gd" id="1_wpn6i"]
+[ext_resource type="Texture2D" uid="uid://b4f1tw0vvetom" path="res://art/Arctic Background_1.png" id="2_r6wib"]
+
+[node name="WinScreen" type="CanvasLayer"]
+script = ExtResource("1_wpn6i")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1400.0
+offset_bottom = 1000.0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 150
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "YOU WIN!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Replay" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Replay"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Return to Map"
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
+show_behind_parent = true
+position = Vector2(700, 500)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("2_r6wib")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

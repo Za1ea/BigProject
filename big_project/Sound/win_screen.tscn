@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://mbd48e70hm64"]
 
-[ext_resource type="PackedScene" uid="uid://ccjyi8hvxarhw" path="res://home_button.tscn" id="1_epup5"]
+[ext_resource type="PackedScene" uid="uid://dacp4gog88m2b" path="res://home_button.tscn" id="1_epup5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_derpi"]
 bg_color = Color(0.196078, 0.196078, 0.196078, 1)

@@ -50,7 +50,11 @@ func attack(extra_arg_0: String):
 		var split = regex.search_all(options[i]) # splits each option into t or f then the option
 		#print(split[0].get_string(), split[1].get_string())
 		#for result in regex.search_all(option):
-		optionbtns[i].text = split[1].get_string() # gets only the option and displays on button
+		var option = split.slice(1,split.size())
+		var option_text = ""
+		for elem in option:
+			option_text += elem.get_string() + " "
+		optionbtns[i].text = option_text # gets only the option and displays on button
 		
 		# check if it's the right answer
 		if split[0].get_string() == "t":
@@ -61,6 +65,7 @@ func attack(extra_arg_0: String):
 
 func correct():
 	$Trivia.hide()
+	await get_tree().create_timer(0.5).timeout
 	current_trash_health = max(0, current_trash_health - damage)
 	set_health($TrashContainer/ProgressBar, current_trash_health, max_trash_health)
 	if current_trash_health == 0:

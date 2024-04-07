@@ -1,8 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dgjilkk6m2xw4"]
+[gd_scene load_steps=15 format=3 uid="uid://b0ku54yf6r35v"]
 
 [ext_resource type="Script" path="res://battle.gd" id="1_3apam"]
-[ext_resource type="Texture2D" uid="uid://duxk13ry0vuaw" path="res://art/trashmonster.png" id="1_ca75h"]
-[ext_resource type="Texture2D" uid="uid://spw7tfh0ix32" path="res://art/obstaclecourse.png" id="1_dgmre"]
+[ext_resource type="Texture2D" path="res://art/trashmonster.png" id="1_ca75h"]
+[ext_resource type="Texture2D" path="res://art/obstaclecourse.png" id="1_dgmre"]
 [ext_resource type="Texture2D" uid="uid://bp8v8iijbblyw" path="res://art/submarinefinal (1).png" id="3_f1ekf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kd8mi"]
@@ -234,7 +234,6 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_gwxo3")
 text = "Clean Up"
 
 [node name="Trivia" type="Panel" parent="."]
-visible = false
 custom_minimum_size = Vector2(900, 700)
 layout_mode = 1
 anchors_preset = 8
@@ -248,14 +247,18 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_rkr4t")
 
 [node name="Question" type="Label" parent="Trivia"]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 247.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -440.0
+offset_right = 440.0
+offset_bottom = 270.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 40
 text = "How many blah blah blah"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Options" type="VBoxContainer" parent="Trivia"]
 layout_mode = 1
@@ -265,7 +268,7 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -256.0
-offset_top = -458.0
+offset_top = -435.0
 offset_right = 292.0
 grow_horizontal = 2
 grow_vertical = 0

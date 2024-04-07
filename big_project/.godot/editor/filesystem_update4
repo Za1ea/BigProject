@@ -21,3 +21,5 @@ res://scene_transition.gd
 res://start.gd
 res://sub_home.gd
 res://TMonster_Ifo.gd
+res://grid.gd
+res://win_screen.tscn
