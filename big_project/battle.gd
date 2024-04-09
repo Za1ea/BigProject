@@ -47,6 +47,7 @@ func attack(extra_arg_0: String):
 	regex.compile("\\w+") 
 	for i in range(3):
 		optionbtns[i].pressed.disconnect(self.correct)
+		optionbtns[i].pressed.disconnect(self.incorrect)
 		var split = regex.search_all(options[i]) # splits each option into t or f then the option
 		#print(split[0].get_string(), split[1].get_string())
 		#for result in regex.search_all(option):
@@ -67,16 +68,22 @@ func correct():
 	$Trivia.hide()
 	await get_tree().create_timer(0.5).timeout
 	current_trash_health = max(0, current_trash_health - damage)
+	$enemyDamage.vis = true
 	set_health($TrashContainer/ProgressBar, current_trash_health, max_trash_health)
+	await get_tree().create_timer(2.0).timeout
+	$enemyDamage.vis = false
 	if current_trash_health == 0:
 		print("you win!")
 	else:
-		await get_tree().create_timer(1.0).timeout
+		await get_tree().create_timer(0.25).timeout
 		enemy_turn()
 
 func enemy_turn():
+	$playerDamage.vis = true
 	current_player_health = max(0, current_player_health - enemy_damage)
 	set_health($PlayerContainer/ProgressBar, current_player_health, max_player_health)
+	await get_tree().create_timer(2.0).timeout
+	$playerDamage.vis = false
 
 func incorrect():
 	$Trivia.hide()

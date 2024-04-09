@@ -1,5 +1,6 @@
-AnimationPlayer
+RichTextLabel
 Label
+AnimationPlayer
 Button
 VBoxContainer
 Panel
@@ -10,6 +11,4 @@ TextureRect
 Control
 PopupPanel
 Node2D
-Popup
-ColorRect
 Popup

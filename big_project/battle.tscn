@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://b0ku54yf6r35v"]
+[gd_scene load_steps=16 format=3 uid="uid://b0ku54yf6r35v"]
 
 [ext_resource type="Script" path="res://battle.gd" id="1_3apam"]
-[ext_resource type="Texture2D" path="res://art/trashmonster.png" id="1_ca75h"]
-[ext_resource type="Texture2D" path="res://art/obstaclecourse.png" id="1_dgmre"]
+[ext_resource type="Texture2D" uid="uid://duxk13ry0vuaw" path="res://art/trashmonster.png" id="1_ca75h"]
+[ext_resource type="Texture2D" uid="uid://spw7tfh0ix32" path="res://art/obstaclecourse.png" id="1_dgmre"]
 [ext_resource type="Texture2D" uid="uid://bp8v8iijbblyw" path="res://art/submarinefinal (1).png" id="3_f1ekf"]
+[ext_resource type="Script" path="res://playerDamage.gd" id="5_xcbat"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kd8mi"]
 animations = [{
@@ -135,10 +136,10 @@ text = "HP: 25/50"
 
 [node name="PlayerContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 165.0
-offset_top = 304.0
-offset_right = 386.0
-offset_bottom = 647.0
+offset_left = 171.0
+offset_top = 285.0
+offset_right = 392.0
+offset_bottom = 628.0
 
 [node name="Player" type="AnimatedSprite2D" parent="PlayerContainer"]
 position = Vector2(169, 240)
@@ -172,7 +173,7 @@ text = "HP: 25/50"
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
-offset_top = 814.0
+offset_top = 873.0
 offset_right = 1400.0
 offset_bottom = 1002.0
 
@@ -194,7 +195,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 90
+theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_vfef8")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gwxo3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_gwxo3")
@@ -210,7 +211,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 90
+theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_vfef8")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gwxo3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_gwxo3")
@@ -226,7 +227,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 90
+theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_vfef8")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gwxo3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_gwxo3")
@@ -234,6 +235,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_gwxo3")
 text = "Clean Up"
 
 [node name="Trivia" type="Panel" parent="."]
+visible = false
 custom_minimum_size = Vector2(900, 700)
 layout_mode = 1
 anchors_preset = 8
@@ -299,6 +301,28 @@ text = "Option 1"
 libraries = {
 "": SubResource("AnimationLibrary_33m1b")
 }
+
+[node name="playerDamage" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 225.0
+offset_right = 424.0
+offset_bottom = 280.0
+theme_override_colors/default_color = Color(0.796078, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+text = "-5"
+script = ExtResource("5_xcbat")
+
+[node name="enemyDamage" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 1140.0
+offset_top = 113.0
+offset_right = 1203.0
+offset_bottom = 168.0
+theme_override_colors/default_color = Color(0.796078, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+text = "-5"
+script = ExtResource("5_xcbat")
 
 [connection signal="pressed" from="Panel/Actions/Recycle" to="." method="attack" binds= ["recycle"]]
 [connection signal="pressed" from="Panel/Actions/Reuse" to="." method="attack" binds= ["reuse"]]
