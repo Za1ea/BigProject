@@ -54,3 +54,9 @@ offset_top = 570.0
 offset_right = 1000.0
 offset_bottom = 670.0
 theme_override_font_sizes/font_size = 50
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Next Level"
