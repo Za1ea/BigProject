@@ -1,0 +1,305 @@
+[gd_scene load_steps=15 format=3 uid="uid://b0ku54yf6r35v"]
+
+[ext_resource type="Script" path="res://battle.gd" id="1_3apam"]
+[ext_resource type="Texture2D" path="res://art/trashmonster.png" id="1_ca75h"]
+[ext_resource type="Texture2D" path="res://art/obstaclecourse.png" id="1_dgmre"]
+[ext_resource type="Texture2D" uid="uid://bp8v8iijbblyw" path="res://art/submarinefinal (1).png" id="3_f1ekf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kd8mi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ca75h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pwa6k"]
+bg_color = Color(0.878431, 0, 0.00392157, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hx06f"]
+bg_color = Color(0.266667, 0.490196, 0.211765, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bxxht"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_f1ekf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vfef8"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwxo3"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkr4t"]
+bg_color = Color(0.121569, 0.121569, 0.121569, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2hyu"]
+bg_color = Color(0.34902, 0.34902, 0.34902, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Animation" id="Animation_d6nss"]
+resource_name = "enemy_damaged"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_33m1b"]
+_data = {
+"enemy_damaged": SubResource("Animation_d6nss")
+}
+
+[node name="Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3apam")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1409.0
+offset_bottom = 999.0
+texture = ExtResource("1_dgmre")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="TrashContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 906.0
+offset_top = 177.0
+offset_right = 1296.0
+offset_bottom = 543.0
+
+[node name="TrashMonster" type="AnimatedSprite2D" parent="TrashContainer"]
+position = Vector2(262, 356)
+scale = Vector2(0.7, 0.729)
+sprite_frames = SubResource("SpriteFrames_kd8mi")
+metadata/_edit_lock_ = true
+
+[node name="ProgressBar" type="ProgressBar" parent="TrashContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_pwa6k")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hx06f")
+max_value = 50.0
+value = 25.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="TrashContainer/ProgressBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -11.5
+offset_right = 37.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP: 25/50"
+
+[node name="PlayerContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 304.0
+offset_right = 386.0
+offset_bottom = 647.0
+
+[node name="Player" type="AnimatedSprite2D" parent="PlayerContainer"]
+position = Vector2(169, 240)
+scale = Vector2(0.3, 0.313)
+sprite_frames = SubResource("SpriteFrames_bxxht")
+metadata/_edit_lock_ = true
+
+[node name="ProgressBar" type="ProgressBar" parent="PlayerContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_pwa6k")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hx06f")
+max_value = 50.0
+value = 25.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="PlayerContainer/ProgressBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -11.5
+offset_right = 37.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP: 25/50"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+offset_top = 814.0
+offset_right = 1400.0
+offset_bottom = 1002.0
+
+[node name="Actions" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Recycle" type="Button" parent="Panel/Actions"]
+custom_minimum_size = Vector2(450, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_vfef8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gwxo3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gwxo3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gwxo3")
+text = "Recycle"
+
+[node name="Reuse" type="Button" parent="Panel/Actions"]
+custom_minimum_size = Vector2(450, 0)
+layout_direction = 2
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_vfef8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gwxo3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gwxo3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gwxo3")
+text = "Reuse"
+
+[node name="Cleanup" type="Button" parent="Panel/Actions"]
+custom_minimum_size = Vector2(450, 0)
+layout_direction = 2
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_vfef8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gwxo3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gwxo3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_gwxo3")
+text = "Clean Up"
+
+[node name="Trivia" type="Panel" parent="."]
+custom_minimum_size = Vector2(900, 700)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rkr4t")
+
+[node name="Question" type="Label" parent="Trivia"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -440.0
+offset_right = 440.0
+offset_bottom = 270.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "How many blah blah blah"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Options" type="VBoxContainer" parent="Trivia"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -435.0
+offset_right = 292.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 30
+
+[node name="Option1" type="Button" parent="Trivia/Options"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_t2hyu")
+text = "Option 1"
+
+[node name="Option2" type="Button" parent="Trivia/Options"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_t2hyu")
+text = "Option 1"
+
+[node name="Option3" type="Button" parent="Trivia/Options"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_t2hyu")
+text = "Option 1"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_33m1b")
+}
+
+[connection signal="pressed" from="Panel/Actions/Recycle" to="." method="attack" binds= ["recycle"]]
+[connection signal="pressed" from="Panel/Actions/Reuse" to="." method="attack" binds= ["reuse"]]
+[connection signal="pressed" from="Panel/Actions/Cleanup" to="." method="attack" binds= ["clean_up"]]

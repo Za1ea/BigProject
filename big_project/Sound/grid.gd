@@ -79,11 +79,13 @@ func _process(delta):
 		go_home()
 
 func go_home():
-	win_popup.instantiate()
-	#SceneTransition.change_scene("res://sub_home.tscn")
+	print("win")
+	#win_popup.instantiate()
+	SceneTransition.change_scene("res://Sound/win_screen.tscn","dissolve")
 
 func _on_restart_pressed():
 	for cell in $GridContainer.get_children():
 		if !cell.is_in_group("level1"):
 			cell.reset()
 		
+

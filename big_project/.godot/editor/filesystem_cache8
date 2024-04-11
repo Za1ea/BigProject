@@ -2,11 +2,12 @@ ea4bc82a6ad023ab7ee23ee620429895
 ::res://::1712358553
 alert.gd::GDScript::-1::1712358335::0::1::::<>Area2D<>::
 alert.tscn::PackedScene::6784943284066127359::1712358335::0::1::::<><>::uid://ci3eb80lw2tc3::::res://art/alert.png<>res://alert.gd<>uid://0g3ld1yqugen::::res://art/alert2.png
-cell.tscn::PackedScene::7046012253526781709::1712358335::0::1::::<><>::res://cell.gd<>uid://dh6ri0wmevpxo::::res://art/square with dot.png<>uid://caaiygfklu101::::res://art/square.png<>uid://bbrlw1t1xkbeo::::res://art/red_dot.png<>uid://csp4cbt5houyn::::res://art/purple_dot.png<>uid://cdfpmpfa7px36::::res://art/teal_dot.png<>uid://drtgti8lx5ldj::::res://art/blue_whale_1.png<>uid://plvm7o0nafyr::::res://art/blue_whale_2.png
 cell_vars.gd::GDScript::-1::1712358335::0::1::::<>Node2D<>::
-global.gd::GDScript::-1::1712358335::0::1::::<>Node<>::
+global.gd::GDScript::-1::1712532920::0::1::::<>Node<>::
 grid.gd::GDScript::-1::1712358335::0::1::::<>Node2D<>::
 grid.tscn::PackedScene::3483900907337510435::1712358335::0::1::::<><>::uid://dkt72sw2uuwyb::::res://art/cargo_ship.png<>uid://c64122exa4lya::::res://art/red_boat.png<>uid://6onhafwrm3br::::res://art/teal_boat.png
+home_button.gd::GDScript::-1::1712450454::0::1::::<>Button<>::
+home_button.tscn::PackedScene::7164353686587547807::1712641135::0::1::::<><>::res://home_button.gd
 icon.svg::CompressedTexture2D::4067679029610153788::1712358335::1712358335::1::::<><>::
 intro.gd::GDScript::-1::1712358335::0::1::::<>Node2D<>::
 intro.tscn::PackedScene::7343261443093654176::1712358335::0::1::::<><>::res://intro.gd<>uid://cikjl7dnjkh3i::::res://art/text.png
@@ -28,6 +29,8 @@ sub_home.gd::GDScript::-1::1712358335::0::1::::<>Control<>::
 sub_home.tscn::PackedScene::5598508474601806777::1712358335::0::1::::<><>::res://sub_home.gd<>uid://df0aestmgud74::::res://art/homepage1.png<>uid://dcvepch0ulnwi::::res://intro.tscn<>uid://dfcjl8okynwje::::res://art/contButton copy.png<>uid://drtgti8lx5ldj::::res://art/blue_whale_1.png<>uid://dqoem0qolc1my::::res://art/contButton.png
 TMonster_Ifo.gd::GDScript::-1::1712358335::0::1::::<>Node2D<>::
 TMonster_Ifo.tscn::PackedScene::5202155303868336317::1712358335::0::1::::<><>::res://TMonster_Ifo.gd<>uid://b2glt3q7de2p2::::res://art/bubblegum/Bubblegum.ttf<>uid://cj5p2ggt0yby7::::res://art/Arctic_Background2.jpg
+trivia.gd::GDScript::-1::1712450454::0::1::::<>Panel<>::
+win_screen.tscn::PackedScene::2607118848275593913::1712641135::0::1::::<><>::res://WinScreen.gd<>uid://b4f1tw0vvetom::::res://art/Arctic Background_1.png
 ::res://art/::1712358335
 alert2.png::CompressedTexture2D::1768827275853173069::1712358335::1712358335::1::::<><>::
 alert.png::CompressedTexture2D::5392401119790043140::1712358335::1712358335::1::::<><>::
@@ -44,6 +47,7 @@ homepage1.png::CompressedTexture2D::7561823831622199337::1712358335::1712358335:
 homepage.png::CompressedTexture2D::8445248502676437302::1712358335::1712358335::1::::<><>::
 map - Copy.png::CompressedTexture2D::2267811332608584120::1712358335::1712358335::1::::<><>::
 map.png::CompressedTexture2D::2344922676824943029::1712358335::1712358335::1::::<><>::
+obstaclecourse.png::CompressedTexture2D::1295758777060771615::1712450454::1712450454::1::::<><>::
 purple_dot.png::CompressedTexture2D::6068970666807344237::1712358335::1712358335::1::::<><>::
 red_boat.png::CompressedTexture2D::7010190758636139428::1712358335::1712358335::1::::<><>::
 red_dot.png::CompressedTexture2D::2492412519707327194::1712358335::1712358335::1::::<><>::
@@ -57,12 +61,21 @@ teal_boat.png::CompressedTexture2D::2205557271545962259::1712358335::1712358335:
 teal_dot.png::CompressedTexture2D::4994662767106607979::1712358335::1712358335::1::::<><>::
 text.png::CompressedTexture2D::5355563676683618460::1712358335::1712358335::1::::<><>::
 title.png::CompressedTexture2D::1163693883521544027::1712358335::1712358335::1::::<><>::
+trashmonster.png::CompressedTexture2D::8611174710792703838::1712450454::1712450454::1::::<><>::
 ::res://art/bubblegum/::1712358335
 Bubblegum.ttf::FontFile::4294609042277764437::1712358335::1712358335::1::::<><>::
-::res://Sound/::1712358335
-cell.gd::GDScript::-1::1712358335::0::1::::<>Control<>::
-cell.tscn::PackedScene::1054917727036780576::1712358335::0::1::::<><>::res://Sound/cell.gd<>uid://caaiygfklu101::::res://art/square.png<>uid://csp4cbt5houyn::::res://art/purple_dot.png<>uid://bbrlw1t1xkbeo::::res://art/red_dot.png<>uid://cdfpmpfa7px36::::res://art/teal_dot.png<>uid://drtgti8lx5ldj::::res://art/blue_whale_1.png<>uid://plvm7o0nafyr::::res://art/blue_whale_2.png<>uid://dh6ri0wmevpxo::::res://art/square with dot.png
-grid.gd::GDScript::-1::1712358335::0::1::::<>Node2D<>::
-grid.tscn::PackedScene::3483900907337510435::1712358335::0::1::::<><>::res://Sound/grid.gd<>uid://dkt72sw2uuwyb::::res://art/cargo_ship.png<>uid://c64122exa4lya::::res://art/red_boat.png<>uid://6onhafwrm3br::::res://art/teal_boat.png
-ship_panel.tscn::PackedScene::4183479742958275283::1712358335::0::1::::<><>::uid://dkt72sw2uuwyb::::res://art/cargo_ship.png<>uid://c64122exa4lya::::res://art/red_boat.png<>uid://6onhafwrm3br::::res://art/teal_boat.png
-win_screen.tscn::PackedScene::844566181349394227::1712358335::0::1::::<><>::
+::res://Battle/::1712641135
+battle.gd::GDScript::-1::1712635376::0::1::::<>Control<>::
+battle.tscn::PackedScene::4163055026378749849::1712641135::0::1::::<><>::res://Battle/battle.gd<>uid://duxk13ry0vuaw::::res://art/trashmonster.png<>uid://spw7tfh0ix32::::res://art/obstaclecourse.png<>uid://bp8v8iijbblyw::::res://art/submarinefinal (1).png
+::res://Obstacle/::1712641136
+course.tscn::PackedScene::7874465237707869189::1712641136::0::1::::<><>::res://Obstacle/scroll.gd<>uid://spw7tfh0ix32::::res://art/obstaclecourse.png<>uid://bybvebfhewoxk::::res://Obstacle/sub_player.tscn
+scroll.gd::GDScript::-1::1712637514::0::1::::<>ParallaxBackground<>::
+sub_player.gd::GDScript::-1::1712641135::0::1::::<>CharacterBody2D<>::
+sub_player.tscn::PackedScene::4074299569355300576::1712641136::0::1::::<><>::uid://bp8v8iijbblyw::::res://art/submarinefinal (1).png<>res://Obstacle/sub_player.gd
+::res://Sound/::1712641135
+cell.gd::GDScript::-1::1712209961::0::1::::<>Control<>::
+cell.tscn::PackedScene::1054917727036780576::1712360946::0::1::::<><>::res://Sound/cell.gd<>uid://caaiygfklu101::::res://art/square.png<>uid://csp4cbt5houyn::::res://art/purple_dot.png<>uid://bbrlw1t1xkbeo::::res://art/red_dot.png<>uid://cdfpmpfa7px36::::res://art/teal_dot.png<>uid://drtgti8lx5ldj::::res://art/blue_whale_1.png<>uid://plvm7o0nafyr::::res://art/blue_whale_2.png<>uid://dh6ri0wmevpxo::::res://art/square with dot.png
+grid.gd::GDScript::-1::1712450884::0::1::::<>Node2D<>::
+grid.tscn::PackedScene::3483900907337510435::1712641135::0::1::::<><>::res://Sound/grid.gd<>uid://dkt72sw2uuwyb::::res://art/cargo_ship.png<>uid://c64122exa4lya::::res://art/red_boat.png<>uid://6onhafwrm3br::::res://art/teal_boat.png<>uid://dacp4gog88m2b::::res://home_button.tscn
+ship_panel.tscn::PackedScene::4183479742958275283::1711642559::0::1::::<><>::uid://dkt72sw2uuwyb::::res://art/cargo_ship.png<>uid://c64122exa4lya::::res://art/red_boat.png<>uid://6onhafwrm3br::::res://art/teal_boat.png
+win_screen.tscn::PackedScene::844566181349394227::1712641135::0::1::::<><>::uid://dacp4gog88m2b::::res://home_button.tscn
