@@ -16,9 +16,12 @@ func _ready():
 
 func _on_button_pressed():
 	i += 1
-	current_text = ""
-	current_text += bubble_text[i]
-	label.text = current_text
+	if i < 3:
+		current_text = ""
+		current_text += bubble_text[i]
+		label.text = current_text
+	elif i == 3:
+		SceneTransition.change_scene("res://Battle/battle.tscn", "dissolve")
 
 
 	pass # Replace with function body.

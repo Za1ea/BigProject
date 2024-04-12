@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dacp4gog88m2b"]
+
+[ext_resource type="Script" path="res://home_button.gd" id="1_tdwtu"]
+
+[node name="homeButton" type="Button"]
+custom_minimum_size = Vector2(120, 50)
+offset_right = 137.0
+offset_bottom = 67.0
+text = "Map"
+script = ExtResource("1_tdwtu")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

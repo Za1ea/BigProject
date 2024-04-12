@@ -18,11 +18,12 @@ func _ready():
 
 func _on_button_pressed():
 	i += 1
-	current_text = ""
-	current_text += bubble_text[i]
-	label.text = current_text
-	if bubble_text[4]:
-		SceneTransition.change_scene("res:/grid.tscn","")
+	if i < 3:
+		current_text = ""
+		current_text += bubble_text[i]
+		label.text = current_text
+	elif i == 3:
+		SceneTransition.change_scene("res://Sound/grid.tscn", "dissolve")
 		
 		
 
