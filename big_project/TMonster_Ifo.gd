@@ -20,4 +20,5 @@ func _on_button_pressed():
 	current_text += bubble_text[i]
 	label.text = current_text
 
+
 	pass # Replace with function body.

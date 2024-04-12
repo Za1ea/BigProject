@@ -1,5 +1,15 @@
-res://map.tscn
+res://start.tscn
 res://Sound/grid.gd
+res://grid.gd
+res://grid.tscn
+res://map_sub.tscn
+res://map.tscn
+res://intro.tscn
+res://map_intro.tscn
+res://sub_home.tscn
 res://alert.tscn
-res://TMonster_Ifo.tscn
+res://scene_transition.tscn
+res://Route_Ifo.gd
 res://Route_Ifo.tscn
+res://WinScreen.gd
+res://win_screen.tscn

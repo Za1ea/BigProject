@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://cl07u722ltcf6"]
 
-[ext_resource type="Texture2D" uid="uid://dsk7akmwyp2as" path="res://art/homepage.png" id="1_f0hy3"]
 [ext_resource type="Script" path="res://sub_home.gd" id="1_vgnjq"]
+[ext_resource type="Texture2D" uid="uid://df0aestmgud74" path="res://art/homepage1.png" id="2_qiic3"]
 [ext_resource type="PackedScene" uid="uid://dcvepch0ulnwi" path="res://intro.tscn" id="3_pr250"]
 [ext_resource type="Texture2D" uid="uid://dfcjl8okynwje" path="res://art/contButton copy.png" id="4_14ran"]
 [ext_resource type="Texture2D" uid="uid://drtgti8lx5ldj" path="res://art/blue_whale_1.png" id="4_fvjwp"]
@@ -47,11 +47,20 @@ script = ExtResource("1_vgnjq")
 layout_mode = 0
 offset_right = 1477.0
 offset_bottom = 1001.0
-texture = ExtResource("1_f0hy3")
+texture = ExtResource("2_qiic3")
 expand_mode = 1
 stretch_mode = 4
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 774.0
+offset_right = 905.0
+offset_bottom = 831.0
+color = Color(0.0313726, 0.247059, 0.337255, 1)
+
 [node name="intro" parent="." instance=ExtResource("3_pr250")]
+visible = false
 position = Vector2(186, 155)
 
 [node name="Button" type="Button" parent="."]
@@ -79,14 +88,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_a0v3b")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_wwrto")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wiyel")
 disabled = true
-
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 531.0
-offset_top = 774.0
-offset_right = 905.0
-offset_bottom = 831.0
-color = Color(0.0313726, 0.247059, 0.337255, 1)
 
 [node name="Button3" type="Button" parent="."]
 layout_mode = 0
