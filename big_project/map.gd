@@ -15,13 +15,13 @@ func _process(delta):
 
 
 func _on_alert_body_entered(body):
-	SceneTransition.change_scene("res://Obstacle_Ifo.tscn", "dissolve")
+	SceneTransition.change_scene("res://TMonster_Ifo.tscn", "dissolve")
 	
 	
 
 
 func _on_alert_3_body_entered(body):
-	SceneTransition.change_scene_to_file("res://Info.tscn")
+	SceneTransition.change_scene("res://Obstacle_Ifo.tscn", "dissolve")
 	
 
 

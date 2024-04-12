@@ -18,7 +18,7 @@ var trivia = {
 		"How many pounds of plastic enters the ocean every year?": ["t~33 billion", "f~15 billion", "f~1 billion"],
 		"How long does plastic take to decompose?": ["t~500-1000 years", "f~10,000 years", "f~100-500 years"],
 		"What is the largest trash site in the ocean?": ["t~Great Pacific Garbage Patch", "f~Great Atlantic Garbage Patch", "f~Great Pacific Plastic Patch"],
-		"What animal can be easily mistaken for trash bags?": ["t~Jellyfish", "f~Manatee", "f~Sunfish"],
+		"What animal can be easily mistaken for plastic bags?": ["t~Jellyfish", "f~Manatee", "f~Sunfish"],
 		"question 5": ["t~yes", "f~no", "f~no"],
 	},
 	"reuse": {

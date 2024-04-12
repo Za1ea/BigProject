@@ -42,7 +42,7 @@ func switch_color(color):
 	$square/animation.position = Vector2i(0, 5)
 	#print(color)
 	#print("current: ", current)
-	if color.is_empty():
+	if color.is_empty() && fixed == false:
 	#	print("empty")
 		$square/animation.animation = "default"
 		current = ""

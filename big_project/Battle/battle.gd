@@ -64,18 +64,18 @@ func attack(extra_arg_0: String):
 		
 			# check if it's the right answer
 			if split[0] == "t":
-				optionbtns[i].pressed.connect(self.correct.bind(i))
+				optionbtns[i].pressed.connect(self.correct)
 				questions.erase(question)
 			else:
-				optionbtns[i].pressed.connect(self.incorrect.bind(i))
+				optionbtns[i].pressed.connect(self.incorrect)
 
 	else:
 		$TryNewMove.vis = true
 		await get_tree().create_timer(2.0).timeout
 		$TryNewMove.vis = false
 
-func correct(extra_arg_0: int):
-	chosen = extra_arg_0
+func correct():
+	#chosen = extra_arg_0
 	
 	$Trivia.hide()
 	await get_tree().create_timer(0.5).timeout

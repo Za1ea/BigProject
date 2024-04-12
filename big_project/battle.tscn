@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://b0ku54yf6r35v"]
 
 [ext_resource type="Script" path="res://battle.gd" id="1_3apam"]
-[ext_resource type="Texture2D" path="res://art/trashmonster.png" id="1_ca75h"]
-[ext_resource type="Texture2D" path="res://art/obstaclecourse.png" id="1_dgmre"]
+[ext_resource type="Texture2D" uid="uid://duxk13ry0vuaw" path="res://art/trashmonster.png" id="1_ca75h"]
+[ext_resource type="Texture2D" uid="uid://spw7tfh0ix32" path="res://art/obstaclecourse.png" id="1_dgmre"]
 [ext_resource type="Texture2D" uid="uid://bp8v8iijbblyw" path="res://art/submarinefinal (1).png" id="3_f1ekf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kd8mi"]
