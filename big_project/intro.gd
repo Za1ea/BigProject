@@ -1,6 +1,6 @@
 extends Node2D
 
-var bubble_text = "all the intro text that someone is going to write"
+var bubble_text = "Welcome, Researcher! You are an oceanographer, tasked with helping people and animals around the world with their aquatic issues. You are constantly getting calls to your submarine, and you have a lot to do! Choose your task by opening your challenge map, and help the Ocean!"
 var can_shrink = true
 var bubble_text_length = 0
 var bubble_text_index = 0
