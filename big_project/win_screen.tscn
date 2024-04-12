@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bde54px7in2qf"]
+[gd_scene load_steps=3 format=3 uid="uid://mbd48e70hm64"]
 
 [ext_resource type="Script" path="res://WinScreen.gd" id="1_wpn6i"]
 [ext_resource type="FontFile" uid="uid://b2glt3q7de2p2" path="res://art/bubblegum/Bubblegum.ttf" id="2_b5hkk"]
@@ -25,16 +25,23 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tl26i"]
 
-[node name="WinScreen" type="CanvasLayer"]
-script = ExtResource("1_wpn6i")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_derpi"]
+bg_color = Color(0.196078, 0.196078, 0.196078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 1400.0
-offset_bottom = 1000.0
-theme_override_constants/margin_left = 100
-theme_override_constants/margin_top = 100
-theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 100
+[node name="Node2D" type="Panel"]
+custom_minimum_size = Vector2(1200, 800)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_derpi")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -81,11 +88,8 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_bfpjq")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tl26i")
 text = "Return to Map"
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
-show_behind_parent = true
-position = Vector2(700, 500)
-scale = Vector2(0.666667, 0.666667)
-texture = ExtResource("2_r6wib")
-
-[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Replay" to="." method="_on_replay_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Next Level"
