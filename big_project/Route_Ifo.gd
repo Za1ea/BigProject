@@ -22,7 +22,7 @@ func _on_button_pressed():
 	current_text += bubble_text[i]
 	label.text = current_text
 	if bubble_text[4]:
-		SceneTransition.change_scene("res:/grid.tscn")
+		SceneTransition.change_scene("res:/grid.tscn","")
 		
 		
 

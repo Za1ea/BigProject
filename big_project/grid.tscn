@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bpvvlr2xeo60f"]
+[gd_scene load_steps=12 format=3 uid="uid://d13efrryffrmk"]
 
 [ext_resource type="Texture2D" uid="uid://dkt72sw2uuwyb" path="res://art/cargo_ship.png" id="2_b6ckh"]
 [ext_resource type="Texture2D" uid="uid://c64122exa4lya" path="res://art/red_boat.png" id="3_23dl6"]

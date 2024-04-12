@@ -1,7 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://domoenkr118du"]
+[gd_scene load_steps=15 format=3 uid="uid://domoenkr118du"]
 
 [ext_resource type="Script" path="res://WinScreen.gd" id="1_wpn6i"]
+[ext_resource type="FontFile" uid="uid://b2glt3q7de2p2" path="res://art/bubblegum/Bubblegum.ttf" id="2_b5hkk"]
 [ext_resource type="Texture2D" uid="uid://b4f1tw0vvetom" path="res://art/Arctic Background_1.png" id="2_r6wib"]
+[ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="3_4hsxb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8jppr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ersdk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mclia"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ietqo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1sit"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8krr5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bpptx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a4rqv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bfpjq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tl26i"]
 
 [node name="WinScreen" type="CanvasLayer"]
 script = ExtResource("1_wpn6i")
@@ -20,7 +42,10 @@ theme_override_constants/separation = 150
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
+theme_override_colors/font_color = Color(0.00392157, 0.65098, 0.831373, 1)
+theme_override_colors/font_outline_color = Color(0.00392157, 0.188235, 0.831373, 1)
+theme_override_fonts/font = ExtResource("2_b5hkk")
+theme_override_font_sizes/font_size = 200
 text = "YOU WIN!"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -34,12 +59,26 @@ theme_override_constants/separation = 60
 
 [node name="Replay" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
+theme_override_colors/font_color = Color(0.133333, 0.266667, 0.780392, 1)
+theme_override_fonts/font = ExtResource("3_4hsxb")
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8jppr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ersdk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mclia")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ietqo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r1sit")
 text = "Replay"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
+theme_override_colors/font_color = Color(0.133333, 0.266667, 0.780392, 1)
+theme_override_fonts/font = ExtResource("3_4hsxb")
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8krr5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bpptx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a4rqv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bfpjq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tl26i")
 text = "Return to Map"
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]

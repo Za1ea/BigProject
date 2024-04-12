@@ -60,7 +60,6 @@ offset_bottom = 831.0
 color = Color(0.0313726, 0.247059, 0.337255, 1)
 
 [node name="intro" parent="." instance=ExtResource("3_pr250")]
-visible = false
 position = Vector2(186, 155)
 
 [node name="Button" type="Button" parent="."]
