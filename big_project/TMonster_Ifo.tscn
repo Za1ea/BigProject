@@ -9,8 +9,8 @@ script = ExtResource("1_yce54")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_top = 3.0
-offset_right = 1154.0
-offset_bottom = 646.0
+offset_right = 1400.0
+offset_bottom = 1003.0
 size_flags_vertical = 3
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 0
@@ -58,8 +58,8 @@ text = "Next
 
 [node name="background" type="Sprite2D" parent="."]
 show_behind_parent = true
-position = Vector2(576, 324)
-scale = Vector2(1.00033, 1)
+position = Vector2(699.905, 500)
+scale = Vector2(1.21544, 1.54321)
 texture = ExtResource("2_ps324")
 
 [connection signal="sort_children" from="MarginContainer" to="." method="_on_margin_container_sort_children"]

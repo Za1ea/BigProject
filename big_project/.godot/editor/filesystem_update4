@@ -1,2 +1,5 @@
-res://Route_Ifo.tscn
+res://map.tscn
 res://Sound/grid.gd
+res://alert.tscn
+res://TMonster_Ifo.tscn
+res://Route_Ifo.tscn
