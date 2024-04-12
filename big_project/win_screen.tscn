@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://domoenkr118du"]
+[gd_scene load_steps=3 format=3 uid="uid://bde54px7in2qf"]
 
 [ext_resource type="Script" path="res://WinScreen.gd" id="1_wpn6i"]
 [ext_resource type="Texture2D" uid="uid://b4f1tw0vvetom" path="res://art/Arctic Background_1.png" id="2_r6wib"]

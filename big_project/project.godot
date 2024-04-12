@@ -24,6 +24,7 @@ SceneTransition="*res://scene_transition.tscn"
 
 window/size/viewport_width=1400
 window/size/viewport_height=1000
+window/stretch/mode="canvas_items"
 
 [input]
 
