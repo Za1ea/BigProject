@@ -1,6 +1,11 @@
 TextureRect
 Label
 MarginContainer
+CenterContainer
+MarginContainer
+TextureRect
+Control
+Label
 Node2D
 Button
 Timer

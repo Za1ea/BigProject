@@ -16,3 +16,16 @@ res://Battle/battle.gd
 res://global.gd
 res://Obstacle/GameOver.tscn
 res://Obstacle/course.tscn
+res://win_screen.tscn
+res://Battle/LoseScreen.tscn
+res://Sound/cell.tscn
+res://grid.tscn
+res://Route_Ifo.tscn
+res://Sound/cell.gd
+res://Obstacle/course.gd
+res://Obstacle_Ifo.tscn
+res://Obstacle_Ifo.gd
+res://scene_transition.tscn
+res://Replay.gd
+res://home_button.gd
+res://scene_transition.gd

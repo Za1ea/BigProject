@@ -8,6 +8,7 @@ var time = 60
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	global.current_game = "Course"
 	start_game()
 
 func start_game():
@@ -63,7 +64,7 @@ func _on_wreck_timer_timeout():
 
 func set_velocity(obj):
 	# Choose the velocity for the mob.
-	var velocity   = (2000.0 - time*20)
+	var velocity   = (2000.0 - time*18)
 	obj.velocity.x -= velocity
 	#print(obj.velocity)
 	#obj.move_and_slide()
