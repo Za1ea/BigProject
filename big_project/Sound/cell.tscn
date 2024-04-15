@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cdfpmpfa7px36" path="res://art/teal_dot.png" id="5_isdk4"]
 [ext_resource type="Texture2D" uid="uid://drtgti8lx5ldj" path="res://art/blue_whale_1.png" id="6_xcniv"]
 [ext_resource type="Texture2D" uid="uid://plvm7o0nafyr" path="res://art/blue_whale_2.png" id="7_vrc5r"]
-[ext_resource type="Texture2D" uid="uid://dh6ri0wmevpxo" path="res://art/square with dot.png" id="8_chshd"]
+[ext_resource type="Texture2D" uid="uid://c237mstn1ciio" path="res://art/yellow_dot.png" id="8_256ai"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_01g8r"]
 animations = [{
@@ -67,10 +67,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_chshd")
+"texture": ExtResource("8_256ai")
 }],
 "loop": true,
-"name": &"white",
+"name": &"yellow",
 "speed": 5.0
 }]
 
@@ -90,5 +90,5 @@ sprite_frames = SubResource("SpriteFrames_01g8r")
 [node name="animation" type="AnimatedSprite2D" parent="square"]
 position = Vector2(-7.15256e-06, 5.00001)
 sprite_frames = SubResource("SpriteFrames_op8wo")
-animation = &"purple"
+animation = &"yellow"
 metadata/_edit_lock_ = true

@@ -23,6 +23,7 @@ var chosen
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	global.current_game = "Battle"
 	$TrashContainer/ProgressBar.max_value = max_trash_health
 	$TrashContainer/ProgressBar.value = max_trash_health
 	$PlayerContainer/ProgressBar.max_value = max_player_health

@@ -1,14 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://bde54px7in2qf"]
+[gd_scene load_steps=16 format=3 uid="uid://bde54px7in2qf"]
 
 [ext_resource type="FontFile" uid="uid://b2glt3q7de2p2" path="res://art/bubblegum/Bubblegum.ttf" id="2_b5hkk"]
+[ext_resource type="Texture2D" uid="uid://b4f1tw0vvetom" path="res://art/Arctic Background_1.png" id="2_r6wib"]
 [ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="3_4hsxb"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_derpi"]
-bg_color = Color(0.196078, 0.196078, 0.196078, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[ext_resource type="Script" path="res://home_button.gd" id="4_3lh3c"]
+[ext_resource type="Script" path="res://Replay.gd" id="5_7y3w1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8krr5"]
 
@@ -30,28 +26,42 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1sit"]
 
-[node name="Node2D" type="Panel"]
+[node name="Node2D" type="Control"]
 custom_minimum_size = Vector2(1200, 800)
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_derpi")
+layout_mode = 3
+anchors_preset = 0
+offset_left = -3.0
+offset_top = -1.0
+offset_right = 1401.0
+offset_bottom = 1000.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.081
+anchor_top = -0.121
+anchor_right = -0.081
+anchor_bottom = -0.121
+offset_left = 113.724
+offset_top = 121.121
+offset_right = 1513.72
+offset_bottom = 1121.12
+texture = ExtResource("2_r6wib")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_top = 11.0
-offset_right = 1200.0
-offset_bottom = 794.0
+offset_right = 1400.0
+offset_bottom = 1000.0
 
-[node name="MarginContainer#VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/separation = 150
 
-[node name="MarginContainer_VBoxContainer#Label" type="Label" parent="MarginContainer/MarginContainer#VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.00392157, 0.65098, 0.831373, 1)
 theme_override_colors/font_outline_color = Color(0.00392157, 0.188235, 0.831373, 1)
@@ -61,16 +71,16 @@ text = "YOU WIN!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer_VBoxContainer#CenterContainer" type="CenterContainer" parent="MarginContainer/MarginContainer#VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="MarginContainer_VBoxContainer_CenterContainer#VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer#VBoxContainer/MarginContainer_VBoxContainer#CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CenterContainer"]
 layout_mode = 2
 theme_override_constants/separation = 60
 
-[node name="MarginContainer_VBoxContainer_CenterContainer_VBoxContainer#Quit" type="Button" parent="MarginContainer/MarginContainer#VBoxContainer/MarginContainer_VBoxContainer#CenterContainer/MarginContainer_VBoxContainer_CenterContainer#VBoxContainer"]
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.266667, 0.780392, 1)
 theme_override_fonts/font = ExtResource("3_4hsxb")
@@ -81,8 +91,9 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_a4rqv")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_bfpjq")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tl26i")
 text = "Return to Map"
+script = ExtResource("4_3lh3c")
 
-[node name="MarginContainer_VBoxContainer_CenterContainer_VBoxContainer#Replay" type="Button" parent="MarginContainer/MarginContainer#VBoxContainer/MarginContainer_VBoxContainer#CenterContainer/MarginContainer_VBoxContainer_CenterContainer#VBoxContainer"]
+[node name="Replay" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.266667, 0.780392, 1)
 theme_override_fonts/font = ExtResource("3_4hsxb")
@@ -93,3 +104,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_mclia")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_ietqo")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_r1sit")
 text = "Replay"
+script = ExtResource("5_7y3w1")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Quit" to="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Quit" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Replay" to="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Replay" method="on_replay_pressed"]

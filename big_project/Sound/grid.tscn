@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bpvvlr2xeo60f"]
+[gd_scene load_steps=15 format=3 uid="uid://bpvvlr2xeo60f"]
 
 [ext_resource type="Script" path="res://Sound/grid.gd" id="1_vygvi"]
 [ext_resource type="Texture2D" uid="uid://dkt72sw2uuwyb" path="res://art/cargo_ship.png" id="2_b6ckh"]
+[ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="2_pbvk6"]
 [ext_resource type="Texture2D" uid="uid://c64122exa4lya" path="res://art/red_boat.png" id="3_23dl6"]
 [ext_resource type="Texture2D" uid="uid://6onhafwrm3br" path="res://art/teal_boat.png" id="4_vjqlq"]
 [ext_resource type="PackedScene" uid="uid://dacp4gog88m2b" path="res://home_button.tscn" id="5_0osji"]
@@ -29,18 +30,21 @@ corner_radius_bottom_left = 5
 [node name="grid" type="Node2D" groups=["cells", "level1"]]
 script = ExtResource("1_vygvi")
 
-[node name="GridContainer" type="GridContainer" parent="."]
-offset_right = 1026.0
+[node name="Center" type="CenterContainer" parent="."]
+offset_right = 1071.0
 offset_bottom = 998.0
+
+[node name="GridContainer" type="GridContainer" parent="Center"]
+layout_mode = 2
 theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 5
 columns = 7
 
 [node name="ColorRect" type="Panel" parent="."]
 offset_left = 1071.0
-offset_top = 256.0
+offset_top = 316.0
 offset_right = 1327.0
-offset_bottom = 833.0
+offset_bottom = 893.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_kdiam")
 
 [node name="purple" type="Button" parent="ColorRect"]
@@ -50,11 +54,12 @@ offset_top = 34.0
 offset_right = 241.0
 offset_bottom = 126.0
 theme_override_colors/font_color = Color(0.101961, 0.101961, 0.384314, 1)
-theme_override_colors/font_pressed_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_colors/font_hover_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_colors/font_focus_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_pbvk6")
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxEmpty_y0xjk")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ox4ff")
 theme_override_styles/pressed = SubResource("StyleBoxLine_8solv")
@@ -77,11 +82,12 @@ offset_top = 166.0
 offset_right = 235.0
 offset_bottom = 258.0
 theme_override_colors/font_color = Color(0.694118, 0.0235294, 0.133333, 1)
-theme_override_colors/font_pressed_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_colors/font_hover_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_colors/font_focus_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_pbvk6")
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxEmpty_y0xjk")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ox4ff")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_vce2d")
@@ -104,11 +110,12 @@ offset_top = 297.0
 offset_right = 239.0
 offset_bottom = 389.0
 theme_override_colors/font_color = Color(0.0823529, 0.431373, 0.454902, 1)
-theme_override_colors/font_pressed_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_colors/font_hover_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_colors/font_focus_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_pbvk6")
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxEmpty_y0xjk")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ox4ff")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_vce2d")
@@ -131,11 +138,12 @@ offset_top = 418.0
 offset_right = 247.0
 offset_bottom = 510.0
 theme_override_colors/font_color = Color(1, 0.843137, 0.380392, 1)
-theme_override_colors/font_pressed_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_colors/font_hover_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_colors/font_focus_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.301961, 0.301961, 0.301961, 1)
-theme_override_font_sizes/font_size = 25
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_pbvk6")
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxEmpty_y0xjk")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ox4ff")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_vce2d")
@@ -153,19 +161,21 @@ texture = ExtResource("5_g0w20")
 
 [node name="Restart" type="Button" parent="."]
 offset_left = 1125.0
-offset_top = 162.0
+offset_top = 222.0
 offset_right = 1272.0
-offset_bottom = 221.0
+offset_bottom = 281.0
+theme_override_fonts/font = ExtResource("2_pbvk6")
+theme_override_font_sizes/font_size = 40
 text = "Restart"
 
 [node name="HomeButton" parent="." instance=ExtResource("5_0osji")]
 offset_left = 1125.0
-offset_top = 25.0
-offset_right = 1735.0
-offset_bottom = 525.0
+offset_top = 85.0
+offset_right = 1739.0
+offset_bottom = 585.0
 
 [connection signal="pressed" from="ColorRect/purple" to="." method="_on_ship_pressed" binds= ["purple"]]
 [connection signal="pressed" from="ColorRect/red" to="." method="_on_ship_pressed" binds= ["red"]]
 [connection signal="pressed" from="ColorRect/teal" to="." method="_on_ship_pressed" binds= ["teal"]]
-[connection signal="pressed" from="ColorRect/yellow" to="." method="_on_ship_pressed" binds= ["white"]]
+[connection signal="pressed" from="ColorRect/yellow" to="." method="_on_ship_pressed" binds= ["yellow"]]
 [connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]

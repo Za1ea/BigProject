@@ -1,12 +1,13 @@
 extends Node
 
+var current_game: String
 
 var grid: Array[Array] = []
 
 var level1_ans = [
 	["purple", "purple", "purple", "purple", "purple", "purple", "red"   ],
-	["white" , "whale" , "whale" , "whale" , "whale" , "purple", "red"   ],
-	["white" , "white" , "white" , "white" , "white" , "purple", "red"   ],
+	["yellow", "whale" , "whale" , "whale" , "whale" , "purple", "red"   ],
+	["yellow", "yellow", "yellow", "yellow", "yellow", "purple", "red"   ],
 	["purple", "purple", "purple", "purple", "purple", "purple", "red"   ],
 	["purple", "red"   , "red"   , "red"   , "red"   , "red"   , "red"   ],
 	["purple", "red"   , "purple", "purple", "purple", "purple", "purple"],
