@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dkgpj6soptr8x"]
+[gd_scene load_steps=10 format=3 uid="uid://dkgpj6soptr8x"]
 
 [ext_resource type="Script" path="res://Obstacle/scroll.gd" id="1_fe8ga"]
 [ext_resource type="Script" path="res://Obstacle/course.gd" id="1_qhs60"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cwc0dt5niht4f" path="res://Obstacle/trash.tscn" id="4_bk78y"]
 [ext_resource type="PackedScene" uid="uid://bb6efrgt30m5j" path="res://Obstacle/shipwreck.tscn" id="4_h8vaw"]
 [ext_resource type="Texture2D" uid="uid://bb7wj4ivyqoru" path="res://art/oceanbackgroung.png" id="6_gttrl"]
+[ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="8_6i21q"]
 
 [sub_resource type="Curve2D" id="Curve2D_60wcg"]
 _data = {
@@ -52,7 +53,8 @@ offset_top = 6.0
 offset_right = 1385.0
 offset_bottom = 75.0
 grow_horizontal = 0
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("8_6i21q")
+theme_override_font_sizes/font_size = 100
 text = "Score: 0"
 
 [node name="WreckTimer" type="Timer" parent="."]
@@ -68,7 +70,8 @@ offset_left = 15.0
 offset_top = 1.0
 offset_right = 83.0
 offset_bottom = 84.0
-theme_override_font_sizes/font_size = 60
+theme_override_fonts/font = ExtResource("8_6i21q")
+theme_override_font_sizes/font_size = 100
 text = "60"
 
 [connection signal="timeout" from="TrashTimer" to="." method="_on_timer_timeout" binds= ["trash"]]

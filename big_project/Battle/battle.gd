@@ -4,6 +4,7 @@ var trivia = global.trivia
 var questions = trivia["recycle"]
 var regex = RegEx.new()
 
+
 @export var max_player_health: int = 50
 @export var max_trash_health: int = 100
 
@@ -23,6 +24,7 @@ var chosen
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	global.current_game = "Battle"
 	$TrashContainer/ProgressBar.max_value = max_trash_health
 	$TrashContainer/ProgressBar.value = max_trash_health
 	$PlayerContainer/ProgressBar.max_value = max_player_health

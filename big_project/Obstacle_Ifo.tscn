@@ -1,9 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgd70c55qirld"]
+[gd_scene load_steps=10 format=3 uid="uid://cgd70c55qirld"]
 
 [ext_resource type="Script" path="res://Obstacle_Ifo.gd" id="1_yce54"]
 [ext_resource type="Texture2D" uid="uid://cj5p2ggt0yby7" path="res://art/Arctic_Background2.jpg" id="2_ps324"]
 [ext_resource type="FontFile" uid="uid://b2glt3q7de2p2" path="res://art/bubblegum/Bubblegum.ttf" id="2_qb53c"]
 [ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="2_r0hkk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sim1j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dvo28"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ejevi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gew4i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ajgt3"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_yce54")
@@ -38,10 +48,10 @@ vertical_alignment = 1
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.2, 0.486275, 0.67451, 1)
+theme_override_colors/font_color = Color(0.0784314, 0.14902, 0.67451, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_r0hkk")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 60
 text = "placeholder
 "
 horizontal_alignment = 1
@@ -54,6 +64,11 @@ size_flags_vertical = 8
 theme_override_colors/font_color = Color(0.2, 0.486275, 0.67451, 1)
 theme_override_fonts/font = ExtResource("2_r0hkk")
 theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sim1j")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dvo28")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ejevi")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gew4i")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ajgt3")
 text = "Next
 "
 

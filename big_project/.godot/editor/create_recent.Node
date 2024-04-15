@@ -1,6 +1,6 @@
-MarginContainer
-Label
 TextureRect
+Label
+MarginContainer
 Node2D
 Button
 Timer
@@ -12,4 +12,3 @@ Path2D
 VisibleOnScreenNotifier2D
 RigidBody2D
 AnimatedSprite2D
-Marker2D

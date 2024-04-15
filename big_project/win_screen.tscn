@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bde54px7in2qf"]
+[gd_scene load_steps=14 format=3 uid="uid://domoenkr118du"]
 
 [ext_resource type="FontFile" uid="uid://b2glt3q7de2p2" path="res://art/bubblegum/Bubblegum.ttf" id="2_b5hkk"]
 [ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="3_4hsxb"]
@@ -30,7 +30,7 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1sit"]
 
-[node name="Node2D" type="Panel"]
+[node name="Node2D2" type="Panel"]
 custom_minimum_size = Vector2(1200, 800)
 anchors_preset = 8
 anchor_left = 0.5

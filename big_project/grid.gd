@@ -1,10 +1,8 @@
 extends Node2D
 
-var cell_scene = preload("res://Sound/cell.tscn")
-var win_popup  = preload("res://Sound/win_screen.tscn")
+var cell_scene = preload("res://cell.tscn")
 var path_color = ""
 var grid       = global.grid
-var level1_ans = global.level1_ans
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,12 +25,11 @@ func _ready():
 			grid[row].append("")
 			
 	level1()
-	#print(grid)
+	print(grid)
 
 
 func _on_ship_pressed(extra_arg_0: String):
 	path_color = extra_arg_0
-	#print(path_color)
 	var cells = $GridContainer.get_children()
 	for cell in cells:
 		#print(cell.get_child(0))
@@ -42,6 +39,7 @@ func _on_ship_pressed(extra_arg_0: String):
 #	path_color = button_colors.get(button)
 
 func level1():
+	var colors = ["purple", "white", "red", "teal"]
 	var purple_start = $GridContainer.get_child(0)
 	var purple_end   = $GridContainer.get_child(48)
 	var white_start = $GridContainer.get_child(7)
@@ -52,9 +50,6 @@ func level1():
 	var teal_end   = $GridContainer.get_child(47)
 	#var whales    = [grid.get_child(8), grid.get_child(9),]
 	var endpoints = [purple_start, purple_end, white_start, white_end, red_start, red_end, teal_start, teal_end]
-	
-	for cell in endpoints:
-		cell.fixed = true
 	
 	purple_start.switch_color("purple")
 	purple_end.switch_color("purple")
@@ -75,15 +70,11 @@ func level1():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if grid == level1_ans:
-		go_home()
+	for child in $GridContainer.get_children():
+		pass
 
-func go_home():
-	win_popup.instantiate()
-	#SceneTransition.change_scene("res://sub_home.tscn")
 
 func _on_restart_pressed():
 	for cell in $GridContainer.get_children():
 		if !cell.is_in_group("level1"):
-			cell.reset()
-		
+			cell.switch_color("")

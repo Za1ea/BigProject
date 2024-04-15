@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cl07u722ltcf6"]
+[gd_scene load_steps=18 format=3 uid="uid://cl07u722ltcf6"]
 
 [ext_resource type="Script" path="res://sub_home.gd" id="1_vgnjq"]
 [ext_resource type="Texture2D" uid="uid://df0aestmgud74" path="res://art/homepage1.png" id="2_qiic3"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dfcjl8okynwje" path="res://art/contButton copy.png" id="4_14ran"]
 [ext_resource type="Texture2D" uid="uid://drtgti8lx5ldj" path="res://art/blue_whale_1.png" id="4_fvjwp"]
 [ext_resource type="Texture2D" uid="uid://dqoem0qolc1my" path="res://art/contButton.png" id="5_tbu1q"]
+[ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="7_onqux"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wyjja"]
 
@@ -58,6 +59,20 @@ offset_top = 774.0
 offset_right = 905.0
 offset_bottom = 831.0
 color = Color(0.0313726, 0.247059, 0.337255, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.183
+anchor_bottom = 0.097
+offset_left = 655.0
+offset_top = 254.0
+offset_right = 538.8
+offset_bottom = 231.0
+theme_override_colors/font_color = Color(0.0627451, 0.231373, 0.482353, 1)
+theme_override_fonts/font = ExtResource("7_onqux")
+theme_override_font_sizes/font_size = 70
+text = "Map"
 
 [node name="intro" parent="." instance=ExtResource("3_pr250")]
 position = Vector2(186, 155)
