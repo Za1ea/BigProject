@@ -19,6 +19,8 @@ var damage = damages["recycle"]
 var enemy_damages = [5, 10]
 var chosen
 
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$TrashContainer/ProgressBar.max_value = max_trash_health
@@ -85,7 +87,7 @@ func correct():
 	await get_tree().create_timer(2.0).timeout
 	$EnemyDamage.vis = false
 	if current_trash_health == 0:
-		print("you win!")
+		SceneTransition.change_scene("res://win_screen.tscn", "")
 	else:
 		await get_tree().create_timer(0.5).timeout
 		enemy_turn(true)
@@ -114,7 +116,6 @@ func enemy_turn(correct):
 
 func incorrect():
 	$Trivia.hide()
-	print("wrong")
 	await get_tree().create_timer(1.0).timeout
 	enemy_turn(false)
 	

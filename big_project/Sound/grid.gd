@@ -11,7 +11,7 @@ func _ready():
 	# create a 6x6 grid
 	var rows = 7
 	var cols = 7
-	var cell_size = Vector2(130, 130)
+	var cell_size = Vector2(0, 0)
 #	print(cell_size)
 	for row in range(rows):
 		grid.append([])
@@ -23,7 +23,8 @@ func _ready():
 			cell.add_to_group("cells")
 			cell.row = row
 			cell.col = col
-			cell.position = Vector2(col * cell_size.x + 100, row * cell_size.x + 100)
+			cell.position = Vector2(col * cell_size.x, row * cell_size.x)
+			print(cell.position)
 			grid[row].append("")
 			
 	level1()

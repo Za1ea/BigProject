@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b0ku54yf6r35v"]
+[gd_scene load_steps=17 format=3 uid="uid://b0ku54yf6r35v"]
 
 [ext_resource type="Script" path="res://Battle/battle.gd" id="1_3apam"]
 [ext_resource type="Texture2D" uid="uid://duxk13ry0vuaw" path="res://art/trashmonster.png" id="1_ca75h"]
@@ -72,11 +72,15 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="Animation" id="Animation_botqe"]
+length = 0.001
+
 [sub_resource type="Animation" id="Animation_d6nss"]
 resource_name = "enemy_damaged"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_33m1b"]
 _data = {
+"RESET": SubResource("Animation_botqe"),
 "enemy_damaged": SubResource("Animation_d6nss")
 }
 
@@ -235,7 +239,6 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_gwxo3")
 text = "Clean Up"
 
 [node name="Trivia" type="Panel" parent="."]
-visible = false
 custom_minimum_size = Vector2(900, 700)
 layout_mode = 1
 anchors_preset = 8

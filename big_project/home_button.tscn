@@ -1,12 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://dacp4gog88m2b"]
+[gd_scene load_steps=4 format=3 uid="uid://dacp4gog88m2b"]
 
+[ext_resource type="Texture2D" uid="uid://bsduxtwkrpdkx" path="res://art/map_icon.png" id="1_ah43m"]
 [ext_resource type="Script" path="res://home_button.gd" id="1_tdwtu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4wtr"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="homeButton" type="Button"]
 custom_minimum_size = Vector2(120, 50)
-offset_right = 137.0
-offset_bottom = 67.0
+offset_right = 678.0
+offset_bottom = 508.0
+scale = Vector2(0.25, 0.22)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_o4wtr")
 text = "Map"
+icon = ExtResource("1_ah43m")
 script = ExtResource("1_tdwtu")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

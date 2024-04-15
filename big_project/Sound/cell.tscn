@@ -83,7 +83,7 @@ offset_bottom = 40.0
 script = ExtResource("1_woqsf")
 
 [node name="square" type="AnimatedSprite2D" parent="."]
-position = Vector2(60, 60)
+position = Vector2(60, 59)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_01g8r")
 
@@ -91,3 +91,4 @@ sprite_frames = SubResource("SpriteFrames_01g8r")
 position = Vector2(-7.15256e-06, 5.00001)
 sprite_frames = SubResource("SpriteFrames_op8wo")
 animation = &"purple"
+metadata/_edit_lock_ = true
