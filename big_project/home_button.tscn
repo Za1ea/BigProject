@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dacp4gog88m2b"]
+[gd_scene load_steps=5 format=3 uid="uid://dacp4gog88m2b"]
 
 [ext_resource type="Texture2D" uid="uid://bsduxtwkrpdkx" path="res://art/map_icon.png" id="1_ah43m"]
+[ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="1_kw083"]
 [ext_resource type="Script" path="res://home_button.gd" id="1_tdwtu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4wtr"]
@@ -11,7 +12,8 @@ custom_minimum_size = Vector2(120, 50)
 offset_right = 678.0
 offset_bottom = 508.0
 scale = Vector2(0.25, 0.22)
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("1_kw083")
+theme_override_font_sizes/font_size = 70
 theme_override_styles/normal = SubResource("StyleBoxFlat_o4wtr")
 text = "Map"
 icon = ExtResource("1_ah43m")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b0ku54yf6r35v"]
+[gd_scene load_steps=18 format=3 uid="uid://b0ku54yf6r35v"]
 
 [ext_resource type="Script" path="res://Battle/battle.gd" id="1_3apam"]
 [ext_resource type="Texture2D" uid="uid://duxk13ry0vuaw" path="res://art/trashmonster.png" id="1_ca75h"]
@@ -46,6 +46,9 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tehh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vfef8"]
 bg_color = Color(0, 0, 0, 1)
@@ -180,6 +183,7 @@ layout_mode = 1
 offset_top = 814.0
 offset_right = 1400.0
 offset_bottom = 1002.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6tehh")
 
 [node name="Actions" type="HBoxContainer" parent="Panel"]
 layout_mode = 1

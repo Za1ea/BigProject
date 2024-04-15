@@ -63,7 +63,7 @@ func _on_wreck_timer_timeout():
 
 func set_velocity(obj):
 	# Choose the velocity for the mob.
-	var velocity   = (2000.0 - time*7)
+	var velocity   = (2000.0 - time*20)
 	obj.velocity.x -= velocity
 	#print(obj.velocity)
 	#obj.move_and_slide()

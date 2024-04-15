@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://dkgpj6soptr8x"]
 
 [ext_resource type="Script" path="res://Obstacle/scroll.gd" id="1_fe8ga"]
-[ext_resource type="Texture2D" uid="uid://spw7tfh0ix32" path="res://art/obstaclecourse.png" id="1_k3abs"]
 [ext_resource type="Script" path="res://Obstacle/course.gd" id="1_qhs60"]
 [ext_resource type="PackedScene" uid="uid://bybvebfhewoxk" path="res://Obstacle/sub_player.tscn" id="2_eu4je"]
 [ext_resource type="PackedScene" uid="uid://oom7qs8xglat" path="res://Obstacle/Obstacle.tscn" id="3_ld3q7"]
 [ext_resource type="PackedScene" uid="uid://cwc0dt5niht4f" path="res://Obstacle/trash.tscn" id="4_bk78y"]
 [ext_resource type="PackedScene" uid="uid://bb6efrgt30m5j" path="res://Obstacle/shipwreck.tscn" id="4_h8vaw"]
+[ext_resource type="Texture2D" uid="uid://bb7wj4ivyqoru" path="res://art/oceanbackgroung.png" id="6_gttrl"]
 
 [sub_resource type="Curve2D" id="Curve2D_60wcg"]
 _data = {
@@ -24,12 +24,11 @@ wreck_scene = ExtResource("4_h8vaw")
 script = ExtResource("1_fe8ga")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(1350, 0)
+motion_mirroring = Vector2(1400, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(701.5, 501)
-scale = Vector2(0.398803, 0.404032)
-texture = ExtResource("1_k3abs")
+position = Vector2(700, 500)
+texture = ExtResource("6_gttrl")
 
 [node name="SubPlayer" parent="." instance=ExtResource("2_eu4je")]
 scale = Vector2(0.8, 0.8)

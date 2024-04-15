@@ -1,7 +1,6 @@
 extends Node2D
 
 var cell_scene = preload("res://Sound/cell.tscn")
-var win_popup  = preload("res://Sound/win_screen.tscn")
 var path_color = ""
 var grid       = global.grid
 var level1_ans = global.level1_ans
@@ -11,7 +10,7 @@ func _ready():
 	# create a 6x6 grid
 	var rows = 7
 	var cols = 7
-	var cell_size = Vector2(0, 0)
+	var cell_size = Vector2(130, 130)
 #	print(cell_size)
 	for row in range(rows):
 		grid.append([])
@@ -23,8 +22,8 @@ func _ready():
 			cell.add_to_group("cells")
 			cell.row = row
 			cell.col = col
-			cell.position = Vector2(col * cell_size.x, row * cell_size.x)
-			print(cell.position)
+			cell.position = Vector2(col * cell_size.x + 100, row * cell_size.x + 100)
+			#print(cell.position)
 			grid[row].append("")
 			
 	level1()
@@ -80,8 +79,6 @@ func _process(delta):
 		go_home()
 
 func go_home():
-	print("win")
-	#win_popup.instantiate()
 	SceneTransition.change_scene("res://Sound/win_screen.tscn","dissolve")
 
 func _on_restart_pressed():
