@@ -3,7 +3,7 @@ extends Node
 var current_game: String
 
 var grid: Array[Array] = []
-
+var current_game : String
 var level1_ans = [
 	["purple", "purple", "purple", "purple", "purple", "purple", "red"   ],
 	["yellow", "whale" , "whale" , "whale" , "whale" , "purple", "red"   ],

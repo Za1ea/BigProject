@@ -1,3 +1,6 @@
+TextureRect
+Label
+MarginContainer
 CenterContainer
 MarginContainer
 TextureRect
@@ -13,3 +16,4 @@ PathFollow2D
 Path2D
 VisibleOnScreenNotifier2D
 RigidBody2D
+AnimatedSprite2D

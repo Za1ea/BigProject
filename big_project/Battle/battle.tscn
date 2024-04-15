@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://b0ku54yf6r35v"]
+[gd_scene load_steps=19 format=3 uid="uid://b0ku54yf6r35v"]
 
 [ext_resource type="Script" path="res://Battle/battle.gd" id="1_3apam"]
 [ext_resource type="Texture2D" uid="uid://duxk13ry0vuaw" path="res://art/trashmonster.png" id="1_ca75h"]
 [ext_resource type="Texture2D" uid="uid://spw7tfh0ix32" path="res://art/obstaclecourse.png" id="1_dgmre"]
 [ext_resource type="Texture2D" uid="uid://bp8v8iijbblyw" path="res://art/submarinefinal (1).png" id="3_f1ekf"]
 [ext_resource type="Script" path="res://Battle/PlayerDamage.gd" id="5_2cuwd"]
+[ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="5_u37l1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kd8mi"]
 animations = [{
@@ -51,7 +52,7 @@ animations = [{
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vfef8"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.0862745, 0.356863, 1, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -139,6 +140,8 @@ offset_right = 37.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_u37l1")
+theme_override_font_sizes/font_size = 20
 text = "HP: 25/50"
 
 [node name="PlayerContainer" type="VBoxContainer" parent="."]
@@ -157,6 +160,7 @@ metadata/_edit_lock_ = true
 [node name="ProgressBar" type="ProgressBar" parent="PlayerContainer"]
 custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("5_u37l1")
 theme_override_styles/background = SubResource("StyleBoxFlat_pwa6k")
 theme_override_styles/fill = SubResource("StyleBoxFlat_hx06f")
 max_value = 50.0
@@ -176,6 +180,8 @@ offset_right = 37.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_u37l1")
+theme_override_font_sizes/font_size = 20
 text = "HP: 25/50"
 
 [node name="Panel" type="Panel" parent="."]
@@ -203,6 +209,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_u37l1")
 theme_override_font_sizes/font_size = 90
 theme_override_styles/normal = SubResource("StyleBoxFlat_vfef8")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gwxo3")
@@ -219,6 +226,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_u37l1")
 theme_override_font_sizes/font_size = 90
 theme_override_styles/normal = SubResource("StyleBoxFlat_vfef8")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gwxo3")
@@ -235,6 +243,7 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_u37l1")
 theme_override_font_sizes/font_size = 90
 theme_override_styles/normal = SubResource("StyleBoxFlat_vfef8")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gwxo3")
@@ -263,7 +272,8 @@ offset_left = -440.0
 offset_right = 440.0
 offset_bottom = 270.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("5_u37l1")
+theme_override_font_sizes/font_size = 50
 text = "How many blah blah blah"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -286,21 +296,24 @@ theme_override_constants/separation = 30
 [node name="Option1" type="Button" parent="Trivia/Options"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("5_u37l1")
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_t2hyu")
 text = "Option 1"
 
 [node name="Option2" type="Button" parent="Trivia/Options"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("5_u37l1")
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_t2hyu")
 text = "Option 1"
 
 [node name="Option3" type="Button" parent="Trivia/Options"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("5_u37l1")
+theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_t2hyu")
 text = "Option 1"
 
@@ -316,6 +329,7 @@ offset_top = 234.0
 offset_right = 406.0
 offset_bottom = 308.0
 theme_override_colors/default_color = Color(0.878431, 0, 0.00392157, 1)
+theme_override_fonts/normal_font = ExtResource("5_u37l1")
 theme_override_font_sizes/normal_font_size = 50
 text = "-5"
 script = ExtResource("5_2cuwd")
@@ -327,6 +341,7 @@ offset_top = 90.0
 offset_right = 1297.0
 offset_bottom = 164.0
 theme_override_colors/default_color = Color(0.878431, 0, 0.00392157, 1)
+theme_override_fonts/normal_font = ExtResource("5_u37l1")
 theme_override_font_sizes/normal_font_size = 50
 text = "-5"
 script = ExtResource("5_2cuwd")
@@ -338,6 +353,7 @@ offset_top = 730.0
 offset_right = 954.0
 offset_bottom = 804.0
 theme_override_colors/default_color = Color(0.407843, 0.356863, 0.341176, 1)
+theme_override_fonts/normal_font = ExtResource("5_u37l1")
 theme_override_font_sizes/normal_font_size = 50
 text = "Try a different move"
 script = ExtResource("5_2cuwd")

@@ -83,7 +83,7 @@ offset_bottom = 40.0
 script = ExtResource("1_woqsf")
 
 [node name="square" type="AnimatedSprite2D" parent="."]
-position = Vector2(60, 59)
+position = Vector2(60, 60)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_01g8r")
 

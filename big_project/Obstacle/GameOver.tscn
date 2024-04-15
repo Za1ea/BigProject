@@ -1,21 +1,38 @@
-[gd_scene load_steps=7 format=3 uid="uid://pxlqafqcp3km"]
+[gd_scene load_steps=14 format=3 uid="uid://pxlqafqcp3km"]
 
 [ext_resource type="Script" path="res://Obstacle/GameOver.gd" id="1_eeb43"]
 [ext_resource type="PackedScene" uid="uid://dacp4gog88m2b" path="res://home_button.tscn" id="1_h15xd"]
 [ext_resource type="Texture2D" uid="uid://b4f1tw0vvetom" path="res://art/Arctic Background_1.png" id="2_6nit7"]
 [ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="2_p86ny"]
+[ext_resource type="Texture2D" uid="uid://spw7tfh0ix32" path="res://art/obstaclecourse.png" id="2_wanvy"]
 [ext_resource type="FontFile" uid="uid://b2glt3q7de2p2" path="res://art/bubblegum/Bubblegum.ttf" id="3_tgp5w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_odx6w"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gipet"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bxc5g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n7oaq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nvkpe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qo4mp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sonq0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6ive7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rn2fo"]
+
 [node name="GameOver" type="Node2D"]
 script = ExtResource("1_eeb43")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1400.0
-offset_bottom = 1000.0
-texture = ExtResource("2_6nit7")
+offset_right = 1631.0
+offset_bottom = 1016.0
+texture = ExtResource("2_wanvy")
 expand_mode = 1
 stretch_mode = 4
 
@@ -40,6 +57,10 @@ theme_override_colors/font_color = Color(0.133333, 0.266667, 0.780392, 1)
 theme_override_fonts/font = ExtResource("2_p86ny")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_odx6w")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gipet")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bxc5g")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_n7oaq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nvkpe")
 text = "Play Again"
 
 [node name="homeButton" parent="." instance=ExtResource("1_h15xd")]
@@ -49,5 +70,9 @@ offset_right = 1930.0
 offset_bottom = 1218.0
 theme_override_colors/font_color = Color(0.133333, 0.266667, 0.780392, 1)
 theme_override_font_sizes/font_size = 400
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qo4mp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sonq0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6ive7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rn2fo")
 
 [connection signal="pressed" from="PlayAgain" to="." method="_on_play_again_pressed"]

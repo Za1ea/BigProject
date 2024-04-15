@@ -4,6 +4,7 @@ var trivia = global.trivia
 var questions = trivia["recycle"]
 var regex = RegEx.new()
 
+
 @export var max_player_health: int = 50
 @export var max_trash_health: int = 100
 
