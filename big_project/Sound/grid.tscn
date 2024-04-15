@@ -164,8 +164,4 @@ offset_top = 892.0
 offset_right = 1293.0
 offset_bottom = 959.0
 
-[connection signal="pressed" from="ColorRect/purple" to="." method="_on_ship_pressed" binds= ["purple"]]
-[connection signal="pressed" from="ColorRect/red" to="." method="_on_ship_pressed" binds= ["red"]]
-[connection signal="pressed" from="ColorRect/teal" to="." method="_on_ship_pressed" binds= ["teal"]]
-[connection signal="pressed" from="ColorRect/white" to="." method="_on_ship_pressed" binds= ["white"]]
 [connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]

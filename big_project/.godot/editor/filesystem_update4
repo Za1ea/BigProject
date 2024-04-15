@@ -1,4 +1,4 @@
-res://start.tscn
+res://map.tscn
 res://Sound/grid.gd
 res://grid.gd
 res://map.tscn
@@ -9,10 +9,20 @@ res://Obstacle/sub_player.tscn
 res://Obstacle/course.tscn
 res://Obstacle/Obstacle.tscn
 res://Obstacle/trash.tscn
-res://battle.tscn
 res://Obstacle/shipwreck.tscn
 res://Obstacle/GameOver.tscn
 res://Sound/grid.tscn
 res://Battle/battle.gd
 res://global.gd
 res://win_screen.tscn
+res://Route_Ifo.tscn
+res://alert.tscn
+res://map_intro.tscn
+res://win_screen.tscn
+res://sub_home.tscn
+res://alert.tscn
+res://win_screen.tscn
+res://intro.gd
+res://intro.tscn
+res://TMonster_Ifo.tscn
+res://Route_Ifo.tscn

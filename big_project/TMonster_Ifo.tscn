@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cgd70c55qirld"]
 
 [ext_resource type="Script" path="res://TMonster_Ifo.gd" id="1_yce54"]
-[ext_resource type="Texture2D" uid="uid://cj5p2ggt0yby7" path="res://Arctic_Background2.jpg" id="2_ps324"]
+[ext_resource type="Texture2D" uid="uid://cj5p2ggt0yby7" path="res://art/Arctic_Background2.jpg" id="2_ps324"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_yce54")
