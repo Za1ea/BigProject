@@ -22,7 +22,7 @@ func _process(delta):
 	score = global.obstacle_score
 	$Score.text = "Score: " + str(score)
 	if time == 0:
-		SceneTransition.change_scene("res://Obstacle/GameOver.tscn", "dissolve")
+		SceneTransition.change_scene("res://Obstacle/GameOver.tscn", "")
 	if $SubPlayer.global_position.y < 0:
 		$SubPlayer.global_position.y == 0
 	elif $SubPlayer.global_position.y > 1000:

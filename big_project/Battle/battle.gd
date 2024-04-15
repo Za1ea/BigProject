@@ -35,7 +35,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if current_player_health == 0:
+		SceneTransition.change_scene("res://lose_screen.tscn", "dissolve")
 
 
 func attack(extra_arg_0: String):	
@@ -88,7 +89,7 @@ func correct():
 	await get_tree().create_timer(2.0).timeout
 	$EnemyDamage.vis = false
 	if current_trash_health == 0:
-		SceneTransition.change_scene("res://win_screen.tscn", "")
+		SceneTransition.change_scene("res://Battle/win_screen2.tscn", "dissolve")
 	else:
 		await get_tree().create_timer(0.5).timeout
 		enemy_turn(true)

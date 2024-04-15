@@ -1,10 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://bde54px7in2qf"]
+[gd_scene load_steps=16 format=3 uid="uid://b2wcv4rokh744"]
 
-[ext_resource type="FontFile" uid="uid://b2glt3q7de2p2" path="res://art/bubblegum/Bubblegum.ttf" id="2_b5hkk"]
-[ext_resource type="Texture2D" uid="uid://b4f1tw0vvetom" path="res://art/Arctic Background_1.png" id="2_r6wib"]
-[ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="3_4hsxb"]
-[ext_resource type="Script" path="res://home_button.gd" id="4_3lh3c"]
-[ext_resource type="Script" path="res://Replay.gd" id="5_7y3w1"]
+[ext_resource type="Texture2D" uid="uid://b4f1tw0vvetom" path="res://art/Arctic Background_1.png" id="1_vwbtd"]
+[ext_resource type="FontFile" uid="uid://b2glt3q7de2p2" path="res://art/bubblegum/Bubblegum.ttf" id="2_b0pph"]
+[ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="3_p2sa6"]
+[ext_resource type="Script" path="res://home_button.gd" id="4_nihmh"]
+[ext_resource type="Script" path="res://Replay.gd" id="5_x107y"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8krr5"]
 
@@ -46,7 +46,7 @@ offset_left = 113.724
 offset_top = 121.121
 offset_right = 1513.72
 offset_bottom = 1121.12
-texture = ExtResource("2_r6wib")
+texture = ExtResource("1_vwbtd")
 expand_mode = 1
 stretch_mode = 4
 
@@ -65,9 +65,9 @@ theme_override_constants/separation = 150
 layout_mode = 2
 theme_override_colors/font_color = Color(0.00392157, 0.65098, 0.831373, 1)
 theme_override_colors/font_outline_color = Color(0.00392157, 0.188235, 0.831373, 1)
-theme_override_fonts/font = ExtResource("2_b5hkk")
+theme_override_fonts/font = ExtResource("2_b0pph")
 theme_override_font_sizes/font_size = 200
-text = "YOU WIN!"
+text = "YOU LOSE..."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -83,7 +83,7 @@ theme_override_constants/separation = 60
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.266667, 0.780392, 1)
-theme_override_fonts/font = ExtResource("3_4hsxb")
+theme_override_fonts/font = ExtResource("3_p2sa6")
 theme_override_font_sizes/font_size = 150
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8krr5")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_bpptx")
@@ -91,12 +91,12 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_a4rqv")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_bfpjq")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tl26i")
 text = "Return to Map"
-script = ExtResource("4_3lh3c")
+script = ExtResource("4_nihmh")
 
 [node name="Replay" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.266667, 0.780392, 1)
-theme_override_fonts/font = ExtResource("3_4hsxb")
+theme_override_fonts/font = ExtResource("3_p2sa6")
 theme_override_font_sizes/font_size = 150
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8jppr")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_ersdk")
@@ -104,7 +104,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_mclia")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_ietqo")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_r1sit")
 text = "Replay"
-script = ExtResource("5_7y3w1")
+script = ExtResource("5_x107y")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Quit" to="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Quit" method="_on_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Replay" to="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Replay" method="on_replay_pressed" binds= ["Sound"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Replay" to="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Replay" method="on_replay_pressed" binds= ["Battle"]]
