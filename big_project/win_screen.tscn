@@ -1,10 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://bde54px7in2qf"]
+[gd_scene load_steps=10 format=3 uid="uid://bde54px7in2qf"]
 
 [ext_resource type="FontFile" uid="uid://b2glt3q7de2p2" path="res://art/bubblegum/Bubblegum.ttf" id="2_b5hkk"]
 [ext_resource type="Texture2D" uid="uid://b4f1tw0vvetom" path="res://art/Arctic Background_1.png" id="2_r6wib"]
 [ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="3_4hsxb"]
 [ext_resource type="Script" path="res://home_button.gd" id="4_3lh3c"]
-[ext_resource type="Script" path="res://Replay.gd" id="5_7y3w1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8krr5"]
 
@@ -15,16 +14,6 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bfpjq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tl26i"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8jppr"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ersdk"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mclia"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ietqo"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1sit"]
 
 [node name="Node2D" type="Control"]
 custom_minimum_size = Vector2(1200, 800)
@@ -93,18 +82,4 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_tl26i")
 text = "Return to Map"
 script = ExtResource("4_3lh3c")
 
-[node name="Replay" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.133333, 0.266667, 0.780392, 1)
-theme_override_fonts/font = ExtResource("3_4hsxb")
-theme_override_font_sizes/font_size = 150
-theme_override_styles/normal = SubResource("StyleBoxEmpty_8jppr")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_ersdk")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_mclia")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_ietqo")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_r1sit")
-text = "Replay"
-script = ExtResource("5_7y3w1")
-
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Quit" to="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Quit" method="_on_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Replay" to="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Replay" method="on_replay_pressed" binds= ["Sound"]]

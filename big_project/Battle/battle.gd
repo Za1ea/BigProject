@@ -24,6 +24,8 @@ var chosen
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	trivia = global.trivia
+	questions = trivia["recycle"]
 	global.current_game = "Battle"
 	$TrashContainer/ProgressBar.max_value = max_trash_health
 	$TrashContainer/ProgressBar.value = max_trash_health

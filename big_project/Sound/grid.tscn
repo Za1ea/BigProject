@@ -169,10 +169,11 @@ theme_override_font_sizes/font_size = 40
 text = "Restart"
 
 [node name="HomeButton" parent="." instance=ExtResource("5_0osji")]
-offset_left = 1125.0
-offset_top = 85.0
-offset_right = 1739.0
-offset_bottom = 585.0
+offset_left = 1094.0
+offset_top = 92.0
+offset_right = 1914.0
+offset_bottom = 592.0
+theme_override_font_sizes/font_size = 200
 
 [connection signal="pressed" from="ColorRect/purple" to="." method="_on_ship_pressed" binds= ["purple"]]
 [connection signal="pressed" from="ColorRect/red" to="." method="_on_ship_pressed" binds= ["red"]]
