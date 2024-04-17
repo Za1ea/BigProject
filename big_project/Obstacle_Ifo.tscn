@@ -51,7 +51,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.0784314, 0.14902, 0.67451, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_r0hkk")
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 50
 text = "placeholder
 "
 horizontal_alignment = 1
