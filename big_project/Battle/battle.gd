@@ -4,6 +4,7 @@ var trivia = global.trivia
 var questions = trivia["recycle"]
 var regex = RegEx.new()
 
+
 @export var max_player_health: int = 50
 @export var max_trash_health: int = 100
 
@@ -19,8 +20,13 @@ var damage = damages["recycle"]
 var enemy_damages = [5, 10]
 var chosen
 
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	trivia = global.trivia.duplicate(true)
+	questions = trivia["recycle"]
+	global.current_game = "Battle"
 	$TrashContainer/ProgressBar.max_value = max_trash_health
 	$TrashContainer/ProgressBar.value = max_trash_health
 	$PlayerContainer/ProgressBar.max_value = max_player_health
@@ -32,7 +38,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if current_player_health == 0:
+		SceneTransition.change_scene("res://lose_screen.tscn", "dissolve")
 
 
 func attack(extra_arg_0: String):	
@@ -64,18 +71,18 @@ func attack(extra_arg_0: String):
 		
 			# check if it's the right answer
 			if split[0] == "t":
-				optionbtns[i].pressed.connect(self.correct.bind(i))
+				optionbtns[i].pressed.connect(self.correct)
 				questions.erase(question)
 			else:
-				optionbtns[i].pressed.connect(self.incorrect.bind(i))
+				optionbtns[i].pressed.connect(self.incorrect)
 
 	else:
 		$TryNewMove.vis = true
 		await get_tree().create_timer(2.0).timeout
 		$TryNewMove.vis = false
 
-func correct(extra_arg_0: int):
-	chosen = extra_arg_0
+func correct():
+	#chosen = extra_arg_0
 	
 	$Trivia.hide()
 	await get_tree().create_timer(0.5).timeout
@@ -85,7 +92,7 @@ func correct(extra_arg_0: int):
 	await get_tree().create_timer(2.0).timeout
 	$EnemyDamage.vis = false
 	if current_trash_health == 0:
-		print("you win!")
+		SceneTransition.change_scene("res://Battle/win_screen2.tscn", "dissolve")
 	else:
 		await get_tree().create_timer(0.5).timeout
 		enemy_turn(true)
@@ -114,7 +121,6 @@ func enemy_turn(correct):
 
 func incorrect():
 	$Trivia.hide()
-	print("wrong")
 	await get_tree().create_timer(1.0).timeout
 	enemy_turn(false)
 	

@@ -1,6 +1,5 @@
 extends ParallaxBackground
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -9,6 +8,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	scroll_offset.x = scroll_offset.x - 50
+	scroll_offset.x -= 200 * delta
 	#print(delta)
-	print(scroll_offset.x)
+

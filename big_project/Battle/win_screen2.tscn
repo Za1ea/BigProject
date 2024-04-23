@@ -1,0 +1,110 @@
+[gd_scene load_steps=16 format=3 uid="uid://bv8sootfkhxf5"]
+
+[ext_resource type="Texture2D" uid="uid://b4f1tw0vvetom" path="res://art/Arctic Background_1.png" id="1_bww6k"]
+[ext_resource type="FontFile" uid="uid://b2glt3q7de2p2" path="res://art/bubblegum/Bubblegum.ttf" id="2_6kcp1"]
+[ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="3_st22k"]
+[ext_resource type="Script" path="res://home_button.gd" id="4_twim1"]
+[ext_resource type="Script" path="res://Replay.gd" id="5_rp7u8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8krr5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bpptx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a4rqv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bfpjq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tl26i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8jppr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ersdk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mclia"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ietqo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1sit"]
+
+[node name="Node2D" type="Control"]
+custom_minimum_size = Vector2(1200, 800)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -3.0
+offset_top = -1.0
+offset_right = 1401.0
+offset_bottom = 1000.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.081
+anchor_top = -0.121
+anchor_right = -0.081
+anchor_bottom = -0.121
+offset_left = 113.724
+offset_top = 121.121
+offset_right = 1513.72
+offset_bottom = 1121.12
+texture = ExtResource("1_bww6k")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1400.0
+offset_bottom = 1000.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 150
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00392157, 0.65098, 0.831373, 1)
+theme_override_colors/font_outline_color = Color(0.00392157, 0.188235, 0.831373, 1)
+theme_override_fonts/font = ExtResource("2_6kcp1")
+theme_override_font_sizes/font_size = 200
+text = "YOU WIN!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.266667, 0.780392, 1)
+theme_override_fonts/font = ExtResource("3_st22k")
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8krr5")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bpptx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_a4rqv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bfpjq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tl26i")
+text = "Return to Map"
+script = ExtResource("4_twim1")
+
+[node name="Replay" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.266667, 0.780392, 1)
+theme_override_fonts/font = ExtResource("3_st22k")
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8jppr")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ersdk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mclia")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ietqo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r1sit")
+text = "Replay"
+script = ExtResource("5_rp7u8")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Quit" to="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Quit" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Replay" to="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/Replay" method="on_replay_pressed" binds= ["Battle"]]
