@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcvepch0ulnwi"]
+[gd_scene load_steps=4 format=3 uid="uid://dcvepch0ulnwi"]
 
 [ext_resource type="Script" path="res://intro.gd" id="1_mi6qm"]
 [ext_resource type="Texture2D" uid="uid://cikjl7dnjkh3i" path="res://art/text.png" id="2_dwsup"]
+[ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="2_spxi3"]
 
 [node name="intro" type="Node2D"]
 position = Vector2(183, 176)
@@ -17,11 +18,13 @@ offset_right = 76.0
 offset_bottom = 72.0
 
 [node name="Label" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-horizontal_alignment = 1
+theme_override_fonts/font = ExtResource("2_spxi3")
+theme_override_font_sizes/font_size = 60
 vertical_alignment = 1
+autowrap_mode = 3
 justification_flags = 160
 
 [node name="NinePatchRect" type="TextureRect" parent="."]

@@ -1,11 +1,8 @@
-<<<<<<< Updated upstream
 RichTextLabel
-=======
 AnimatedSprite2D
 Sprite2D
 ParallaxLayer
 TextureRect
->>>>>>> Stashed changes
 Label
 AnimationPlayer
 Button
@@ -15,13 +12,25 @@ HBoxContainer
 ProgressBar
 AnimatedSprite2D
 TextureRect
+Label
+MarginContainer
+CenterContainer
+MarginContainer
+TextureRect
 Control
-PopupPanel
+Label
 Node2D
-<<<<<<< Updated upstream
 Popup
-=======
 Button
 Timer
 CharacterBody2D
->>>>>>> Stashed changes
+Button
+Timer
+CharacterBody2D
+Area2D
+CollisionShape2D
+PathFollow2D
+Path2D
+VisibleOnScreenNotifier2D
+RigidBody2D
+AnimatedSprite2D

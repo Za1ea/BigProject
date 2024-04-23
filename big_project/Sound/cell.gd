@@ -37,12 +37,13 @@ func set_path_color(color):
 	path_color = color
 	
 func switch_color(color):
+	print(color)
 	var current = grid[row][col]
 	anim.scale = 1*anim.scale
 	anim.position = Vector2i(0, 5)
 	#print(color)
 	#print("current: ", current)
-	if color.is_empty():
+	if color.is_empty() && fixed == false:
 	#	print("empty")
 		anim.animation = "default"
 		current = ""

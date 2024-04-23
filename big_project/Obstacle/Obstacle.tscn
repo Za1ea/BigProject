@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://oom7qs8xglat"]
+
+[ext_resource type="Texture2D" uid="uid://c1aucfbe5rqh0" path="res://art/school_of_fish.png" id="1_rk63q"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aq0r4"]
+radius = 62.0
+height = 260.0
+
+[node name="Obstacle" type="CharacterBody2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 303.0
+offset_top = 115.0
+offset_right = 343.0
+offset_bottom = 155.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_rk63q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(434, 182)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_aq0r4")
