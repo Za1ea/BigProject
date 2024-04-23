@@ -1,4 +1,11 @@
+<<<<<<< Updated upstream
 RichTextLabel
+=======
+AnimatedSprite2D
+Sprite2D
+ParallaxLayer
+TextureRect
+>>>>>>> Stashed changes
 Label
 AnimationPlayer
 Button
@@ -11,4 +18,10 @@ TextureRect
 Control
 PopupPanel
 Node2D
+<<<<<<< Updated upstream
 Popup
+=======
+Button
+Timer
+CharacterBody2D
+>>>>>>> Stashed changes

@@ -1,4 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
+<<<<<<< Updated upstream
 ::res://::1712679004
 alert.gd::GDScript::-1::1710782847::0::1::::<>Area2D<>::
 alert.tscn::PackedScene::6784943284066127359::1710782847::0::1::::<><>::uid://ci3eb80lw2tc3::::res://art/alert.png<>res://alert.gd<>uid://0g3ld1yqugen::::res://art/alert2.png
@@ -34,6 +35,43 @@ TMonster_Ifo.tscn::PackedScene::5202155303868336317::1712594843::0::1::::<><>::r
 trivia.gd::GDScript::-1::1712594843::0::1::::<>Panel<>::
 win_screen.tscn::PackedScene::2607118848275593913::1712594843::0::1::::<><>::res://WinScreen.gd<>uid://b4f1tw0vvetom::::res://art/Arctic Background_1.png
 ::res://art/::1712594843
+=======
+::res://::1713888570
+alert.gd::GDScript::-1::1710782847::0::1::::<>Area2D<>::
+alert.tscn::PackedScene::6784943284066127359::1710782847::0::1::::<><>::uid://ci3eb80lw2tc3::::res://art/alert.png<>res://alert.gd<>uid://0g3ld1yqugen::::res://art/alert2.png
+export_presets.cfg::TextFile::-1::1713457118::0::1::::<><>::
+global.gd::GDScript::-1::1713224111::0::1::::<>Node<>::
+home_button.gd::GDScript::-1::1712594843::0::1::::<>Button<>::
+home_button.tscn::PackedScene::7164353686587547807::1713544530::0::1::::<><>::uid://bsduxtwkrpdkx::::res://art/map_icon.png<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf<>res://home_button.gd
+icon.svg::CompressedTexture2D::4067679029610153788::1710782847::1710782847::1::::<><>::
+intro.gd::GDScript::-1::1713221208::0::1::::<>Node2D<>::
+intro.tscn::PackedScene::7343261443093654176::1713221208::0::1::::<><>::res://intro.gd<>uid://cikjl7dnjkh3i::::res://art/text.png<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf
+lose_screen.tscn::PackedScene::4327096258255427919::1713544529::0::1::::<><>::uid://b4f1tw0vvetom::::res://art/Arctic Background_1.png<>uid://b2glt3q7de2p2::::res://art/bubblegum/Bubblegum.ttf<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf<>res://home_button.gd<>res://Replay.gd
+map.gd::GDScript::-1::1713221208::0::1::::<>Node2D<>::
+map.tscn::PackedScene::1547384562755656097::1713544530::0::1::::<><>::res://map.gd<>uid://8n5sfgagfukj::::res://art/map.png<>uid://c3wxa3oypncmh::::res://alert.tscn<>uid://b2sysr0ib0i5w::::res://map_sub.tscn<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf
+mapSub.gd::GDScript::-1::1710782847::0::1::::<>CharacterBody2D<>::
+map_intro.tscn::PackedScene::1315849748917255280::1713544530::0::1::::<><>::uid://dcvepch0ulnwi::::res://intro.tscn
+map_sub.tscn::PackedScene::4320168545492610122::1713224505::0::1::::<><>::res://mapSub.gd<>uid://bp8v8iijbblyw::::res://art/submarinefinal (1).png
+new_script.gd::GDScript::-1::1712594843::0::1::::<>Node<>::
+Obstacle_Ifo.gd::GDScript::-1::1713225569::0::1::::<>Node2D<>::
+Obstacle_Ifo.tscn::PackedScene::5202155303868336317::1713544530::0::1::::<><>::res://Obstacle_Ifo.gd<>uid://cj5p2ggt0yby7::::res://art/Arctic_Background2.jpg<>uid://b2glt3q7de2p2::::res://art/bubblegum/Bubblegum.ttf<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf
+Replay.gd::GDScript::-1::1713224471::0::1::::<>Control<>::
+Route_Ifo.gd::GDScript::-1::1713457196::0::1::::<>Node2D<>::
+Route_Ifo.tscn::PackedScene::5202155303868336317::1713544530::0::1::::<><>::res://Route_Ifo.gd<>uid://cj5p2ggt0yby7::::res://art/Arctic_Background2.jpg<>uid://b2glt3q7de2p2::::res://art/bubblegum/Bubblegum.ttf<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf
+scene_transition.gd::GDScript::-1::1711388158::0::1::::<>CanvasLayer<>::
+scene_transition.tscn::PackedScene::3167832655919278619::1713222245::0::1::::<><>::res://scene_transition.gd<>uid://p80qbhpx7thk::::res://art/bubbles.png
+start.gd::GDScript::-1::1711388158::0::1::::<>Control<>::
+start.tscn::PackedScene::3566607453896349293::1713815068::0::1::::<><>::res://start.gd<>uid://8y8q2plmifsp::::res://art/start.png<>uid://qtx4rxpo8ysp::::res://art/title.png<>uid://dkhivhwbx3xtm::::res://art/startButton.png
+sub_home.gd::GDScript::-1::1711388158::0::1::::<>Control<>::
+sub_home.tscn::PackedScene::5598508474601806777::1713544529::0::1::::<><>::res://sub_home.gd<>uid://df0aestmgud74::::res://art/homepage1.png<>uid://dcvepch0ulnwi::::res://intro.tscn<>uid://dfcjl8okynwje::::res://art/contButton copy.png<>uid://drtgti8lx5ldj::::res://art/blue_whale_1.png<>uid://dqoem0qolc1my::::res://art/contButton.png<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf
+TMonster_Ifo.gd::GDScript::-1::1713225030::0::1::::<>Node2D<>::
+TMonster_Ifo.tscn::PackedScene::5202155303868336317::1713544530::0::1::::<><>::res://TMonster_Ifo.gd<>uid://cj5p2ggt0yby7::::res://art/Arctic_Background2.jpg<>uid://b2glt3q7de2p2::::res://art/bubblegum/Bubblegum.ttf<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf
+trivia.gd::GDScript::-1::1712594843::0::1::::<>Panel<>::
+win_screen.gd::GDScript::-1::1713221208::0::1::::<>Control<>::
+win_screen.tscn::PackedScene::2607118848275593913::1713544529::0::1::::<><>::uid://b2glt3q7de2p2::::res://art/bubblegum/Bubblegum.ttf<>uid://b4f1tw0vvetom::::res://art/Arctic Background_1.png<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf<>res://home_button.gd
+::res://art/::1713555184
+Adigiana Ultra.ttf::FontFile::8942259484294568012::1713221208::1713221208::1::::<><>::
+>>>>>>> Stashed changes
 alert2.png::CompressedTexture2D::1768827275853173069::1710782847::1710782847::1::::<><>::
 alert.png::CompressedTexture2D::5392401119790043140::1710782847::1710782847::1::::<><>::
 Arctic Background_1.png::CompressedTexture2D::4433832804978660356::1711387486::1711387486::1::::<><>::
@@ -41,6 +79,7 @@ Arctic_Background2.jpg::CompressedTexture2D::5467431589383770116::1711387486::17
 blue_whale_1.png::CompressedTexture2D::8392094273990845467::1710782847::1710782847::1::::<><>::
 blue_whale_2.png::CompressedTexture2D::1076838999767828805::1710782847::1710782847::1::::<><>::
 bubbles.png::CompressedTexture2D::1122503682026626388::1710952122::1710952122::1::::<><>::
+<<<<<<< Updated upstream
 cargo_ship.png::CompressedTexture2D::7902365805651017033::1710782847::1710782847::1::::<><>::
 contButton copy.png::CompressedTexture2D::7514902876830216246::1710782847::1710782847::1::::<><>::
 contButton.png::CompressedTexture2D::8311450473794111768::1710782847::1710782847::1::::<><>::
@@ -51,6 +90,26 @@ obstaclecourse.png::CompressedTexture2D::1295758777060771615::1712594843::171259
 purple_dot.png::CompressedTexture2D::6068970666807344237::1710782847::1710782847::1::::<><>::
 red_boat.png::CompressedTexture2D::7010190758636139428::1710782847::1710782847::1::::<><>::
 red_dot.png::CompressedTexture2D::2492412519707327194::1710782847::1710782847::1::::<><>::
+=======
+button1.png::CompressedTexture2D::2499596363574402757::1713221208::1713221208::1::::<><>::
+cargoship.png::CompressedTexture2D::2489467286851155400::1713221208::1713221208::1::::<><>::
+cargo_ship.png::CompressedTexture2D::7902365805651017033::1710782847::1710782847::1::::<><>::
+contButton copy.png::CompressedTexture2D::7514902876830216246::1710782847::1710782847::1::::<><>::
+contButton.png::CompressedTexture2D::8311450473794111768::1710782847::1710782847::1::::<><>::
+homepage1.png::CompressedTexture2D::7561823831622199337::1713221208::1713221208::1::::<><>::
+homepage.png::CompressedTexture2D::8445248502676437302::1710782847::1710782847::1::::<><>::
+map - Copy.png::CompressedTexture2D::2267811332608584120::1710782847::1710782847::1::::<><>::
+map.png::CompressedTexture2D::2344922676824943029::1710782847::1710782847::1::::<><>::
+map_icon.png::CompressedTexture2D::3657269447962020415::1713221208::1713221208::1::::<><>::
+MondayFeelings-7BD2l.ttf::FontFile::2139622743186485631::1713221208::1713221208::1::::<><>::
+obstaclecourse.png::CompressedTexture2D::1295758777060771615::1712594843::1712594843::1::::<><>::
+oceanbackgroung.png::CompressedTexture2D::2524022997969503662::1713221208::1713221208::1::::<><>::
+purple_dot.png::CompressedTexture2D::6068970666807344237::1710782847::1710782847::1::::<><>::
+red_boat.png::CompressedTexture2D::7010190758636139428::1710782847::1710782847::1::::<><>::
+red_dot.png::CompressedTexture2D::2492412519707327194::1710782847::1710782847::1::::<><>::
+sand.png::CompressedTexture2D::4046031324237515674::1713555183::1713555184::1::::<><>::
+school_of_fish.png::CompressedTexture2D::6598969477802257007::1713221208::1713221208::1::::<><>::
+>>>>>>> Stashed changes
 square with dot.png::CompressedTexture2D::7715627489770516672::1710782847::1710782847::1::::<><>::
 square.png::CompressedTexture2D::4773370285716045220::1710782847::1710782847::1::::<><>::
 start.png::CompressedTexture2D::2367810581434941607::1710782847::1710782847::1::::<><>::
@@ -62,6 +121,7 @@ teal_dot.png::CompressedTexture2D::4994662767106607979::1710782847::1710782847::
 text.png::CompressedTexture2D::5355563676683618460::1710782847::1710782847::1::::<><>::
 title.png::CompressedTexture2D::1163693883521544027::1710782847::1710782847::1::::<><>::
 trashmonster.png::CompressedTexture2D::8611174710792703838::1712594843::1712594843::1::::<><>::
+<<<<<<< Updated upstream
 ::res://art/bubblegum/::1711387486
 Bubblegum.ttf::FontFile::4294609042277764437::1711387486::1711387486::1::::<><>::
 ::res://Sound/::1712597637
@@ -71,3 +131,40 @@ grid.gd::GDScript::-1::1712594896::0::1::::<>Node2D<>::
 grid.tscn::PackedScene::3483900907337510435::1712597637::0::1::::<><>::res://Sound/grid.gd<>uid://dkt72sw2uuwyb::::res://art/cargo_ship.png<>uid://c64122exa4lya::::res://art/red_boat.png<>uid://6onhafwrm3br::::res://art/teal_boat.png<>uid://dacp4gog88m2b::::res://home_button.tscn
 ship_panel.tscn::PackedScene::4183479742958275283::1710782847::0::1::::<><>::uid://dkt72sw2uuwyb::::res://art/cargo_ship.png<>uid://c64122exa4lya::::res://art/red_boat.png<>uid://6onhafwrm3br::::res://art/teal_boat.png
 win_screen.tscn::PackedScene::844566181349394227::1712597637::0::1::::<><>::uid://dacp4gog88m2b::::res://home_button.tscn
+=======
+trashobstacle1.png::CompressedTexture2D::3745821282668191442::1713221208::1713221208::1::::<><>::
+trashobstacle2.png::CompressedTexture2D::5884130871185505125::1713221208::1713221208::1::::<><>::
+wreckedship.png::CompressedTexture2D::2611222203173672726::1713221208::1713221208::1::::<><>::
+yellow_dot.png::CompressedTexture2D::6727708071419215694::1713221208::1713221208::1::::<><>::
+::res://art/bubblegum/::1711387486
+Bubblegum.ttf::FontFile::4294609042277764437::1711387486::1711387486::1::::<><>::
+::res://Battle/::1713815068
+battle.gd::GDScript::-1::1713457118::0::1::::<>Control<>::
+battle.tscn::PackedScene::4163055026378749849::1713815068::0::1::::<><>::res://Battle/battle.gd<>uid://duxk13ry0vuaw::::res://art/trashmonster.png<>uid://spw7tfh0ix32::::res://art/obstaclecourse.png<>uid://bp8v8iijbblyw::::res://art/submarinefinal (1).png<>res://Battle/PlayerDamage.gd<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf
+LoseScreen.tscn::PackedScene::5765566430767330615::1713457118::0::1::::<><>::uid://cj5p2ggt0yby7::::res://art/Arctic_Background2.jpg
+PlayerDamage.gd::GDScript::-1::1713221208::0::1::::<>RichTextLabel<>::
+win_screen2.tscn::PackedScene::3929629537879246940::1713544529::0::1::::<><>::uid://b4f1tw0vvetom::::res://art/Arctic Background_1.png<>uid://b2glt3q7de2p2::::res://art/bubblegum/Bubblegum.ttf<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf<>res://home_button.gd<>res://Replay.gd
+::res://Obstacle/::1713815069
+course.gd::GDScript::-1::1713815005::0::1::::<>Node2D<>::
+course.tscn::PackedScene::7874465237707869189::1713815069::0::1::::<><>::res://Obstacle/scroll.gd<>res://Obstacle/course.gd<>uid://bybvebfhewoxk::::res://Obstacle/sub_player.tscn<>uid://oom7qs8xglat::::res://Obstacle/Obstacle.tscn<>uid://cwc0dt5niht4f::::res://Obstacle/trash.tscn<>uid://bb6efrgt30m5j::::res://Obstacle/shipwreck.tscn<>uid://bb7wj4ivyqoru::::res://art/oceanbackgroung.png<>uid://bxv6sr067bcsg::::res://art/sand.png<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf
+GameOver.gd::GDScript::-1::1713221208::0::1::::<>Node2D<>::
+GameOver.tscn::PackedScene::1101009810991053864::1713815068::0::1::::<><>::res://Obstacle/GameOver.gd<>uid://dacp4gog88m2b::::res://home_button.tscn<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf<>uid://spw7tfh0ix32::::res://art/obstaclecourse.png<>uid://b2glt3q7de2p2::::res://art/bubblegum/Bubblegum.ttf
+Obstacle.tscn::PackedScene::1012331718517879551::1713815069::0::1::::<><>::uid://c1aucfbe5rqh0::::res://art/school_of_fish.png
+scroll.gd::GDScript::-1::1713805757::0::1::::<>ParallaxBackground<>::
+shipwreck.tscn::PackedScene::2520857937715043741::1713815069::0::1::::<><>::res://Obstacle/trash.gd<>uid://bdg5pidlwdxqc::::res://art/wreckedship.png
+sub_player.gd::GDScript::-1::1713815068::0::1::::<>CharacterBody2D<>::
+sub_player.tscn::PackedScene::4074299569355300576::1713815069::0::1::::<><>::uid://bp8v8iijbblyw::::res://art/submarinefinal (1).png<>res://Obstacle/sub_player.gd
+trash.gd::GDScript::-1::1713221208::0::1::::<>CharacterBody2D<>::
+trash.tscn::PackedScene::6322649010021344899::1713815069::0::1::::<><>::res://Obstacle/trash.gd<>uid://btmrenohbxfpy::::res://art/trashobstacle1.png
+::res://OceanRescueHTML/::1713457118
+index.apple-touch-icon.png::CompressedTexture2D::1904700256604488739::1713457118::1713457118::1::::<><>::
+index.icon.png::CompressedTexture2D::6618985553930467910::1713457118::1713457118::1::::<><>::
+index.png::CompressedTexture2D::4808762907896154274::1713457118::1713457118::1::::<><>::
+::res://Sound/::1713815069
+cell.gd::GDScript::-1::1713543614::0::1::::<>Control<>::
+cell.tscn::PackedScene::1054917727036780576::1713815069::0::1::::<><>::res://Sound/cell.gd<>uid://caaiygfklu101::::res://art/square.png<>uid://csp4cbt5houyn::::res://art/purple_dot.png<>uid://bbrlw1t1xkbeo::::res://art/red_dot.png<>uid://cdfpmpfa7px36::::res://art/teal_dot.png<>uid://drtgti8lx5ldj::::res://art/blue_whale_1.png<>uid://plvm7o0nafyr::::res://art/blue_whale_2.png<>uid://c237mstn1ciio::::res://art/yellow_dot.png
+grid.gd::GDScript::-1::1713814783::0::1::::<>Node2D<>::
+grid.tscn::PackedScene::3483900907337510435::1713815069::0::1::::<><>::res://Sound/grid.gd<>uid://dkt72sw2uuwyb::::res://art/cargo_ship.png<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf<>uid://c64122exa4lya::::res://art/red_boat.png<>uid://6onhafwrm3br::::res://art/teal_boat.png<>uid://dacp4gog88m2b::::res://home_button.tscn<>uid://bbp6fr335cdj1::::res://art/cargoship.png
+WinScreen.gd::GDScript::-1::1713221208::0::1::::<>CanvasLayer<>::
+win_screen.tscn::PackedScene::844566181349394227::1713457118::0::1::::<><>::
+>>>>>>> Stashed changes

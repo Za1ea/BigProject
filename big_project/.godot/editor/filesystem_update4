@@ -1,5 +1,6 @@
 res://start.tscn
 res://Sound/grid.gd
+<<<<<<< Updated upstream
 res://map.tscn
 res://Sound/grid.tscn
 res://Sound/win_screen.tscn
@@ -7,3 +8,16 @@ res://home_button.tscn
 res://battle.tscn
 res://playerDamage.gd
 res://battle.gd
+=======
+res://Battle/battle.tscn
+res://Obstacle/GameOver.tscn
+res://Sound/grid.tscn
+res://Sound/cell.tscn
+res://Obstacle/course.tscn
+res://Obstacle/sub_player.tscn
+res://Obstacle/Obstacle.tscn
+res://Obstacle/shipwreck.tscn
+res://Obstacle/trash.tscn
+res://Obstacle/course.gd
+res://Obstacle/sub_player.gd
+>>>>>>> Stashed changes

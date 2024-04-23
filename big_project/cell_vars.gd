@@ -11,4 +11,11 @@ func set_color(color):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+<<<<<<< Updated upstream:big_project/cell_vars.gd
 	pass
+=======
+	
+	scroll_offset.x -= 400 * delta
+	#print(delta)
+
+>>>>>>> Stashed changes:big_project/Obstacle/scroll.gd

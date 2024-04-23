@@ -1,0 +1,89 @@
+[gd_scene load_steps=11 format=3 uid="uid://dkgpj6soptr8x"]
+
+[ext_resource type="Script" path="res://Obstacle/scroll.gd" id="1_fe8ga"]
+[ext_resource type="Script" path="res://Obstacle/course.gd" id="1_qhs60"]
+[ext_resource type="PackedScene" uid="uid://bybvebfhewoxk" path="res://Obstacle/sub_player.tscn" id="2_eu4je"]
+[ext_resource type="PackedScene" uid="uid://oom7qs8xglat" path="res://Obstacle/Obstacle.tscn" id="3_ld3q7"]
+[ext_resource type="PackedScene" uid="uid://cwc0dt5niht4f" path="res://Obstacle/trash.tscn" id="4_bk78y"]
+[ext_resource type="PackedScene" uid="uid://bb6efrgt30m5j" path="res://Obstacle/shipwreck.tscn" id="4_h8vaw"]
+[ext_resource type="Texture2D" uid="uid://bb7wj4ivyqoru" path="res://art/oceanbackgroung.png" id="6_gttrl"]
+[ext_resource type="Texture2D" uid="uid://bxv6sr067bcsg" path="res://art/sand.png" id="7_b33uq"]
+[ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="8_6i21q"]
+
+[sub_resource type="Curve2D" id="Curve2D_60wcg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1400, 0, 0, 0, 0, 0, 1400, 835)
+}
+point_count = 2
+
+[node name="Course" type="Node2D"]
+script = ExtResource("1_qhs60")
+trash_scene = ExtResource("4_bk78y")
+obstacle_scene = ExtResource("3_ld3q7")
+wreck_scene = ExtResource("4_h8vaw")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_fe8ga")
+
+[node name="PlayerLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1400, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/PlayerLayer"]
+position = Vector2(700, 500)
+texture = ExtResource("6_gttrl")
+
+[node name="WreckLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1900, 0)
+
+[node name="SandLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1400, 0)
+
+[node name="Sand" type="Sprite2D" parent="ParallaxBackground/SandLayer"]
+position = Vector2(700, 500)
+texture = ExtResource("7_b33uq")
+
+[node name="SubPlayer" parent="." instance=ExtResource("2_eu4je")]
+position = Vector2(140, 460)
+scale = Vector2(0.8, 0.8)
+
+[node name="Path" type="Path2D" parent="."]
+curve = SubResource("Curve2D_60wcg")
+
+[node name="SpawnLoc" type="PathFollow2D" parent="Path"]
+position = Vector2(1400, 0)
+rotation = 1.5708
+
+[node name="Score" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1195.0
+offset_top = 6.0
+offset_right = 1385.0
+offset_bottom = 75.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("8_6i21q")
+theme_override_font_sizes/font_size = 100
+text = "Score: 0"
+
+[node name="TrashTimer" type="Timer" parent="."]
+wait_time = 1.5
+
+[node name="WreckTimer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="ObstacleTimer" type="Timer" parent="."]
+wait_time = 4.0
+
+[node name="ScoreTimer" type="Timer" parent="."]
+
+[node name="Time" type="Label" parent="."]
+offset_left = 15.0
+offset_top = 1.0
+offset_right = 83.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("8_6i21q")
+theme_override_font_sizes/font_size = 100
+text = "60"
+
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
