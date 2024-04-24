@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://b0ku54yf6r35v"]
+[gd_scene load_steps=20 format=3 uid="uid://b0ku54yf6r35v"]
 
 [ext_resource type="Script" path="res://Battle/battle.gd" id="1_3apam"]
 [ext_resource type="Texture2D" uid="uid://duxk13ry0vuaw" path="res://art/trashmonster.png" id="1_ca75h"]
 [ext_resource type="Texture2D" uid="uid://spw7tfh0ix32" path="res://art/obstaclecourse.png" id="1_dgmre"]
 [ext_resource type="Texture2D" uid="uid://bp8v8iijbblyw" path="res://art/submarinefinal (1).png" id="3_f1ekf"]
+[ext_resource type="Texture2D" uid="uid://kdg4nohxv5oh" path="res://art/empty.png" id="4_hrf17"]
 [ext_resource type="Script" path="res://Battle/PlayerDamage.gd" id="5_2cuwd"]
 [ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="5_u37l1"]
 
@@ -12,10 +13,13 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_ca75h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hrf17")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"damage",
+"speed": 8.0
 }]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pwa6k"]
@@ -42,10 +46,13 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_f1ekf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hrf17")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"damage",
+"speed": 8.0
 }]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tehh"]
@@ -116,6 +123,7 @@ offset_bottom = 543.0
 position = Vector2(262, 356)
 scale = Vector2(0.7, 0.729)
 sprite_frames = SubResource("SpriteFrames_kd8mi")
+animation = &"damage"
 metadata/_edit_lock_ = true
 
 [node name="ProgressBar" type="ProgressBar" parent="TrashContainer"]
@@ -155,6 +163,7 @@ offset_bottom = 647.0
 position = Vector2(169, 240)
 scale = Vector2(0.3, 0.313)
 sprite_frames = SubResource("SpriteFrames_bxxht")
+animation = &"damage"
 metadata/_edit_lock_ = true
 
 [node name="ProgressBar" type="ProgressBar" parent="PlayerContainer"]
@@ -251,7 +260,32 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_gwxo3")
 theme_override_styles/focus = SubResource("StyleBoxFlat_gwxo3")
 text = "Clean Up"
 
+[node name="EnemyDamage" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 1204.0
+offset_top = 90.0
+offset_right = 1297.0
+offset_bottom = 164.0
+theme_override_colors/default_color = Color(0.878431, 0, 0.00392157, 1)
+theme_override_fonts/normal_font = ExtResource("5_u37l1")
+theme_override_font_sizes/normal_font_size = 50
+text = "-5"
+script = ExtResource("5_2cuwd")
+
+[node name="PlayerDamage" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 234.0
+offset_right = 406.0
+offset_bottom = 308.0
+theme_override_colors/default_color = Color(0.878431, 0, 0.00392157, 1)
+theme_override_fonts/normal_font = ExtResource("5_u37l1")
+theme_override_font_sizes/normal_font_size = 50
+text = "-5"
+script = ExtResource("5_2cuwd")
+
 [node name="Trivia" type="Panel" parent="."]
+visible = false
 custom_minimum_size = Vector2(900, 700)
 layout_mode = 1
 anchors_preset = 8
@@ -321,30 +355,6 @@ text = "Option 1"
 libraries = {
 "": SubResource("AnimationLibrary_33m1b")
 }
-
-[node name="PlayerDamage" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 318.0
-offset_top = 234.0
-offset_right = 406.0
-offset_bottom = 308.0
-theme_override_colors/default_color = Color(0.878431, 0, 0.00392157, 1)
-theme_override_fonts/normal_font = ExtResource("5_u37l1")
-theme_override_font_sizes/normal_font_size = 50
-text = "-5"
-script = ExtResource("5_2cuwd")
-
-[node name="EnemyDamage" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 1204.0
-offset_top = 90.0
-offset_right = 1297.0
-offset_bottom = 164.0
-theme_override_colors/default_color = Color(0.878431, 0, 0.00392157, 1)
-theme_override_fonts/normal_font = ExtResource("5_u37l1")
-theme_override_font_sizes/normal_font_size = 50
-text = "-5"
-script = ExtResource("5_2cuwd")
 
 [node name="TryNewMove" type="RichTextLabel" parent="."]
 layout_mode = 0

@@ -10,7 +10,7 @@ var regex = RegEx.new()
 
 var current_player_health = max_player_health
 var current_trash_health  = max_trash_health
-
+@onready var _animated_sprite = $TrashContainer/TrashMonster
 var damages = {
 	"recycle": 5,
 	"reuse": 10,
@@ -88,8 +88,11 @@ func correct():
 	await get_tree().create_timer(0.5).timeout
 	current_trash_health = max(0, current_trash_health - damage)
 	$EnemyDamage.vis = true
+	_animated_sprite.play("damage")
 	set_health($TrashContainer/ProgressBar, current_trash_health, max_trash_health)
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.0).timeout
+	_animated_sprite.stop()
+	await get_tree().create_timer(1.0).timeout
 	$EnemyDamage.vis = false
 	if current_trash_health == 0:
 		SceneTransition.change_scene("res://Battle/win_screen2.tscn", "dissolve")
@@ -105,18 +108,25 @@ func enemy_turn(correct):
 	if !correct:
 		enemy_damage = enemy_damages[1]
 		$PlayerDamage.vis = true
+		$PlayerContainer/Player.play("damage")
+		
 	elif chance >= 0.5 && correct:
 		enemy_damage = enemy_damages[0]
 		$PlayerDamage.vis = true
+		$PlayerContainer/Player.play("damage")
 	else:
 		enemy_damage = 0
 		
 	$PlayerDamage.text = "-" + str(enemy_damage)
 	
-	print(chance)
 	current_player_health = max(0, current_player_health - enemy_damage)
 	set_health($PlayerContainer/ProgressBar, current_player_health, max_player_health)
-	await get_tree().create_timer(2.0).timeout
+	
+	await get_tree().create_timer(1.0).timeout
+	$PlayerContainer/Player.stop()
+	print(chance)
+	
+	await get_tree().create_timer(1.0).timeout
 	$PlayerDamage.vis = false
 
 func incorrect():

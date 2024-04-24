@@ -12,5 +12,5 @@ res://win_screen.tscn
 res://Route_Ifo.tscn
 res://Obstacle_Ifo.tscn
 res://scene_transition.tscn
-res://Battle/battle.gd
 res://TMonster_Ifo.tscn
+res://map.tscn
