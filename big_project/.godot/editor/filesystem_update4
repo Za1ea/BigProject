@@ -1,5 +1,7 @@
 res://start.tscn
 res://Sound/grid.gd
+res://global.gd
+res://Route_Ifo.gd
 res://Sound/win_screen.tscn
 res://home_button.tscn
 res://Battle/battle.tscn
@@ -12,5 +14,4 @@ res://win_screen.tscn
 res://Route_Ifo.tscn
 res://Obstacle_Ifo.tscn
 res://scene_transition.tscn
-res://Battle/battle.gd
 res://TMonster_Ifo.tscn

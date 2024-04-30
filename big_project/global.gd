@@ -14,6 +14,16 @@ var level1_ans = [
 	["purple", "purple", "purple", "teal"  , "teal"  , "teal"  , "purple"]
 ]
 
+var level2_ans = [
+	["purple", "purple", "purple", "whale" , "yellow", "whale" , "green"],
+	["blue"  , "blue"  , "purple", "red"   , "yellow", "whale" , "green"],
+	["teal"  , "blue"  , "purple", "red"   , "yellow", "yellow", "green"],
+	["teal"  , "whale" , "purple", "red"   , "red"   , "yellow", "green"],
+	["teal"  , "teal"  , "purple", "yellow", "yellow", "yellow", "green"],
+	["whale" , "whale" , "purple", "yellow", "whale" , "whale" , "green"],
+	["whale" , "whale" , "purple", "yellow", "yellow", "green" , "green"]
+]
+
 var trivia = {
 	"recycle": {
 		"How many pounds of plastic enters the ocean every year?": ["t~33 billion", "f~15 billion", "f~1 billion"],
