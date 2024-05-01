@@ -27,7 +27,7 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vce2d"]
 
-[node name="grid" type="Node2D" groups=["cells", "level1"]]
+[node name="grid" type="Node2D" groups=["cells", "level1", "whales"]]
 script = ExtResource("1_vygvi")
 
 [node name="Center" type="CenterContainer" parent="."]

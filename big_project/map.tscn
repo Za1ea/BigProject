@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://wbtgyrlm0eg4"]
+[gd_scene load_steps=8 format=3 uid="uid://dypo32og1dvb8"]
 
 [ext_resource type="Script" path="res://map.gd" id="1_2tn30"]
 [ext_resource type="Texture2D" uid="uid://8n5sfgagfukj" path="res://art/map.png" id="1_ow0ys"]
 [ext_resource type="PackedScene" uid="uid://c3wxa3oypncmh" path="res://alert.tscn" id="2_a8chh"]
 [ext_resource type="PackedScene" uid="uid://b2sysr0ib0i5w" path="res://map_sub.tscn" id="3_c1seq"]
+[ext_resource type="PackedScene" uid="uid://cj3kq4f02x3uq" path="res://sub_button.tscn" id="4_7yhgp"]
 [ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="5_x3u2a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jqndu"]
@@ -31,7 +32,13 @@ position = Vector2(-224, 172)
 position = Vector2(386, 336)
 
 [node name="alert2" parent="." instance=ExtResource("2_a8chh")]
-position = Vector2(124, -123)
+position = Vector2(126, -143)
+
+[node name="sub_button" parent="." instance=ExtResource("4_7yhgp")]
+offset_left = 1110.0
+offset_top = 49.0
+offset_right = 1364.0
+offset_bottom = 162.0
 
 [node name="mapSub" parent="." instance=ExtResource("3_c1seq")]
 position = Vector2(170, 261)

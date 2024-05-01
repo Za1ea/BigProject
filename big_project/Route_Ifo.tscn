@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cgd70c55qirld"]
+[gd_scene load_steps=10 format=3 uid="uid://ber5p04e36q7i"]
 
 [ext_resource type="Script" path="res://Route_Ifo.gd" id="1_yce54"]
 [ext_resource type="Texture2D" uid="uid://cj5p2ggt0yby7" path="res://art/Arctic_Background2.jpg" id="2_ps324"]

@@ -71,19 +71,27 @@ func level1():
 	
 	for i in range(8,12):
 		$Center/GridContainer.get_child(i).whale()
-		$Center/GridContainer.get_child(i).add_to_group("level1")
+		$Center/GridContainer.get_child(i).add_to_group("whales")
+	print(grid)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if grid == level1_ans:
-		go_home()
+	if grid == level1_ans && global.lose==false:
+		win()
+	elif grid == level1_ans && global.lose==true:
+		lose()
 
-func go_home():
+func win():
 	SceneTransition.change_scene("res://win_screen.tscn","dissolve")
+func lose():
+	SceneTransition.change_scene("res://Sound/sound_lose_screen.tscn","dissolve")
 
 func _on_restart_pressed():
 	for cell in $Center/GridContainer.get_children():
 		if !cell.is_in_group("level1"):
-			cell.reset()
+			if cell.is_in_group("whales"):
+				cell.reset(true)
+			else:
+				cell.reset()
 		

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://b71v2ti27ua5n"]
+
+[ext_resource type="Script" path="res://windows.gd" id="1_2k0sf"]
+[ext_resource type="Script" path="res://ParallaxBackground.gd" id="1_avpwf"]
+[ext_resource type="Texture2D" uid="uid://bb7wj4ivyqoru" path="res://art/oceanbackgroung.png" id="2_7q46m"]
+[ext_resource type="PackedScene" uid="uid://cj3kq4f02x3uq" path="res://sub_button.tscn" id="2_suqy2"]
+[ext_resource type="Texture2D" uid="uid://spw7tfh0ix32" path="res://art/obstaclecourse.png" id="4_6l2c2"]
+
+[node name="windows" type="Node2D"]
+script = ExtResource("1_2k0sf")
+
+[node name="sub_button" parent="." instance=ExtResource("2_suqy2")]
+offset_right = 274.0
+offset_bottom = 127.0
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_avpwf")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1400, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(700, 498)
+texture = ExtResource("2_7q46m")
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+visible = false
+script = ExtResource("1_avpwf")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2(1400, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2(700, 498)
+texture = ExtResource("4_6l2c2")

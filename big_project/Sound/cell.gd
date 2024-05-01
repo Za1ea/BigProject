@@ -43,7 +43,13 @@ func switch_color(color):
 	$square/animation.position = Vector2i(0, 5)
 	#print(color)
 	#print("current: ", current)
-	if color.is_empty() && fixed == false:
+	if $square/animation.animation == "whale":
+			global.lose = true
+			$square/animation.animation = "dead"
+			print(grid)
+			
+			
+	elif color.is_empty() && fixed == false:
 	#	print("empty")
 		$square/animation.animation = "default"
 		current = ""
@@ -68,10 +74,13 @@ func switch_color(color):
 			grid[row][col] = color
 			
 	#print(grid)
-
-func reset():
-	$square/animation.animation = "default"
-	grid[row][col] = ""
+func reset(whales = false):
+	if whales == true:
+		$square/animation.animation = "whale"
+		grid[row][col] = "whale"
+	else: 
+		$square/animation.animation = "default"
+		grid[row][col] = ""
 
 func whale():
 	$square/animation.scale = 0.5*$square/animation.scale

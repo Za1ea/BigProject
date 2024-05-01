@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cgd70c55qirld"]
+[gd_scene load_steps=10 format=3 uid="uid://bj77h40l6wsnc"]
 
 [ext_resource type="Script" path="res://Obstacle_Ifo.gd" id="1_yce54"]
 [ext_resource type="Texture2D" uid="uid://cj5p2ggt0yby7" path="res://art/Arctic_Background2.jpg" id="2_ps324"]

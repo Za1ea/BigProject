@@ -39,3 +39,6 @@ var trivia = {
 }
 
 var obstacle_score = 0
+var port = 1
+var intro = 0
+var lose = false
