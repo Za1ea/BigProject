@@ -1,6 +1,5 @@
-res://Sound/grid.gd
-res://Sound/sound_lose_screen.tscn
 res://Sound/grid.tscn
+res://Sound/grid.gd
 res://Battle/LoseScreen.tscn
 res://Sound/cell.tscn
 res://sub_home.tscn
@@ -9,6 +8,7 @@ res://windows.tscn
 res://sub_button.tscn
 res://map.tscn
 res://lose_screen.tscn
-res://global.gd
-res://Sound/cell.gd
-res://Replay.gd
+res://Sound/sound_lose_screen.tscn
+res://Battle/battle.tscn
+res://Route_Ifo.gd
+res://Route_Ifo.tscn

@@ -1,9 +1,9 @@
 [gd_scene load_steps=20 format=3 uid="uid://b0ku54yf6r35v"]
 
 [ext_resource type="Script" path="res://Battle/battle.gd" id="1_3apam"]
-[ext_resource type="Texture2D" uid="uid://duxk13ry0vuaw" path="res://art/trashmonster.png" id="1_ca75h"]
 [ext_resource type="Texture2D" uid="uid://spw7tfh0ix32" path="res://art/obstaclecourse.png" id="1_dgmre"]
 [ext_resource type="Texture2D" uid="uid://bp8v8iijbblyw" path="res://art/submarinefinal (1).png" id="3_f1ekf"]
+[ext_resource type="Texture2D" uid="uid://uqqp56yvymw1" path="res://art/trashmonsternew.png" id="3_gcqk1"]
 [ext_resource type="Texture2D" uid="uid://kdg4nohxv5oh" path="res://art/empty.png" id="4_hrf17"]
 [ext_resource type="Script" path="res://Battle/PlayerDamage.gd" id="5_2cuwd"]
 [ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="5_u37l1"]
@@ -12,7 +12,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ca75h")
+"texture": ExtResource("3_gcqk1")
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_hrf17")
@@ -120,11 +120,10 @@ offset_right = 1296.0
 offset_bottom = 543.0
 
 [node name="TrashMonster" type="AnimatedSprite2D" parent="TrashContainer"]
-position = Vector2(262, 356)
-scale = Vector2(0.7, 0.729)
+position = Vector2(136, 271)
+scale = Vector2(0.6, 0.625)
 sprite_frames = SubResource("SpriteFrames_kd8mi")
 animation = &"damage"
-metadata/_edit_lock_ = true
 
 [node name="ProgressBar" type="ProgressBar" parent="TrashContainer"]
 custom_minimum_size = Vector2(0, 25)
