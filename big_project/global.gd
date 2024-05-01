@@ -4,6 +4,15 @@ var current_game: String
 
 var grid: Array[Array] = []
 
+
+	#["" , "" , "" , "" , "" , "" , ""],
+	#["" , "" , "" , "" , "" , "" , ""],
+	#["" , "" , "" , "" , "" , "" , ""],
+	#["" , "" , "" , "" , "" , "" , ""],
+	#["" , "" , "" , "" , "" , "" , ""],
+	#["" , "" , "" , "" , "" , "" , ""],
+	#["" , "" , "" , "" , "" , "" , ""]
+
 var level1_ans = [
 	["purple", "purple", "purple", "purple", "purple", "purple", "red"   ],
 	["yellow", "whale" , "whale" , "whale" , "whale" , "purple", "red"   ],
@@ -13,6 +22,7 @@ var level1_ans = [
 	["purple", "red"   , "purple", "purple", "purple", "purple", "purple"],
 	["purple", "purple", "purple", "teal"  , "teal"  , "teal"  , "purple"]
 ]
+#colors: red, purple, yellow, teal
 
 var level2_ans = [
 	["purple", "purple", "purple", "whale" , "yellow", "whale" , "green"],
@@ -23,6 +33,40 @@ var level2_ans = [
 	["whale" , "whale" , "purple", "yellow", "whale" , "whale" , "green"],
 	["whale" , "whale" , "purple", "yellow", "yellow", "green" , "green"]
 ]
+#colors: purple, blue, teal, yellow, red, green
+
+var level3_ans = [
+	["whale", "whale"  , "whale"  , "whale"  , "yellow" , "yellow" , "yellow"],
+	["teal" , "teal"   , "teal"   , "yellow" , "yellow" , "red"    , "yellow"],
+	["teal" , "yellow" , "yellow" , "yellow" , "purple" , "red"    , "yellow"],
+	["teal" , "purple" , "purple" , "purple" , "purple" , "red"    , "yellow"],
+	["teal" , "purple" , "whale"  , "whale"  , "whale"  , "red"    , "red"   ],
+	["teal" , "purple" , "purple" , "purple" , "purple" , "purple" , "red"   ],
+	["teal" , "teal"   , "teal"   , "teal"   , "teal"   , "purple" , "purple"]
+]
+#colors: teal, pruple, red, yellow
+
+var level4_ans = [
+	["yellow" , "yellow" , "yellow" , "yellow" , "whale"  , "whale"  , "whale" ],
+	["yellow" , "whale"  , "whale"  , "yellow" , "whale"  , "green"  , "green" ],
+	["yellow" , "yellow" , "whale"  , "yellow" , "yellow" , "green"  , "purple"],
+	["red"    , "yellow" , "green"  , "green"  , "green"  , "green"  , "purple"],
+	["red"    , "red"    , "green"  , "red"    , "red"    , "red"    , "purple"],
+	["teal"   , "red"    , "red"    , "red"    , "teal"   , "teal"   , "purple"],
+	["teal"   , "teal"   , "teal"   , "teal"   , "teal"   , "purple" , "purple"]
+]
+#colors: yellow, red, teal, green, purple
+
+var level5_ans = [
+	["whale" , "red"    , "red"    , "whale"  , "whale"  , "whale"  , "whale" ],
+	["whale" , "whale"  , "red"    , "red"    , "yellow" , "yellow" , "yellow"],
+	["teal"  , "teal"   , "teal"   , "red"    , "red"    , "red"    , "yellow"],
+	["teal"  , "purple" , "purple" , "purple" , "purple" , "red"    , "yellow"],
+	["teal"  , "purple" , "whale"  , "whale"  , "purple" , "purple" , "yellow"],
+	["teal"  , "purple" , "purple" , "whale"  , "teal"   , "teal"   , "yellow"],
+	["teal"  , "teal"   , "teal"   , "teal"   , "teal"   , "yellow" , "yellow"]
+]
+#colors: teal, purple, red, yellow
 
 var trivia = {
 	"recycle": {
