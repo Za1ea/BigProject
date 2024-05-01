@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dkgpj6soptr8x"]
+[gd_scene load_steps=11 format=3 uid="uid://cdh2y3uenvqh0"]
 
 [ext_resource type="Script" path="res://Obstacle/scroll.gd" id="1_fe8ga"]
 [ext_resource type="Script" path="res://Obstacle/course.gd" id="1_qhs60"]
@@ -12,7 +12,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_60wcg"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1400, 0, 0, 0, 0, 0, 1400, 835)
+"points": PackedVector2Array(0, 0, 0, 0, 1400, 0, 0, 0, 0, 0, 1397, 755)
 }
 point_count = 2
 
@@ -31,6 +31,8 @@ motion_mirroring = Vector2(1400, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/PlayerLayer"]
 position = Vector2(700, 500)
 texture = ExtResource("6_gttrl")
+
+[node name="TrashLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="WreckLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(1900, 0)
@@ -51,7 +53,7 @@ curve = SubResource("Curve2D_60wcg")
 
 [node name="SpawnLoc" type="PathFollow2D" parent="Path"]
 position = Vector2(1400, 0)
-rotation = 1.5708
+rotation = 1.57477
 
 [node name="Score" type="Label" parent="."]
 anchors_preset = 1
@@ -67,15 +69,9 @@ theme_override_font_sizes/font_size = 100
 text = "Score: 0"
 
 [node name="TrashTimer" type="Timer" parent="."]
-wait_time = 1.5
+wait_time = 2.0
 
-[node name="WreckTimer" type="Timer" parent="."]
-wait_time = 5.0
-
-[node name="ObstacleTimer" type="Timer" parent="."]
-wait_time = 4.0
-
-[node name="ScoreTimer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="."]
 
 [node name="Time" type="Label" parent="."]
 offset_left = 15.0
@@ -86,4 +82,5 @@ theme_override_fonts/font = ExtResource("8_6i21q")
 theme_override_font_sizes/font_size = 100
 text = "60"
 
-[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="timeout" from="TrashTimer" to="." method="spawn_trash" binds= ["trash"]]
+[connection signal="timeout" from="Timer" to="." method="_on_score_timer_timeout"]

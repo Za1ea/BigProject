@@ -1,17 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://bybvebfhewoxk"]
+[gd_scene load_steps=6 format=3 uid="uid://bybvebfhewoxk"]
 
 [ext_resource type="Texture2D" uid="uid://bp8v8iijbblyw" path="res://art/submarinefinal (1).png" id="1_dp4p0"]
 [ext_resource type="Script" path="res://Obstacle/sub_player.gd" id="1_e3ist"]
+[ext_resource type="Texture2D" uid="uid://fq13m0lbt6le" path="res://art/empty.png" id="3_bbf8r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hft1c"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_dp4p0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bbf8r")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"damage",
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pe43m"]
@@ -19,14 +23,18 @@ radius = 107.0
 height = 298.0
 
 [node name="SubPlayer" type="CharacterBody2D"]
+collision_mask = 3
 script = ExtResource("1_e3ist")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sub" type="AnimatedSprite2D" parent="."]
 position = Vector2(34, 56)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_hft1c")
+animation = &"damage"
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_pe43m")

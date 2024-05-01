@@ -8,43 +8,52 @@ var time = 60
 var screen_size
 
 @onready var wreck_layer = $ParallaxBackground/WreckLayer
+@onready var trash_layer = $ParallaxBackground/TrashLayer
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	score = 0
 	screen_size = get_viewport_rect().size
 	global.current_game = "Course"
 	start_game()
 
 func start_game():
 	$TrashTimer.start()
-	$ObstacleTimer.start()
-	$WreckTimer.start()
-	$ScoreTimer.start()
+	$Timer.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print($ParallaxBackground/WreckLayer.position)
+	#print($ParallaxBackground/WreckLayer.position)
 	score = global.obstacle_score
 	$Score.text = "Score: " + str(score)
 	if time == 0:
 		SceneTransition.change_scene("res://Obstacle/GameOver.tscn", "")
-	if -1650 <= wreck_layer.position.x && wreck_layer.position.x <= -1640:
-		for n in wreck_layer.get_children():
-			wreck_layer.remove_child(n)
+	spawn(wreck_layer, "wreck")
+	spawn(trash_layer, "trash")
+
+func spawn(layer, obj):
+	if -1650 <= layer.position.x && layer.position.x <= -1640:  # spawns wrecks at end of screen so they don't just pop up
+		for n in layer.get_children():
+			layer.remove_child(n)
 			n.queue_free()
-		if randf_range(0.0, 1.0) < 0.4:
-			_on_wreck_timer_timeout()
+		var rand = randf_range(0.0, 1.0)
+		if obj == "wreck" && rand < 0.4:
+			spawn_wreck()
+		if obj != "wreck" && rand < 0.8:
+			spawn_trash(obj)
+			spawn_trash(obj)
 
-
-func _on_timer_timeout(extra_arg_0 : String):
+func spawn_trash(extra_arg_0 : String):
 	var obj
 	# Create a new instance of the Mob scene.
 	if extra_arg_0 == "trash":
 		obj = trash_scene.instantiate()
 	elif extra_arg_0 == "obstacle":
 		obj = obstacle_scene.instantiate()
-
+	
+	
+	
 	# Choose a random location on Path2D.
 	var spawn_location = $Path/SpawnLoc
 	spawn_location.progress_ratio = randf()
@@ -56,25 +65,33 @@ func _on_timer_timeout(extra_arg_0 : String):
 	obj.position = spawn_location.position
 	
 	set_velocity(obj)
+	'''
+	var spawn_location = $Path/SpawnLoc
+	spawn_location.progress_ratio = randf()
+	#var direction = spawn_location.rotation + PI / 2
+	obj.position = spawn_location.position
+	#obj.rotation = direction
+	print(obj.position)
+	obj.set_type(extra_arg_0)
+	trash_layer.add_child(obj)
 
 	# Add some randomness to the direction.
 	#direction += randf_range(-PI / 4, PI / 4)
 	#mob.rotation = direction
+	'''
 
 
 
-func _on_wreck_timer_timeout():
+func spawn_wreck():
 	#var mirror = Vector2(randf_range(1400, 2800), 0)
 	#$ParallaxBackground/WreckLayer.set_mirroring(mirror)
 	
 	var shipwreck = wreck_scene.instantiate()
-	print("shipwreck")
-	shipwreck.rotation = randf_range(-50.0, 50.0)
+	shipwreck.rotation = randf_range(-PI/3, PI/3)
+	print(shipwreck.rotation)
 	shipwreck.position = Vector2i(1400, 850)
+	shipwreck.set_type("wreck")
 	wreck_layer.add_child(shipwreck)
-	
-	
-	
 	
 	#set_velocity(shipwreck)
 

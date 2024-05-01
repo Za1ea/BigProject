@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://b0ku54yf6r35v"]
+[gd_scene load_steps=20 format=3 uid="uid://c0vxciaojkcme"]
 
 [ext_resource type="Script" path="res://Battle/battle.gd" id="1_3apam"]
-[ext_resource type="Texture2D" uid="uid://duxk13ry0vuaw" path="res://art/trashmonster.png" id="1_ca75h"]
 [ext_resource type="Texture2D" uid="uid://spw7tfh0ix32" path="res://art/obstaclecourse.png" id="1_dgmre"]
+[ext_resource type="Texture2D" uid="uid://b7gdk8fj4gbd8" path="res://art/trashmonsternew.png" id="3_24vmp"]
 [ext_resource type="Texture2D" uid="uid://bp8v8iijbblyw" path="res://art/submarinefinal (1).png" id="3_f1ekf"]
+[ext_resource type="Texture2D" uid="uid://fq13m0lbt6le" path="res://art/empty.png" id="4_iwpty"]
 [ext_resource type="Script" path="res://Battle/PlayerDamage.gd" id="5_2cuwd"]
 [ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="5_u37l1"]
 
@@ -11,11 +12,14 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ca75h")
+"texture": ExtResource("3_24vmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iwpty")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"damage",
+"speed": 8.0
 }]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pwa6k"]
@@ -42,10 +46,13 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_f1ekf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iwpty")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"damage",
+"speed": 8.0
 }]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tehh"]
@@ -107,15 +114,16 @@ stretch_mode = 3
 
 [node name="TrashContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 906.0
-offset_top = 177.0
-offset_right = 1296.0
-offset_bottom = 543.0
+offset_left = 843.0
+offset_top = 103.0
+offset_right = 1233.0
+offset_bottom = 469.0
 
 [node name="TrashMonster" type="AnimatedSprite2D" parent="TrashContainer"]
-position = Vector2(262, 356)
-scale = Vector2(0.7, 0.729)
+position = Vector2(196, 324)
+scale = Vector2(0.6, 0.625)
 sprite_frames = SubResource("SpriteFrames_kd8mi")
+animation = &"damage"
 metadata/_edit_lock_ = true
 
 [node name="ProgressBar" type="ProgressBar" parent="TrashContainer"]
@@ -146,15 +154,16 @@ text = "HP: 25/50"
 
 [node name="PlayerContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 171.0
-offset_top = 285.0
-offset_right = 392.0
-offset_bottom = 628.0
+offset_left = 150.0
+offset_top = 277.0
+offset_right = 371.0
+offset_bottom = 620.0
 
 [node name="Player" type="AnimatedSprite2D" parent="PlayerContainer"]
 position = Vector2(169, 240)
 scale = Vector2(0.3, 0.313)
 sprite_frames = SubResource("SpriteFrames_bxxht")
+animation = &"damage"
 metadata/_edit_lock_ = true
 
 [node name="ProgressBar" type="ProgressBar" parent="PlayerContainer"]
@@ -325,10 +334,10 @@ libraries = {
 
 [node name="PlayerDamage" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 318.0
-offset_top = 234.0
-offset_right = 406.0
-offset_bottom = 308.0
+offset_left = 322.0
+offset_top = 207.0
+offset_right = 410.0
+offset_bottom = 281.0
 theme_override_colors/default_color = Color(0.878431, 0, 0.00392157, 1)
 theme_override_fonts/normal_font = ExtResource("5_u37l1")
 theme_override_font_sizes/normal_font_size = 50
@@ -337,10 +346,10 @@ script = ExtResource("5_2cuwd")
 
 [node name="EnemyDamage" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 1204.0
-offset_top = 90.0
-offset_right = 1297.0
-offset_bottom = 164.0
+offset_left = 1185.0
+offset_top = 34.0
+offset_right = 1278.0
+offset_bottom = 108.0
 theme_override_colors/default_color = Color(0.878431, 0, 0.00392157, 1)
 theme_override_fonts/normal_font = ExtResource("5_u37l1")
 theme_override_font_sizes/normal_font_size = 50
@@ -349,10 +358,10 @@ script = ExtResource("5_2cuwd")
 
 [node name="TryNewMove" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 446.0
-offset_top = 730.0
-offset_right = 954.0
-offset_bottom = 804.0
+offset_left = 508.0
+offset_top = 753.0
+offset_right = 897.0
+offset_bottom = 808.0
 theme_override_colors/default_color = Color(0.407843, 0.356863, 0.341176, 1)
 theme_override_fonts/normal_font = ExtResource("5_u37l1")
 theme_override_font_sizes/normal_font_size = 50

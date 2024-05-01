@@ -14,6 +14,7 @@ var level1_ans = [
 	["purple", "purple", "purple", "teal"  , "teal"  , "teal"  , "purple"]
 ]
 
+
 var trivia = {
 	"recycle": {
 		"How many pounds of plastic enters the ocean every year?": ["t~33 billion", "f~15 billion", "f~1 billion"],
