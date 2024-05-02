@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714591344
+::res://::1714666027
 alert.gd::GDScript::-1::1713458766::0::1::::<>Area2D<>::
 alert.tscn::PackedScene::6784943284066127359::1713458766::0::1::::<><>::uid://ci3eb80lw2tc3::::res://art/alert.png<>res://alert.gd<>uid://0g3ld1yqugen::::res://art/alert2.png
 export_presets.cfg::TextFile::-1::1713458766::0::1::::<><>::
@@ -37,7 +37,8 @@ windows.gd::GDScript::-1::1714494530::0::1::::<>Node2D<>::
 windows.tscn::PackedScene::4687461786571613833::1714591343::0::1::::<><>::res://windows.gd<>res://ParallaxBackground.gd<>uid://bb7wj4ivyqoru::::res://art/oceanbackgroung.png<>uid://cj3kq4f02x3uq::::res://sub_button.tscn<>uid://spw7tfh0ix32::::res://art/obstaclecourse.png
 win_screen.gd::GDScript::-1::1713458766::0::1::::<>Control<>::
 win_screen.tscn::PackedScene::2607118848275593913::1713976319::0::1::::<><>::uid://b2glt3q7de2p2::::res://art/bubblegum/Bubblegum.ttf<>uid://b4f1tw0vvetom::::res://art/Arctic Background_1.png<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf<>res://home_button.gd
-::res://art/::1714591559
+::res://art/::1714666019
+54d4861e-bec0-48b9-86c0-5938bf669edd.png::CompressedTexture2D::7800133353840972592::1714666006::1714666029::1::::<><>::
 Adigiana Ultra.ttf::FontFile::8942259484294568012::1713458766::1713458766::1::::<><>::
 alert2.png::CompressedTexture2D::1768827275853173069::1713458766::1713458766::1::::<><>::
 alert.png::CompressedTexture2D::5392401119790043140::1713458766::1713458766::1::::<><>::
@@ -87,9 +88,9 @@ wreckedship.png::CompressedTexture2D::2611222203173672726::1713458766::171345876
 yellow_dot.png::CompressedTexture2D::6727708071419215694::1713458766::1713458766::1::::<><>::
 ::res://art/bubblegum/::1713458766
 Bubblegum.ttf::FontFile::4294609042277764437::1713458766::1713458766::1::::<><>::
-::res://Battle/::1714591344
+::res://Battle/::1714591633
 battle.gd::GDScript::-1::1713544048::0::1::::<>Control<>::
-battle.tscn::PackedScene::4163055026378749849::1714591344::0::1::::<><>::res://Battle/battle.gd<>uid://duxk13ry0vuaw::::res://art/trashmonster.png<>uid://spw7tfh0ix32::::res://art/obstaclecourse.png<>uid://bp8v8iijbblyw::::res://art/submarinefinal (1).png<>uid://kdg4nohxv5oh::::res://art/empty.png<>res://Battle/PlayerDamage.gd<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf
+battle.tscn::PackedScene::4163055026378749849::1714591633::0::1::::<><>::res://Battle/battle.gd<>uid://spw7tfh0ix32::::res://art/obstaclecourse.png<>uid://bp8v8iijbblyw::::res://art/submarinefinal (1).png<>uid://uqqp56yvymw1::::res://art/trashmonsternew.png<>uid://kdg4nohxv5oh::::res://art/empty.png<>res://Battle/PlayerDamage.gd<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf
 LoseScreen.tscn::PackedScene::5765566430767330615::1714591343::0::1::::<><>::uid://cj5p2ggt0yby7::::res://art/Arctic_Background2.jpg
 PlayerDamage.gd::GDScript::-1::1713458766::0::1::::<>RichTextLabel<>::
 win_screen2.tscn::PackedScene::3929629537879246940::1713458766::0::1::::<><>::uid://b4f1tw0vvetom::::res://art/Arctic Background_1.png<>uid://b2glt3q7de2p2::::res://art/bubblegum/Bubblegum.ttf<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf<>res://home_button.gd<>res://Replay.gd
