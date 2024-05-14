@@ -1,14 +1,14 @@
+ColorRect
+TextureRect
+Panel
 Button
 Sprite2D
 ParallaxLayer
 ParallaxBackground
-TextureRect
 Label
 MarginContainer
 CenterContainer
 MarginContainer
-TextureRect
 Control
 Label
 Node2D
-Timer

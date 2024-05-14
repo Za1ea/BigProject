@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b0ku54yf6r35v"]
+[gd_scene load_steps=21 format=3 uid="uid://b0ku54yf6r35v"]
 
 [ext_resource type="Script" path="res://Battle/battle.gd" id="1_3apam"]
 [ext_resource type="Texture2D" uid="uid://spw7tfh0ix32" path="res://art/obstaclecourse.png" id="1_dgmre"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://kdg4nohxv5oh" path="res://art/empty.png" id="4_hrf17"]
 [ext_resource type="Script" path="res://Battle/PlayerDamage.gd" id="5_2cuwd"]
 [ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="5_u37l1"]
+[ext_resource type="PackedScene" uid="uid://dacp4gog88m2b" path="res://home_button.tscn" id="8_ak0eo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kd8mi"]
 animations = [{
@@ -366,6 +367,9 @@ theme_override_fonts/normal_font = ExtResource("5_u37l1")
 theme_override_font_sizes/normal_font_size = 50
 text = "Try a different move"
 script = ExtResource("5_2cuwd")
+
+[node name="homeButton" parent="." instance=ExtResource("8_ak0eo")]
+layout_mode = 0
 
 [connection signal="pressed" from="Panel/Actions/Recycle" to="." method="attack" binds= ["recycle"]]
 [connection signal="pressed" from="Panel/Actions/Reuse" to="." method="attack" binds= ["reuse"]]

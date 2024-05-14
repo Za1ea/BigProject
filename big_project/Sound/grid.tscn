@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://bpvvlr2xeo60f"]
+[gd_scene load_steps=16 format=3 uid="uid://bpvvlr2xeo60f"]
 
 [ext_resource type="Script" path="res://Sound/grid.gd" id="1_vygvi"]
 [ext_resource type="Texture2D" uid="uid://dkt72sw2uuwyb" path="res://art/cargo_ship.png" id="2_b6ckh"]
 [ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="2_pbvk6"]
+[ext_resource type="Texture2D" uid="uid://spw7tfh0ix32" path="res://art/obstaclecourse.png" id="2_wglqt"]
 [ext_resource type="Texture2D" uid="uid://c64122exa4lya" path="res://art/red_boat.png" id="3_23dl6"]
 [ext_resource type="Texture2D" uid="uid://6onhafwrm3br" path="res://art/teal_boat.png" id="4_vjqlq"]
 [ext_resource type="PackedScene" uid="uid://dacp4gog88m2b" path="res://home_button.tscn" id="5_0osji"]
@@ -29,6 +30,18 @@ corner_radius_bottom_left = 5
 
 [node name="grid" type="Node2D" groups=["cells", "level1", "whales"]]
 script = ExtResource("1_vygvi")
+
+[node name="ColorRect2" type="TextureRect" parent="."]
+offset_right = 1462.0
+offset_bottom = 1113.0
+texture = ExtResource("2_wglqt")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_right = 1459.0
+offset_bottom = 1022.0
+color = Color(0.180392, 0.403922, 1, 0.372549)
 
 [node name="Center" type="CenterContainer" parent="."]
 offset_right = 1071.0

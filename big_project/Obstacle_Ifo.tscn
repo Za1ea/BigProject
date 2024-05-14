@@ -1,9 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://bj77h40l6wsnc"]
+[gd_scene load_steps=11 format=3 uid="uid://bj77h40l6wsnc"]
 
 [ext_resource type="Script" path="res://Obstacle_Ifo.gd" id="1_yce54"]
 [ext_resource type="Texture2D" uid="uid://cj5p2ggt0yby7" path="res://art/Arctic_Background2.jpg" id="2_ps324"]
 [ext_resource type="FontFile" uid="uid://b2glt3q7de2p2" path="res://art/bubblegum/Bubblegum.ttf" id="2_qb53c"]
 [ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="2_r0hkk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_30usv"]
+bg_color = Color(0.898039, 0.760784, 0.976471, 0.741176)
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sim1j"]
 
@@ -18,22 +25,18 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_yce54")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-offset_top = 3.0
-offset_right = 1400.0
-offset_bottom = 1003.0
-size_flags_vertical = 3
-theme_override_constants/margin_left = 25
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 25
-theme_override_constants/margin_bottom = 25
+[node name="ColorRect" type="Panel" parent="."]
+offset_left = 36.0
+offset_top = 202.0
+offset_right = 1367.0
+offset_bottom = 858.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_30usv")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
+[node name="Title" type="Label" parent="."]
+offset_left = 54.0
+offset_top = 53.0
+offset_right = 1375.0
+offset_bottom = 160.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.2, 0.486275, 0.67451, 1)
@@ -44,6 +47,21 @@ text = "Obstacle Course Minigame
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 57.0
+offset_top = 3.0
+offset_right = 1349.0
+offset_bottom = 1003.0
+size_flags_vertical = 3
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
