@@ -34,6 +34,8 @@ texture = ExtResource("6_gttrl")
 
 [node name="TrashLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
+[node name="ObstacleLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
 [node name="WreckLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(1900, 0)
 
@@ -71,6 +73,9 @@ text = "Score: 0"
 [node name="TrashTimer" type="Timer" parent="."]
 wait_time = 2.0
 
+[node name="FishTimer" type="Timer" parent="."]
+wait_time = 5.0
+
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Time" type="Label" parent="."]
@@ -83,4 +88,5 @@ theme_override_font_sizes/font_size = 100
 text = "60"
 
 [connection signal="timeout" from="TrashTimer" to="." method="spawn_trash" binds= ["trash"]]
+[connection signal="timeout" from="FishTimer" to="." method="spawn_trash" binds= ["obstacle"]]
 [connection signal="timeout" from="Timer" to="." method="_on_score_timer_timeout"]

@@ -42,7 +42,7 @@ func _on_body_entered(body):
 		global.obstacle_score += 1
 		body.queue_free()
 	else:
-		global.obstacle_score = min(0, global.obstacle_score - 1)
+		global.obstacle_score = max(0, global.obstacle_score - 5)
 		lives -= 1
 		$Sub.play("damage")
 		await get_tree().create_timer(1.0).timeout

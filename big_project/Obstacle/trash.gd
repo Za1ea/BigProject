@@ -14,8 +14,6 @@ func _process(delta):
 
 func set_type(type):
 	obj = type
-	if obj == "trash":
-		pass
 		#self.collision_layer = (int)pow(2, 0)
 
 func _on_visible_on_screen_notifier_2d_screen_exited():

@@ -1,12 +1,13 @@
-res://start.tscn
+res://Obstacle/course.gd
+res://Obstacle/course.tscn
 res://Sound/grid.gd
+res://start.tscn
 res://map.tscn
 res://Sound/win_screen.tscn
 res://home_button.tscn
-res://Obstacle/course.tscn
 res://Obstacle/shipwreck.tscn
 res://Obstacle/sub_player.tscn
 res://lose_screen.tscn
 res://Battle/battle.tscn
 res://Obstacle/trash.tscn
-res://Obstacle/course.gd
+res://Obstacle/Obstacle.tscn
