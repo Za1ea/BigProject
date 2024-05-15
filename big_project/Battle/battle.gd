@@ -20,7 +20,8 @@ var damage = damages["recycle"]
 var enemy_damages = [5, 10]
 var chosen
 
-
+@onready var trash_sprite = $TrashContainer/TrashMonster
+@onready var player_sprite = $PlayerContainer/Player
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -88,8 +89,11 @@ func correct():
 	await get_tree().create_timer(0.5).timeout
 	current_trash_health = max(0, current_trash_health - damage)
 	$EnemyDamage.vis = true
+	trash_sprite.play("damage")
 	set_health($TrashContainer/ProgressBar, current_trash_health, max_trash_health)
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(0.8).timeout
+	trash_sprite.stop()
+	await get_tree().create_timer(1.2).timeout
 	$EnemyDamage.vis = false
 	if current_trash_health == 0:
 		SceneTransition.change_scene("res://Battle/win_screen2.tscn", "dissolve")
@@ -105,18 +109,24 @@ func enemy_turn(correct):
 	if !correct:
 		enemy_damage = enemy_damages[1]
 		$PlayerDamage.vis = true
+		player_sprite.play("damage")
+		
 	elif chance >= 0.5 && correct:
 		enemy_damage = enemy_damages[0]
 		$PlayerDamage.vis = true
+		player_sprite.play("damage")
+		
 	else:
 		enemy_damage = 0
 		
 	$PlayerDamage.text = "-" + str(enemy_damage)
 	
-	print(chance)
 	current_player_health = max(0, current_player_health - enemy_damage)
 	set_health($PlayerContainer/ProgressBar, current_player_health, max_player_health)
-	await get_tree().create_timer(2.0).timeout
+	
+	await get_tree().create_timer(0.8).timeout
+	player_sprite.stop()
+	await get_tree().create_timer(1.2).timeout
 	$PlayerDamage.vis = false
 
 func incorrect():

@@ -11,11 +11,11 @@ var rmax = 6
 var cmin = 0
 var cmax = 6
 var fixed = false
-#var anim = get_tree().square.animation
+@onready var anim = $square/animation
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$square/animation.animation = "default"
+	anim.animation = "default"
 	set_process_input(true)
 	
 func _gui_input(event):
@@ -39,19 +39,19 @@ func set_path_color(color):
 func switch_color(color):
 	print(color)
 	var current = grid[row][col]
-	$square/animation.scale = 1*$square/animation.scale
-	$square/animation.position = Vector2i(0, 5)
+	anim.scale = 1*anim.scale
+	anim.position = Vector2i(0, 5)
 	#print(color)
 	#print("current: ", current)
 	if color.is_empty() && fixed == false:
 	#	print("empty")
-		$square/animation.animation = "default"
+		anim.animation = "default"
 		current = ""
 	
 	elif current == color && fixed == false && current != "whale":
 	#	print("back")
 	#	print(current)
-		$square/animation.animation = "default"
+		anim.animation = "default"
 		grid[row][col] = ""
 	
 	elif current == "" && !color.is_empty() && current != "whale":
@@ -63,21 +63,21 @@ func switch_color(color):
 		#print(grid)
 		#print(grid[a.x][a.y], grid[b.x][b.y], grid[l.x][l.y], grid[r.x][r.y])
 		if (grid[a.x][a.y] == color || grid[b.x][b.y] == color || grid[l.x][l.y] == color || grid[r.x][r.y] == color || fixed == true):
-			$square/animation.animation = color
+			anim.animation = color
 			#print(color)
 			grid[row][col] = color
 			
 	#print(grid)
 
 func reset():
-	$square/animation.animation = "default"
+	anim.animation = "default"
 	grid[row][col] = ""
 
 func whale():
-	$square/animation.scale = 0.5*$square/animation.scale
-	$square/animation.position = Vector2i(0, 65)
-	$square/animation.animation = "whale"
-	$square/animation.play("whale")
+	anim.scale = 0.5*anim.scale
+	anim.position = Vector2i(0, 65)
+	anim.animation = "whale"
+	anim.play("whale")
 	grid[row][col] = "whale"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

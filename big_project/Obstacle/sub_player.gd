@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var speed : float = 500.0
 @export var gravity : float = 40.0
 @export var JUMP_VELOCITY : float = 10.0
+@export var lives : int = 3
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 #var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -32,6 +33,8 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+	global_position = global_position.clamp(Vector2(0, 120), get_viewport_rect().size - Vector2(0, 100))
+	
 
 
 func _on_body_entered(body):
@@ -39,4 +42,10 @@ func _on_body_entered(body):
 		global.obstacle_score += 1
 		body.queue_free()
 	else:
-		global.obstacle_score = min(0, global.obstacle_score - 1)
+		global.obstacle_score = max(0, global.obstacle_score - 5)
+		lives -= 1
+		$Sub.play("damage")
+		await get_tree().create_timer(1.0).timeout
+		$Sub.stop()
+		if lives == 0:
+			SceneTransition.change_scene("res://lose_screen.tscn", "")

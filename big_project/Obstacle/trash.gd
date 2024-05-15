@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-var score = global.obstacle_score
 var obj = "trash"
 
 # Called when the node enters the scene tree for the first time.
@@ -12,6 +11,10 @@ func _ready():
 func _process(delta):
 	#velocity.x -= 400 * delta
 	move_and_slide()
+
+func set_type(type):
+	obj = type
+		#self.collision_layer = (int)pow(2, 0)
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()
