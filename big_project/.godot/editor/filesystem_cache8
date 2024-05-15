@@ -3,7 +3,7 @@ ea4bc82a6ad023ab7ee23ee620429895
 alert.gd::GDScript::-1::1710782847::0::1::::<>Area2D<>::
 alert.tscn::PackedScene::6784943284066127359::1710782847::0::1::::<><>::uid://ci3eb80lw2tc3::::res://art/alert.png<>res://alert.gd<>uid://0g3ld1yqugen::::res://art/alert2.png
 export_presets.cfg::TextFile::-1::1713891213::0::1::::<><>::
-global.gd::GDScript::-1::1714495046::0::1::::<>Node<>::
+global.gd::GDScript::-1::1714496637::0::1::::<>Node<>::
 home_button.gd::GDScript::-1::1712594843::0::1::::<>Button<>::
 home_button.tscn::PackedScene::7164353686587547807::1715621635::0::1::::<><>::uid://bsduxtwkrpdkx::::res://art/map_icon.png<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf<>res://home_button.gd
 icon.svg::CompressedTexture2D::4067679029610153788::1710782847::1710782847::1::::<><>::
