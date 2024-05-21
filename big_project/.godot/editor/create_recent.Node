@@ -12,3 +12,17 @@ MarginContainer
 Control
 Label
 Node2D
+ParallaxLayer
+RichTextLabel
+AnimatedSprite2D
+Sprite2D
+TextureRect
+Label
+AnimationPlayer
+Button
+VBoxContainer
+Panel
+HBoxContainer
+ProgressBar
+AnimatedSprite2D
+TextureRect

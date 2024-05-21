@@ -66,8 +66,8 @@ otter.png::CompressedTexture2D::2696782391838552629::1713889271::1713889274::1::
 purple_dot.png::CompressedTexture2D::6068970666807344237::1713458766::1713458766::1::::<><>::
 red_boat.png::CompressedTexture2D::7010190758636139428::1713458766::1713458766::1::::<><>::
 red_dot.png::CompressedTexture2D::2492412519707327194::1713458766::1713458766::1::::<><>::
-sand.png::CompressedTexture2D::3696292890140704014::1713545787::1713545849::1::::<><>::
-school_of_fish.png::CompressedTexture2D::6598969477802257007::1713458766::1713458766::1::::<><>::
+sand.png::CompressedTexture2D::4046031324237515674::1713891197::1713891197::1::::<><>::
+school_of_fish.png::CompressedTexture2D::6598969477802257007::1713891213::1713891213::1::::<><>::
 square with dot.png::CompressedTexture2D::7715627489770516672::1713458766::1713458766::1::::<><>::
 square.png::CompressedTexture2D::4773370285716045220::1713458766::1713458766::1::::<><>::
 start.png::CompressedTexture2D::2367810581434941607::1713458766::1713458766::1::::<><>::
@@ -94,18 +94,18 @@ battle.tscn::PackedScene::4163055026378749849::1715620277::0::1::::<><>::res://B
 LoseScreen.tscn::PackedScene::5765566430767330615::1715620276::0::1::::<><>::uid://cj5p2ggt0yby7::::res://art/Arctic_Background2.jpg
 PlayerDamage.gd::GDScript::-1::1713458766::0::1::::<>RichTextLabel<>::
 win_screen2.tscn::PackedScene::3929629537879246940::1713458766::0::1::::<><>::uid://b4f1tw0vvetom::::res://art/Arctic Background_1.png<>uid://b2glt3q7de2p2::::res://art/bubblegum/Bubblegum.ttf<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf<>res://home_button.gd<>res://Replay.gd
-::res://Obstacle/::1715620276
-course.gd::GDScript::-1::1713458766::0::1::::<>Node2D<>::
-course.tscn::PackedScene::7874465237707869189::1715620276::0::1::::<><>::res://Obstacle/scroll.gd<>res://Obstacle/course.gd<>uid://bybvebfhewoxk::::res://Obstacle/sub_player.tscn<>uid://oom7qs8xglat::::res://Obstacle/Obstacle.tscn<>uid://cwc0dt5niht4f::::res://Obstacle/trash.tscn<>uid://bb6efrgt30m5j::::res://Obstacle/shipwreck.tscn<>uid://bb7wj4ivyqoru::::res://art/oceanbackgroung.png<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf
-GameOver.gd::GDScript::-1::1713458766::0::1::::<>Node2D<>::
-GameOver.tscn::PackedScene::1101009810991053864::1713978429::0::1::::<><>::res://Obstacle/GameOver.gd<>uid://dacp4gog88m2b::::res://home_button.tscn<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf<>uid://spw7tfh0ix32::::res://art/obstaclecourse.png<>uid://b2glt3q7de2p2::::res://art/bubblegum/Bubblegum.ttf
-Obstacle.tscn::PackedScene::1012331718517879551::1713458766::0::1::::<><>::uid://c1aucfbe5rqh0::::res://art/school_of_fish.png
-scroll.gd::GDScript::-1::1713458766::0::1::::<>ParallaxBackground<>::
-shipwreck.tscn::PackedScene::2520857937715043741::1713458766::0::1::::<><>::uid://bdg5pidlwdxqc::::res://art/wreckedship.png
-sub_player.gd::GDScript::-1::1713458766::0::1::::<>CharacterBody2D<>::
-sub_player.tscn::PackedScene::4074299569355300576::1713458766::0::1::::<><>::uid://bp8v8iijbblyw::::res://art/submarinefinal (1).png<>res://Obstacle/sub_player.gd
-trash.gd::GDScript::-1::1713458766::0::1::::<>CharacterBody2D<>::
-trash.tscn::PackedScene::6322649010021344899::1713458766::0::1::::<><>::res://Obstacle/trash.gd<>uid://btmrenohbxfpy::::res://art/trashobstacle1.png
+::res://Obstacle/::1715621636
+course.gd::GDScript::-1::1715621331::0::1::::<>Node2D<>::
+course.tscn::PackedScene::4999542262186980287::1715621635::0::1::::<><>::res://Obstacle/scroll.gd<>res://Obstacle/course.gd<>uid://bybvebfhewoxk::::res://Obstacle/sub_player.tscn<>uid://oom7qs8xglat::::res://Obstacle/Obstacle.tscn<>uid://cwc0dt5niht4f::::res://Obstacle/trash.tscn<>uid://bb6efrgt30m5j::::res://Obstacle/shipwreck.tscn<>uid://bb7wj4ivyqoru::::res://art/oceanbackgroung.png<>uid://bxv6sr067bcsg::::res://art/sand.png<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf
+GameOver.gd::GDScript::-1::1713891212::0::1::::<>Node2D<>::
+GameOver.tscn::PackedScene::1101009810991053864::1713891212::0::1::::<><>::res://Obstacle/GameOver.gd<>uid://dacp4gog88m2b::::res://home_button.tscn<>uid://d0nxybs2njrei::::res://art/Adigiana Ultra.ttf<>uid://spw7tfh0ix32::::res://art/obstaclecourse.png<>uid://b2glt3q7de2p2::::res://art/bubblegum/Bubblegum.ttf
+Obstacle.tscn::PackedScene::1012331718517879551::1715621636::0::1::::<><>::res://Obstacle/trash.gd<>uid://c1aucfbe5rqh0::::res://art/school_of_fish.png
+scroll.gd::GDScript::-1::1713976798::0::1::::<>ParallaxBackground<>::
+shipwreck.tscn::PackedScene::2520857937715043741::1715621635::0::1::::<><>::res://Obstacle/trash.gd<>uid://jbmewp2m00tr::::res://art/wreckedship1.png
+sub_player.gd::GDScript::-1::1714752917::0::1::::<>CharacterBody2D<>::
+sub_player.tscn::PackedScene::4074299569355300576::1715621635::0::1::::<><>::uid://bp8v8iijbblyw::::res://art/submarinefinal (1).png<>res://Obstacle/sub_player.gd<>uid://fq13m0lbt6le::::res://art/empty.png
+trash.gd::GDScript::-1::1715014853::0::1::::<>CharacterBody2D<>::
+trash.tscn::PackedScene::6322649010021344899::1715621636::0::1::::<><>::res://Obstacle/trash.gd<>uid://btmrenohbxfpy::::res://art/trashobstacle1.png
 ::res://OceanRescueHTML/::1713458766
 index.apple-touch-icon.png::CompressedTexture2D::1904700256604488739::1713458766::1713458766::1::::<><>::
 index.icon.png::CompressedTexture2D::6618985553930467910::1713458766::1713458766::1::::<><>::

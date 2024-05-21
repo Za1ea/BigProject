@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dkgpj6soptr8x"]
+[gd_scene load_steps=11 format=3 uid="uid://cdh2y3uenvqh0"]
 
 [ext_resource type="Script" path="res://Obstacle/scroll.gd" id="1_fe8ga"]
 [ext_resource type="Script" path="res://Obstacle/course.gd" id="1_qhs60"]
@@ -7,11 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://cwc0dt5niht4f" path="res://Obstacle/trash.tscn" id="4_bk78y"]
 [ext_resource type="PackedScene" uid="uid://bb6efrgt30m5j" path="res://Obstacle/shipwreck.tscn" id="4_h8vaw"]
 [ext_resource type="Texture2D" uid="uid://bb7wj4ivyqoru" path="res://art/oceanbackgroung.png" id="6_gttrl"]
+[ext_resource type="Texture2D" uid="uid://bxv6sr067bcsg" path="res://art/sand.png" id="7_b33uq"]
 [ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="8_6i21q"]
 
 [sub_resource type="Curve2D" id="Curve2D_60wcg"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1400, 0, 0, 0, 0, 0, 1400, 835)
+"points": PackedVector2Array(0, 0, 0, 0, 1400, 0, 0, 0, 0, 0, 1397, 755)
 }
 point_count = 2
 
@@ -24,14 +25,29 @@ wreck_scene = ExtResource("4_h8vaw")
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 script = ExtResource("1_fe8ga")
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="PlayerLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(1400, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/PlayerLayer"]
 position = Vector2(700, 500)
 texture = ExtResource("6_gttrl")
 
+[node name="TrashLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="ObstacleLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="WreckLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1900, 0)
+
+[node name="SandLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1400, 0)
+
+[node name="Sand" type="Sprite2D" parent="ParallaxBackground/SandLayer"]
+position = Vector2(700, 500)
+texture = ExtResource("7_b33uq")
+
 [node name="SubPlayer" parent="." instance=ExtResource("2_eu4je")]
+position = Vector2(140, 460)
 scale = Vector2(0.8, 0.8)
 
 [node name="Path" type="Path2D" parent="."]
@@ -39,10 +55,7 @@ curve = SubResource("Curve2D_60wcg")
 
 [node name="SpawnLoc" type="PathFollow2D" parent="Path"]
 position = Vector2(1400, 0)
-rotation = 1.5708
-
-[node name="TrashTimer" type="Timer" parent="."]
-wait_time = 1.5
+rotation = 1.57477
 
 [node name="Score" type="Label" parent="."]
 anchors_preset = 1
@@ -57,13 +70,13 @@ theme_override_fonts/font = ExtResource("8_6i21q")
 theme_override_font_sizes/font_size = 100
 text = "Score: 0"
 
-[node name="WreckTimer" type="Timer" parent="."]
-wait_time = 10.0
+[node name="TrashTimer" type="Timer" parent="."]
+wait_time = 2.0
 
-[node name="ObstacleTimer" type="Timer" parent="."]
-wait_time = 4.0
+[node name="FishTimer" type="Timer" parent="."]
+wait_time = 5.0
 
-[node name="ScoreTimer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="."]
 
 [node name="Time" type="Label" parent="."]
 offset_left = 15.0
@@ -74,7 +87,6 @@ theme_override_fonts/font = ExtResource("8_6i21q")
 theme_override_font_sizes/font_size = 100
 text = "60"
 
-[connection signal="timeout" from="TrashTimer" to="." method="_on_timer_timeout" binds= ["trash"]]
-[connection signal="timeout" from="WreckTimer" to="." method="_on_wreck_timer_timeout"]
-[connection signal="timeout" from="ObstacleTimer" to="." method="_on_timer_timeout" binds= ["obstacle"]]
-[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="timeout" from="TrashTimer" to="." method="spawn_trash" binds= ["trash"]]
+[connection signal="timeout" from="FishTimer" to="." method="spawn_trash" binds= ["obstacle"]]
+[connection signal="timeout" from="Timer" to="." method="_on_score_timer_timeout"]
