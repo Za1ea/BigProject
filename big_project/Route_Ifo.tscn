@@ -26,10 +26,10 @@ corner_radius_bottom_left = 80
 script = ExtResource("1_yce54")
 
 [node name="ColorRect" type="Panel" parent="."]
-offset_left = 36.0
-offset_top = 315.0
-offset_right = 1367.0
-offset_bottom = 858.0
+offset_left = 29.0
+offset_top = 243.0
+offset_right = 1360.0
+offset_bottom = 831.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ba7og")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -92,6 +92,7 @@ show_behind_parent = true
 position = Vector2(700, 500)
 scale = Vector2(1.21718, 1.54784)
 texture = ExtResource("2_ps324")
+metadata/_edit_lock_ = true
 
 [connection signal="sort_children" from="MarginContainer" to="." method="_on_margin_container_sort_children"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
