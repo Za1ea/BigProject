@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cl07u722ltcf6"]
+[gd_scene load_steps=36 format=3 uid="uid://cjngr55s2e4j7"]
 
 [ext_resource type="Script" path="res://sub_home.gd" id="1_vgnjq"]
 [ext_resource type="Texture2D" uid="uid://df0aestmgud74" path="res://art/homepage1.png" id="2_qiic3"]
@@ -7,6 +7,41 @@
 [ext_resource type="Texture2D" uid="uid://drtgti8lx5ldj" path="res://art/blue_whale_1.png" id="4_fvjwp"]
 [ext_resource type="Texture2D" uid="uid://dqoem0qolc1my" path="res://art/contButton.png" id="5_tbu1q"]
 [ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="7_onqux"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6m7uh"]
+bg_color = Color(0.0431373, 0.356863, 0.988235, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p36po"]
+bg_color = Color(0.0431373, 0.356863, 0.988235, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uoy2e"]
+bg_color = Color(0.368627, 0.580392, 0.996078, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_np8h1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hxg1w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hjypl"]
+bg_color = Color(0.858824, 0.435294, 0.643137, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rkvc"]
+bg_color = Color(0.858824, 0.435294, 0.643137, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kb6kn"]
+bg_color = Color(0.705882, 0.282353, 0.501961, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b1vou"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqsvp"]
+bg_color = Color(0.113725, 0.631373, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v5jkv"]
+bg_color = Color(0.113725, 0.631373, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndaly"]
+bg_color = Color(0.054902, 0.368627, 0.105882, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ejml3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wyjja"]
 
@@ -32,6 +67,16 @@ corner_radius_bottom_left = 50
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wwrto"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wiyel"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i35aj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e23n0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c4h0u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k7e2s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_28ebc"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_f5hm6"]
 
@@ -74,10 +119,49 @@ theme_override_fonts/font = ExtResource("7_onqux")
 theme_override_font_sizes/font_size = 70
 text = "Map"
 
+[node name="Button6" type="Button" parent="."]
+layout_mode = 0
+offset_left = 616.0
+offset_top = 788.0
+offset_right = 721.0
+offset_bottom = 821.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_6m7uh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_p36po")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uoy2e")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_np8h1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hxg1w")
+
+[node name="Button7" type="Button" parent="."]
+layout_mode = 0
+offset_left = 546.0
+offset_top = 788.0
+offset_right = 607.0
+offset_bottom = 821.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_hjypl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1rkvc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kb6kn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_b1vou")
+
+[node name="Button5" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.25
+anchor_bottom = 0.432
+offset_left = 810.0
+offset_top = 788.0
+offset_right = 521.0
+offset_bottom = 389.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_hqsvp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v5jkv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ndaly")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ejml3")
+
 [node name="intro" parent="." instance=ExtResource("3_pr250")]
+visible = false
 position = Vector2(186, 155)
 
 [node name="Button" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 991.0
 offset_top = 802.0
@@ -105,9 +189,31 @@ disabled = true
 
 [node name="Button3" type="Button" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 141.0
+offset_top = 426.0
+offset_right = 342.0
+offset_bottom = 617.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i35aj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e23n0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c4h0u")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_k7e2s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_28ebc")
+icon = SubResource("CanvasTexture_f5hm6")
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1088.0
+offset_top = 420.0
+offset_right = 1289.0
+offset_bottom = 611.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i35aj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_e23n0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c4h0u")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_k7e2s")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_28ebc")
 icon = SubResource("CanvasTexture_f5hm6")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

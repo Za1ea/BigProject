@@ -1,0 +1,33 @@
+[gd_scene load_steps=9 format=3 uid="uid://cj3kq4f02x3uq"]
+
+[ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="1_6o846"]
+[ext_resource type="Script" path="res://sub_button.gd" id="1_qmiuq"]
+[ext_resource type="Texture2D" uid="uid://lx1f4qmu6sok" path="res://art/submarinefinal (1) copy.png" id="2_085qv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g1u8n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h2rif"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_22v8e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mixmi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q0n2k"]
+
+[node name="sub_button" type="Button"]
+offset_right = 298.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_6o846")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g1u8n")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_h2rif")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_22v8e")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mixmi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q0n2k")
+text = "Home"
+icon = ExtResource("2_085qv")
+expand_icon = true
+script = ExtResource("1_qmiuq")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

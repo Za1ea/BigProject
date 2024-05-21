@@ -1,3 +1,17 @@
+ColorRect
+TextureRect
+Panel
+Button
+Sprite2D
+ParallaxLayer
+ParallaxBackground
+Label
+MarginContainer
+CenterContainer
+MarginContainer
+Control
+Label
+Node2D
 ParallaxLayer
 RichTextLabel
 AnimatedSprite2D

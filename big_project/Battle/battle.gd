@@ -10,7 +10,7 @@ var regex = RegEx.new()
 
 var current_player_health = max_player_health
 var current_trash_health  = max_trash_health
-
+@onready var _animated_sprite = $TrashContainer/TrashMonster
 var damages = {
 	"recycle": 5,
 	"reuse": 10,

@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://pbalualjl0k7"]
+[gd_scene load_steps=12 format=3 uid="uid://pbalualjl0k7"]
 
 [ext_resource type="Script" path="res://Sound/cell.gd" id="1_woqsf"]
 [ext_resource type="Texture2D" uid="uid://caaiygfklu101" path="res://art/square.png" id="2_fave1"]
+[ext_resource type="Texture2D" uid="uid://c1lefan1fmtq8" path="res://art/deadwhale (1).png" id="3_8jdku"]
 [ext_resource type="Texture2D" uid="uid://csp4cbt5houyn" path="res://art/purple_dot.png" id="3_24bh6"]
 [ext_resource type="Texture2D" uid="uid://bbrlw1t1xkbeo" path="res://art/red_dot.png" id="4_tq1br"]
 [ext_resource type="Texture2D" uid="uid://cdfpmpfa7px36" path="res://art/teal_dot.png" id="5_isdk4"]
@@ -22,6 +23,14 @@ animations = [{
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_op8wo"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8jdku")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_fave1")
@@ -90,5 +99,5 @@ sprite_frames = SubResource("SpriteFrames_01g8r")
 [node name="animation" type="AnimatedSprite2D" parent="square"]
 position = Vector2(-7.15256e-06, 5.00001)
 sprite_frames = SubResource("SpriteFrames_op8wo")
-animation = &"yellow"
+animation = &"dead"
 metadata/_edit_lock_ = true
