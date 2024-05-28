@@ -22,6 +22,8 @@ var chosen
 
 @onready var trash_sprite = $TrashContainer/TrashMonster
 @onready var player_sprite = $PlayerContainer/Player
+@onready var player_explosion = $PlayerContainer/explosion
+@onready var trash_explosion = $TrashContainer/explosion
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -40,6 +42,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if current_player_health == 0:
+		player_explosion.set_visible(true)
+		player_explosion.play("explode")
+		player_sprite.hide()
 		SceneTransition.change_scene("res://lose_screen.tscn", "dissolve")
 
 
@@ -96,9 +101,11 @@ func correct():
 	await get_tree().create_timer(1.2).timeout
 	$EnemyDamage.vis = false
 	if current_trash_health == 0:
+		trash_explosion.set_visible(true)
+		trash_explosion.play("explode")
+		trash_sprite.hide()
 		SceneTransition.change_scene("res://Battle/win_screen2.tscn", "dissolve")
 	else:
-		await get_tree().create_timer(0.5).timeout
 		enemy_turn(true)
 
 func enemy_turn(correct):

@@ -48,4 +48,7 @@ func _on_body_entered(body):
 		await get_tree().create_timer(1.0).timeout
 		$Sub.stop()
 		if lives == 0:
+			$explosion.set_visible(true)
+			$explosion.play("explode")
+			$Sub.hide()
 			SceneTransition.change_scene("res://lose_screen.tscn", "")

@@ -1,3 +1,4 @@
+AnimatedSprite2D
 CenterContainer
 ColorRect
 TextureRect
@@ -11,4 +12,3 @@ MarginContainer
 MarginContainer
 Control
 Label
-Node2D

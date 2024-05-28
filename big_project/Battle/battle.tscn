@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b0ku54yf6r35v"]
+[gd_scene load_steps=22 format=3 uid="uid://b0ku54yf6r35v"]
 
 [ext_resource type="Script" path="res://Battle/battle.gd" id="1_3apam"]
 [ext_resource type="Texture2D" uid="uid://spw7tfh0ix32" path="res://art/obstaclecourse.png" id="1_dgmre"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://kdg4nohxv5oh" path="res://art/empty.png" id="4_hrf17"]
 [ext_resource type="Script" path="res://Battle/PlayerDamage.gd" id="5_2cuwd"]
 [ext_resource type="FontFile" uid="uid://d0nxybs2njrei" path="res://art/Adigiana Ultra.ttf" id="5_u37l1"]
+[ext_resource type="PackedScene" uid="uid://bx65njdrei8iv" path="res://explosion.tscn" id="6_575h6"]
 [ext_resource type="PackedScene" uid="uid://dacp4gog88m2b" path="res://home_button.tscn" id="8_ak0eo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kd8mi"]
@@ -125,6 +126,7 @@ position = Vector2(136, 271)
 scale = Vector2(0.6, 0.625)
 sprite_frames = SubResource("SpriteFrames_kd8mi")
 animation = &"damage"
+metadata/_edit_lock_ = true
 
 [node name="ProgressBar" type="ProgressBar" parent="TrashContainer"]
 custom_minimum_size = Vector2(0, 25)
@@ -152,6 +154,11 @@ theme_override_fonts/font = ExtResource("5_u37l1")
 theme_override_font_sizes/font_size = 20
 text = "HP: 25/50"
 
+[node name="explosion" parent="TrashContainer" instance=ExtResource("6_575h6")]
+position = Vector2(193, 340)
+scale = Vector2(0.7, 0.7)
+metadata/_edit_lock_ = true
+
 [node name="PlayerContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 150.0
@@ -160,7 +167,7 @@ offset_right = 371.0
 offset_bottom = 620.0
 
 [node name="Player" type="AnimatedSprite2D" parent="PlayerContainer"]
-position = Vector2(169, 240)
+position = Vector2(108, 201)
 scale = Vector2(0.3, 0.313)
 sprite_frames = SubResource("SpriteFrames_bxxht")
 animation = &"damage"
@@ -192,6 +199,10 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_u37l1")
 theme_override_font_sizes/font_size = 20
 text = "HP: 25/50"
+
+[node name="explosion" parent="PlayerContainer" instance=ExtResource("6_575h6")]
+position = Vector2(123, 211)
+metadata/_edit_lock_ = true
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
